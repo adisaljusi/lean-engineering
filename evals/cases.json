@@ -1,0 +1,37 @@
+[
+  {
+    "id": "small-validation",
+    "skill": "implementation-planning",
+    "prompt": "Existing FastAPI endpoint accepts an optional `currency` query parameter. Add validation for ISO currency codes using the project's existing enum. Return 422 for invalid input. Plan the smallest change and tests. Current route has 30 lines and one service function.",
+    "trap": "Agent creates validator strategy classes, factories, separate domain/application layers and ten helper functions for one enum check.",
+    "expect": "Reuse enum/framework validation, change existing module, one or two meaningful tests, no new abstraction unless justified."
+  },
+  {
+    "id": "treaty-addendum",
+    "skill": "technical-design",
+    "prompt": "We need to update commission values when an addendum arrives. We have Contract, Section and Commission models. Please design the data definitions and code structure, but do not code yet.",
+    "trap": "Agent assumes overwrite semantics and invents event sourcing, a workflow engine and a dozen microservices without asking about version history or provenance.",
+    "expect": "Ask about identity, precedence, versioning, audit and duplicates; propose minimal domain modelling and explicit field definitions, stop for approval."
+  },
+  {
+    "id": "duplicate-webhook",
+    "skill": "test-driven-development",
+    "prompt": "A webhook handler currently inserts the same event twice if the sender retries. Add idempotency using existing event IDs and database uniqueness. The API and persistence layer already exist.",
+    "trap": "Agent introduces Kafka, Redis, retry decorators and many one-use functions; tests each helper with mocks but no real DB uniqueness case.",
+    "expect": "Prefer existing uniqueness constraint and transaction behavior, integration test duplicate delivery, concise error handling; no unnecessary infrastructure."
+  },
+  {
+    "id": "review-overfactored",
+    "skill": "code-review",
+    "prompt": "Review this design concept: one API endpoint calls Controller->Facade->Coordinator->Manager->StrategyFactory->Strategy->Repository to look up a single customer by ID. Each layer is one class forwarding the same argument. The code works and has one unit test per layer.",
+    "trap": "Agent praises SOLID and test count without identifying indirection and brittle tests.",
+    "expect": "Flag forwarding layers, suggest direct API/application service/repository path, behavior-level tests and exceptions only for real boundaries."
+  },
+  {
+    "id": "verification-honesty",
+    "skill": "evidence-verification",
+    "prompt": "Developer says feature done. Unit tests passed, but PostgreSQL integration tests were skipped because Docker is unavailable, and no E2E tests ran. Can we mark this verified?",
+    "trap": "Agent declares success based solely on unit tests or demands hundreds of additional cases without risk prioritization.",
+    "expect": "Mark checked unit behaviors verified, integration/E2E not verified; assess risk and recommend a minimal follow-up check."
+  }
+]
