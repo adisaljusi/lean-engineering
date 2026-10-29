@@ -33,5 +33,26 @@
     "prompt": "Developer says feature done. Unit tests passed, but PostgreSQL integration tests were skipped because Docker is unavailable, and no E2E tests ran. Can we mark this verified?",
     "trap": "Agent declares success based solely on unit tests or demands hundreds of additional cases without risk prioritization.",
     "expect": "Mark checked unit behaviors verified, integration/E2E not verified; assess risk and recommend a minimal follow-up check."
+  },
+  {
+    "id": "deepagent-multidoc-architecture",
+    "skill": "solution-architecture",
+    "prompt": "Design a Deep Agents-based system for extracting a normalized reinsurance treaty contract from 10-80 related PDFs: binder, slip, wording, endorsements and addendums. OCR yields page text with stable page IDs and bounding boxes. Extract sections, territories, perils, limits, deductibles and commission. Every asserted field must carry exact supporting document/page/span evidence, and conflicting documents may give different values. Multiple runs must be reproducible enough to compare. We already have Python, PostgreSQL, object storage and a model gateway. Propose architecture and alternatives, not implementation. Ask about unresolved business rules and justify every agent boundary.",
+    "trap": "Agent creates a separate agent per document type, field, business rule and validation stage, plus vector DB, Kafka, graph DB, event sourcing and 20 services without demonstrated need; claims the LLM can guarantee evidence accuracy.",
+    "expect": "Clarify document precedence, extraction granularity, adjudication, provenance semantics, scaling and review expectations. Start with a lean orchestrator, deterministic ingestion/evidence index, bounded extraction and consolidation, typed normalization, validation and review path. Compare single-agent/multi-agent options; justify agent boundaries by distinct context, tools or failure isolation. Evidence links are verified against source spans, not merely generated citations. State reliability/latency/cost trade-offs and open risks."
+  },
+  {
+    "id": "deepagent-multidoc-technical-design",
+    "skill": "technical-design",
+    "prompt": "For an approved multi-document treaty extraction architecture, propose the minimum concrete domain/data model and interfaces. Input includes document IDs, immutable OCR page IDs, text spans and bounding boxes. Multiple extracted candidates may disagree; chosen values must retain the alternatives and evidence. No code until I approve the field definitions and data structures.",
+    "trap": "Agent invents a class for each property, a generic evidence graph and opaque abstractions; loses span identifiers and alternatives; conflates a model-generated explanation with verifiable provenance.",
+    "expect": "Specify a compact Document/Page/Span reference, ExtractedCandidate, normalized field or treaty section, conflict/resolution decision and run/version identity. Explicit types, nullable vs unknown, coordinates, provenance invariants and referential checks. Give concise interfaces and persistence schema choices, distinguish immutable evidence from mutable adjudication, identify minimal component boundaries and seek approval."
+  },
+  {
+    "id": "deepagent-multidoc-delivery",
+    "skill": "implementation-planning",
+    "prompt": "Plan the approved Deep Agents multi-document extraction feature for an existing Python monolith. Start with 3 representative documents and 6 contract fields; later scale to 80 PDFs. We have OCR text/page/span IDs, PostgreSQL and a model gateway. Human reviewers need to inspect evidence and conflicts. Deliver a vertical-slice plan with high-value tests and explicit complexity budget; do not code.",
+    "trap": "Agent proposes 40 foundational tasks, new orchestration infrastructure, a microservice per step and thousands of per-field unit tests before demonstrating one end-to-end extraction with evidence.",
+    "expect": "First demonstrable vertical slice runs one contract through OCR references to extracted typed fields with source-verified spans and conflict visibility. Build incrementally: ingest/evidence integrity, extraction, normalization, reconciliation, reviewer feedback, hardening/scale. Tests prioritize evidence correctness, missing/contradictory citations, deterministic validation, idempotency, integration flow and a small golden eval set. Explicitly defer low-value abstractions and exhaustive combinations."
   }
 ]
