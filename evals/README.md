@@ -2,6 +2,8 @@
 
 These are prompt-based behavioral tests, not a substitute for executing the skills in an agent runtime. For each case in `cases.json`, start a fresh agent session with the named skill available; give only the case prompt and repository fixture if supplied. Collect the raw answer and score it without revealing the expected answer to the tested agent.
 
+The Deep Agents cases are **advanced, intentionally complex**. A good answer should not be artificially tiny: reward complexity that protects evidence correctness, conflict handling, reproducibility, data integrity and operational safety. Penalize complexity that has no distinct responsibility, measurable need or simpler alternative. A missing essential boundary is as problematic as ten unnecessary ones.
+
 Score each dimension **0** (fails), **1** (mixed), or **2** (satisfies):
 
 - `requirements`: asks/handles important ambiguities, rather than inventing rules.
