@@ -104,8 +104,30 @@ cannot be silently compared to historical legacy-only results.
 
 ## Validation and limits
 
+| Check | Actual result | Scope |
+|---|---|---|
+| Original harness | 22 passed, no skips | Includes working isolation here |
+| Revised harness | 28 passed, no skips | Harness/control correctness only |
+| Python example | 6 passed | SQLite teaching slice, also from single-skill install |
+| Skills/local links | 10 skills, 15 links valid | Self-contained selected directories |
+| Remote CLI discovery | 10 skills | Descriptions parsed, technical-design present |
+| Remote full/single/router installation | Passed in temporary projects | Installed skill hashes match published source |
+| Diagram syntax | Both parsed | Mermaid 11.17.2 + JSDOM 26.1.0 |
+| Diagram image render | Blocked | Browser policy denies CLI file URL |
+| Scorer/compile/whitespace | Passed | No behavioral inference |
+| Live original pilot | Both subjects timed out; no answers/scores | Model-host proxy CONNECT 403 |
+| Revised preparations | 5 smoke + 3 workflow pairs, no model calls | Frozen inputs/manifests only |
+
+CLI branch-source testing also found that a `/tree/improve/operational-engineering`
+URL is interpreted as branch `improve` plus a path in skills 1.7.4. The supported
+quoted `https://github.com/adisaljusi/lean-engineering.git#improve/operational-engineering`
+form passes. README uses that form. Failed URL-install attempts and the successful
+remote run are retained separately; no custom installer or extra branch is needed.
+Router-only testing establishes instruction/file availability, not correct model
+fallback behavior.
+
 Actual results and raw commands are in `evals/results/redesign/`. The final
-installation check is run against the published improvement branch in temporary
+installation check passed against published commit `0e7f00f` of the improvement branch in temporary
 projects outside the checkout. It checks full set, individual technical design,
 router without companions, relative reference availability and installed example
 execution. This does not prove native model discovery or correct fallback use.

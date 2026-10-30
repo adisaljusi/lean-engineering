@@ -1,5 +1,5 @@
 {
-  "status": "static checks complete; remote installation pending",
+  "status": "completed within available capabilities",
   "behavioral_effectiveness": "unvalidated",
   "original_harness": {
     "passed": 22,
@@ -15,5 +15,25 @@
   "diagram_syntax": "passed",
   "diagram_render": "blocked by Chromium file URL policy",
   "model_execution": "original subjects timed out after proxy CONNECT 403; no answers/scores",
-  "source": "fc7f9f7022a37c6d30043982917619baea42ca57"
+  "source": "fc7f9f7022a37c6d30043982917619baea42ca57",
+  "installation": {
+    "cli": "skills@1.7.4",
+    "node": "24.19.0",
+    "full_set": 10,
+    "individual": "technical-design with references/examples; six tests passed",
+    "router_only": "fallback instruction present; companions absent",
+    "outside_checkout": true,
+    "skill_files_match_source": true,
+    "verified_source_commit": "0e7f00fea62b28e9118972bc209a8986aca60bd8",
+    "native_model_discovery": "not verified"
+  },
+  "prepared": {
+    "smoke_pairs": 5,
+    "workflow_pairs": 3,
+    "subject_calls": 0,
+    "stakeholder_calls": 0,
+    "assessor_calls": 0,
+    "scores": 0,
+    "source_commit": "0e7f00fea62b28e9118972bc209a8986aca60bd8"
+  }
 }

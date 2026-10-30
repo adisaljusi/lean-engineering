@@ -9,7 +9,9 @@ arms timed out without answers. No stakeholder/assessor calls or scores exist.
 The revised harness has 28 passing tests and its Python example has six; these
 are limited code/checker results, not evidence of skill effectiveness. CLI testing
 reproduced a missing technical-design skill on master (invalid description YAML)
-and verifies the revised self-contained layout separately.
+and verifies remote installation of all ten revised self-contained skills, an
+individual skill with its examples/references, and the router alone. The quoted
+repository `#ref` source is required for the slash-containing branch name.
 
 See [the redesign critique and proof](../docs/REDESIGN.md) and
 [retained evidence](results/redesign/). Historical reports below are preserved

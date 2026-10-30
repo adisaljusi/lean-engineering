@@ -1,0 +1,65 @@
+{
+  "source": "https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering",
+  "cli": "skills@1.7.4",
+  "runs": [
+    {
+      "command": [
+        "npx",
+        "--yes",
+        "skills@1.7.4",
+        "add",
+        "https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering",
+        "--skill",
+        "*",
+        "--agent",
+        "codex",
+        "--copy",
+        "-y"
+      ],
+      "cwd": "/tmp/lean-install-fiq32p_x/all",
+      "returncode": 1,
+      "stdout": "\n\u2502\n\u25cf   codex  Agent detected \u2014 installing non-interactively\n\u001b[?25l\u2502\n\u25c7  Source: https://github.com/adisaljusi/lean-engineering.git @ improve (operational-engineering)\n\u001b[?25h\u001b[?25l\u2502\n\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026..\u001b[1G\u001b[J\u25d0  Cloning repository\u2026..\u001b[1G\u001b[J\u25d3  Cloning repository\u2026..\u001b[1G\u001b[J\u25d1  Cloning repository\u2026..\u001b[1G\u001b[J\u25d2  Cloning repository\u2026..\u001b[1G\u001b[J\u25d0  Cloning repository\u2026..\u001b[1G\u001b[J\u25d3  Cloning repository\u2026..\u2502\n\u25a0  Failed to clone repository\n\u2502\n\u2502  Failed to clone https://github.com/adisaljusi/lean-engineering.git: Cloning into '/tmp/skills-CKQ7iP'...\n\u2502\n\u2502  fatal: Remote branch improve not found in upstream origin\n\u2502\n\u2502\n\u2502\n\u2502  Tip: use the --yes (-y) and --global (-g) flags to install without prompts.\n\u2502\n\u2514  Installation failed\n\n\u001b[1G\u001b[J\u25a0  Canceled\n\u001b[?25h",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npx",
+        "--yes",
+        "skills@1.7.4",
+        "add",
+        "https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering",
+        "--skill",
+        "technical-design",
+        "--agent",
+        "codex",
+        "--copy",
+        "-y"
+      ],
+      "cwd": "/tmp/lean-install-fiq32p_x/single",
+      "returncode": 1,
+      "stdout": "\n\u2502\n\u25cf   codex  Agent detected \u2014 installing non-interactively\n\u001b[?25l\u2502\n\u25c7  Source: https://github.com/adisaljusi/lean-engineering.git @ improve (operational-engineering)\n\u001b[?25h\u001b[?25l\u2502\n\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026..\u001b[1G\u001b[J\u25d0  Cloning repository\u2026..\u001b[1G\u001b[J\u25d3  Cloning repository\u2026..\u001b[1G\u001b[J\u25d1  Cloning repository\u2026..\u001b[1G\u001b[J\u25d2  Cloning repository\u2026..\u001b[1G\u001b[J\u25d0  Cloning repository\u2026..\u2502\n\u25a0  Failed to clone repository\n\u2502\n\u2502  Failed to clone https://github.com/adisaljusi/lean-engineering.git: Cloning into '/tmp/skills-hZTivW'...\n\u2502\n\u2502  fatal: Remote branch improve not found in upstream origin\n\u2502\n\u2502\n\u2502\n\u2502  Tip: use the --yes (-y) and --global (-g) flags to install without prompts.\n\u2502\n\u2514  Installation failed\n\n\u001b[1G\u001b[J\u25a0  Canceled\n\u001b[?25h",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npx",
+        "--yes",
+        "skills@1.7.4",
+        "add",
+        "https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering",
+        "--skill",
+        "lean-engineer",
+        "--agent",
+        "codex",
+        "--copy",
+        "-y"
+      ],
+      "cwd": "/tmp/lean-install-fiq32p_x/router",
+      "returncode": 1,
+      "stdout": "\n\u2502\n\u25cf   codex  Agent detected \u2014 installing non-interactively\n\u001b[?25l\u2502\n\u25c7  Source: https://github.com/adisaljusi/lean-engineering.git @ improve (operational-engineering)\n\u001b[?25h\u001b[?25l\u2502\n\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u2502\n\u25a0  Failed to clone repository\n\u2502\n\u2502  Failed to clone https://github.com/adisaljusi/lean-engineering.git: Cloning into '/tmp/skills-CMbVt0'...\n\u2502\n\u2502  fatal: Remote branch improve not found in upstream origin\n\u2502\n\u2502\n\u2502\n\u2502  Tip: use the --yes (-y) and --global (-g) flags to install without prompts.\n\u2502\n\u2514  Installation failed\n\n\u001b[1G\u001b[J\u25a0  Canceled\n\u001b[?25h",
+      "stderr": ""
+    }
+  ],
+  "native_model_discovery": "not verified; requires live agent traces",
+  "passed": false
+}

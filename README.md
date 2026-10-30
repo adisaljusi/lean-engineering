@@ -19,21 +19,23 @@ only nine skills because its technical-design description has invalid YAML.
 Install the revised ten skills from this branch explicitly:
 
 ```sh
-npx skills add https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering
+npx skills add 'https://github.com/adisaljusi/lean-engineering.git#improve/operational-engineering'
 ```
 
 Verified CLI selection syntax (1.7.4; Node 24.19.0 used here):
 
 ```sh
 # List without installation
-npx skills@1.7.4 add https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering --list
+npx skills@1.7.4 add 'https://github.com/adisaljusi/lean-engineering.git#improve/operational-engineering' --list
 # Full set, project-local, copied to Codex's native .agents/skills location
-npx skills@1.7.4 add https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering --skill '*' --agent codex --copy -y
+npx skills@1.7.4 add 'https://github.com/adisaljusi/lean-engineering.git#improve/operational-engineering' --skill '*' --agent codex --copy -y
 # One skill, including its own references and runnable examples
-npx skills@1.7.4 add https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering --skill technical-design --agent codex --copy -y
+npx skills@1.7.4 add 'https://github.com/adisaljusi/lean-engineering.git#improve/operational-engineering' --skill technical-design --agent codex --copy -y
 ```
 
-Omit selection flags for the interactive skill/agent chooser. No custom installer
+The quoted `#ref` form preserves the slash in the branch name. In CLI 1.7.4, a
+`/tree/improve/operational-engineering` URL is parsed as branch `improve` and a
+subdirectory, and fails. Omit selection flags for the interactive skill/agent chooser. No custom installer
 or runtime is needed. Each directory contains its own supporting files; no shared
 checkout path or development symlink is required. Use the agent's installed-skill
 catalog; `lean-engineer` works without companions by doing the needed steps
