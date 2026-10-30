@@ -1,0 +1,3 @@
+# Audit export workload
+
+PostgreSQL contains 50 million tenant-scoped audit rows, ordered by occurred_at and id; timestamps are not unique. Current Python export loads every row, sorts in memory and emits CSV. A customer needs a reproducible point-in-time export while writes continue. Memory budget is 256 MB; query should not scan other tenants. Existing indexes: primary key id and (tenant_id, occurred_at, id). No new store is authorized. A long read transaction's effect on vacuum/retention must be assessed. Exports may resume after worker restart; do not claim a new snapshot is identical to the original. Propose alternatives, query/algorithm shape and verification, not implementation. Actual row size and acceptable snapshot lifetime are unmeasured.

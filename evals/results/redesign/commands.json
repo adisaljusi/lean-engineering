@@ -1,0 +1,116 @@
+{
+  "original_pilot": {
+    "command": [
+      "python",
+      "evals/conversations.py",
+      "--model",
+      "gpt-6.1",
+      "--actor-model",
+      "gpt-6.1",
+      "--judge-model",
+      "gpt-6.1",
+      "--cases",
+      "commission-lifecycle",
+      "--pilot",
+      "commission-lifecycle",
+      "--turn-timeout",
+      "35",
+      "--timeout",
+      "100",
+      "--output",
+      "work/prechange-pilot"
+    ],
+    "exit": 2,
+    "source": "fc7f9f7022a37c6d30043982917619baea42ca57"
+  },
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "evals/tests",
+        "-v"
+      ],
+      "exit": 0,
+      "tests": 28,
+      "skipped": 0,
+      "raw": "redesign-tests.txt"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "technical-design/examples",
+        "-v"
+      ],
+      "exit": 0,
+      "tests": 6,
+      "raw": "example-tests.txt"
+    },
+    {
+      "command": [
+        "python",
+        "evals/score.py",
+        "--self-test"
+      ],
+      "exit": 0,
+      "meaning": "supplied-score validation only"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "evals",
+        "scripts",
+        "technical-design/examples"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "python",
+        "scripts/validate_skills.py"
+      ],
+      "exit": 0,
+      "skills": 10,
+      "local_links": 15
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0
+    }
+  ],
+  "diagram": {
+    "cli_version": "11.12.0",
+    "resolved_mermaid": "11.17.2",
+    "jsdom": "26.1.0",
+    "parse_results": "diagram-parse.txt",
+    "render_command": [
+      "npx",
+      "--yes",
+      "--package",
+      "@mermaid-js/mermaid-cli@11.12.0",
+      "mmdc",
+      "-p",
+      "solution-architecture/examples/puppeteer.json",
+      "-i",
+      "solution-architecture/examples/extraction.mmd",
+      "-o",
+      "work/diagrams/extraction.svg"
+    ],
+    "render_exit": 1,
+    "observed_error": "net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///home/agent/.npm/_npx/bb964472b4759b27/node_modules/@mermaid-js/mermaid-cli/dist/index.html"
+  }
+}

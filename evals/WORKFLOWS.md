@@ -162,3 +162,39 @@ coverage is focused, not exhaustive. SQLite and synthetic OCR records establish
 neither production PostgreSQL/HTTP behavior nor real extraction accuracy. Do not
 publish an improvement claim without completed, repeated, independently reviewed
 runs and the associated failure/indeterminate coverage.
+
+## Redesign changes and current limits
+
+There are now five workflows: the original three plus `authorized-small-fix` and
+`documented-feature-delivery`. Both new tasks are explicitly authorized and all
+business answers are in README. The actor must not invent new policy or coach a
+repair. They test actual delivery and verification rather than a response-only
+explanation of routing. Existing commission/multidocument exchanges retain
+correction, pressure and separate stakeholder/assessor roles.
+
+Native treatment now installs complete skill directories, including references
+and examples, not only SKILL.md. This corrects an intervention defect introduced
+when skills gained supporting material. Directory presence proves packaging,
+not model discovery; inspect actual tool-read events and applied reasoning in a
+supported pilot. Baselines need no skill calls to earn full quality credit.
+
+New criteria assess use of documented/prior answers, redundant permission,
+visual consistency and stakeholder exposure. The assessor explicitly audits
+actor disclosure/consistency/consent separately. A compromised stakeholder policy
+makes the subject experiment indeterminate; undisclosed hidden facts are not
+silently treated as subject failures. Deterministic check failures remain in the
+record. Human pilot inspection is still necessary; this is not a validated model
+stakeholder. No role has been live-qualified here.
+
+Required checker counts come from each case. Missing, empty, skipped, crashed or
+wrong-count checks cannot pass, and maintainability now affects quality verdicts.
+The new policy differs from historical legacy-only scoring; retain both results.
+Fresh repetitions and the same role/resource policies remain required. Adaptive
+exchanges are retained as actual exposures, not asserted identical inputs.
+
+In this environment filesystem isolation now passes. A bounded original pilot
+attempted both subject arms, but model-host proxy CONNECT requests returned 403
+and both turns timed out without answers. There were no stakeholder or assessor
+calls and no behavioral scores. Re-running after instruction edits against the
+same denied destination would not establish anything. Revised prepare-only
+inputs validate packaging only. See `results/redesign/` and `docs/REDESIGN.md`.

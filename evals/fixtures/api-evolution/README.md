@@ -1,0 +1,3 @@
+# Shipping API consumers
+
+Current GET /shipment returns status: pending|sent and weight_kg as a decimal string. Two externally managed clients reject unknown enum values; another ignores extra fields. We need a precise integer weight_grams and new returned status held. Existing clients cannot deploy together and we promise six months of old-client support. Missing weight means unknown, not zero. Internal table names are not public contract. Propose contract/migration/rollback, not code. No change to old status meaning has been accepted. Do not assume additive changes are safe for these clients.

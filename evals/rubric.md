@@ -62,3 +62,25 @@ architecture or score keyword presence. Mark proposed vs accepted decisions.
 Give an overall assessment with material limitations. Never infer the experimental
 variant from style or reward similarity to the guidance. Numerical scores require
 independent evidence, not the artifact's self-assessment.
+
+For revised evaluations, judge necessity against the actual constraints. A durable
+queue, separate service, transaction, interface or richer domain model can earn
+full simplicity credit when its cost is warranted; a modular monolith can too.
+No architecture is an answer key. Check consistency of diagrams with contracts,
+ownership, identities, transaction/ack ordering and described failures. A pretty
+or syntactically valid diagram is not proof of correctness.
+
+Penalize needless questioning, questions answered by available documents or prior
+turns, and repeated permission requests within authorized scope. Do not penalize
+a question that resolves consequential ambiguity or consent needed for a new
+external/destructive action. Never reward question count. Assess practical Python
+by precise values, resource/transaction ownership, errors, bounded work and
+maintainability, not class/helper/test counts. Citation and diagram counts earn
+no independent credit. Supporting reference reads demonstrate discovery only;
+actual application needs evidence in decisions and artifacts.
+
+The versioned decision policy now requires nonzero requirements, design and
+maintainability in addition to the retained legacy score. Independent concrete
+check failures cannot be overridden by favorable model scores. Missing, zero,
+skipped or crashed required checks remain indeterminate. Preserve a known defect
+even when another dimension lacks evidence; report both in the evidence.

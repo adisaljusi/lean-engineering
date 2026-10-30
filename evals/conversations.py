@@ -109,7 +109,7 @@ def stakeholder_reply(case, exchange, authorized, model, timeout, output):
     return data
 
 
-def run_check(after, check, output, timeout=30):
+def run_check(after, check, output, timeout=30, expected=None):
     with tempfile.TemporaryDirectory(prefix='lean-postcheck-') as tmp, \
          tempfile.TemporaryDirectory(prefix='lean-check-runtime-') as runtime_tmp:
         workspace, runtime = Path(tmp), Path(runtime_tmp)
@@ -124,16 +124,7 @@ def run_check(after, check, output, timeout=30):
         result['command'] = argv
         if check:
             result['checker_sha256'] = runner.digest((runner.ROOT / 'checks' / check).read_bytes())
-    count = re.search(r'Ran (\d+) tests?', result['stderr'])
-    result['tests_run'] = int(count[1]) if count else None
-    expected = 8 if check else None
-    if (result['status'] == 'succeeded' and count and int(count[1]) > 0 and
-        (expected is None or int(count[1]) == expected) and 'skipped=' not in result['stderr']):
-        result['verdict'] = 'pass'
-    elif result['status'] == 'failed' and 'Ran ' in result['stderr'] and 'FAILED' in result['stderr']:
-        result['verdict'] = 'fail'
-    else:
-        result['verdict'] = 'indeterminate'
+    result['verdict'] = runner.check_verdict(result, expected)
     runner.write_json(output, result)
     return result
 
@@ -212,9 +203,7 @@ def variant(case, treatment, args, output, blocked):
         snapshot(workspace, before)
         skill_files = {}
         if treatment:
-            for skill in sorted(runner.ROOT.parent.glob('*/SKILL.md')):
-                name = '.agents/skills/' + skill.parent.name + '/SKILL.md'
-                skill_files[name] = skill.read_bytes()
+            skill_files = runner.installed_skill_files()
             snapshot(workspace, skill_files)
         snapshot(output / 'intervention', skill_files)
         runner.write_json(output / 'intervention-manifest.json', runner.manifest(skill_files))
@@ -276,12 +265,12 @@ def variant(case, treatment, args, output, blocked):
             try:
                 if case['heldout']:
                     checks['generated_tests'] = run_check(after, None, output / 'generated-tests.json', min(30, budget()))
-                    checks['heldout_tests'] = run_check(after, case['heldout'], output / 'heldout-tests.json', min(30, budget()))
+                    checks['heldout_tests'] = run_check(after, case['heldout'], output / 'heldout-tests.json', min(30, budget()), expected=case['expected_checks'])
                 judgment = assess(case, before, after, exchange, turns, checks,
                                   args.judge_model, budget(), output)
             except TimeoutError:
                 judgment = {'status': 'not_judged', 'reason': 'Workflow deadline reached'}
-    verdict = compose(completed, checks, judgment)
+    verdict = compose(completed, checks, judgment, ('generated_tests', 'heldout_tests') if case['heldout'] else ())
     runner.write_json(output / 'exchange.json', exchange)
     runner.write_json(output / 'trajectory.json', turns)
     runner.write_json(output / 'checks.json', checks)
@@ -293,16 +282,18 @@ def variant(case, treatment, args, output, blocked):
     return result
 
 
-def compose(completed, checks, judgment):
+def compose(completed, checks, judgment, expected_checks=()):
     if not completed or judgment['status'] != 'judged':
         return 'indeterminate'
     external = [checks[k]['verdict'] for k in ('generated_tests', 'heldout_tests') if k in checks]
-    if 'indeterminate' in external or any(c['verdict'] == 'not_verified' for c in judgment['criteria']):
+    if any(c['id'] == 'stakeholder_policy' and c['verdict'] != 'pass' for c in judgment['criteria']):
         return 'indeterminate'
     if ('fail' in external or not checks['no_code_before_authorization'] or
         not checks['immutable_inputs_preserved_at_turn_boundaries'] or
-        not judgment['legacy_result']['passed'] or any(c['verdict'] == 'fail' for c in judgment['criteria'])):
+        not judgment['quality_result']['passed'] or any(c['verdict'] == 'fail' for c in judgment['criteria'])):
         return 'fail'
+    if any(k not in checks for k in expected_checks) or 'indeterminate' in external or any(c['verdict'] == 'not_verified' for c in judgment['criteria']):
+        return 'indeterminate'
     return 'pass'
 
 
@@ -314,7 +305,7 @@ def run(args):
     ready = capabilities['live_ready'] and capabilities['resume_help']['status'] == 'succeeded'
     runner.write_json(output / 'capabilities.json', capabilities)
     all_cases = json.loads((runner.ROOT / 'workflows.json').read_text())
-    selected = set(args.cases or [c['id'] for c in all_cases])
+    selected = set(args.cases or [c['id'] for c in all_cases if not c.get('holdout')])
     if selected - {c['id'] for c in all_cases} or args.pilot not in selected:
         raise ValueError('Select known workflows and include the pilot')
     cases = sorted((c for c in all_cases if c['id'] in selected), key=lambda c: c['id'] != args.pilot)
@@ -322,7 +313,11 @@ def run(args):
     summary = {'model': args.model, 'actor_model': args.actor_model, 'judge_model': args.judge_model,
                'source_commit': runner.command(['git', 'rev-parse', 'HEAD'], runner.ROOT, 5)['stdout'].strip(),
                'workflow_sha256': runner.digest((runner.ROOT / 'workflows.json').read_bytes()),
-               'runner_sha256': runner.digest(Path(__file__).read_bytes()), 'seed': args.seed,
+               'runner_sha256': runner.digest(Path(__file__).read_bytes()),
+               'shared_runner_sha256': runner.digest(Path(runner.__file__).read_bytes()),
+               'rubric_sha256': runner.digest((runner.ROOT / 'rubric.md').read_bytes()),
+               'scoring_policy': 'operational-v1: quality plus all required checks/criteria and valid stakeholder exposure',
+               'seed': args.seed,
                'max_turns': args.max_turns, 'timeout_seconds': args.timeout,
                'turn_timeout_seconds': args.turn_timeout, 'reasoning_effort': 'medium',
                'skill_mode': 'native project .agents/skills, no body injection in user prompts',

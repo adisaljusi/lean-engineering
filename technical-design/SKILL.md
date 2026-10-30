@@ -1,19 +1,20 @@
 ---
 name: technical-design
-description: Produce and review concrete technical designs: field-level data definitions, domain and persistence models, data structures, coding patterns, component interfaces, algorithms, error flows and explicit approval before implementation.
+description: Make concrete domain, data, API, algorithm and Python implementation decisions with precise semantics and proportionate boundaries.
 ---
 
 # Technical Design
 
-Read the approved requirements and solution architecture, plus existing repository modules and conventions. Extend `design.md` with only relevant details:
+Inspect accepted behavior, current architecture, modules, schemas, dependencies and tests. Use for decisions that need more detail before safe implementation, not a mandatory document step.
 
-- **Domain model:** entities, value objects, aggregates, invariants, states, identity, ownership and lifecycle.
-- **Data definitions:** every important field's name, meaning, type, nullability, validation, default, constraints, provenance, versioning and approval owner. Distinguish unknown, absent, null and invalid values where significant.
-- **Structures and persistence:** collections/DTOs/records/enums, relationships, keys, indexes, transaction boundaries, schema evolution and migration compatibility.
-- **Contracts:** public interfaces, function/method signatures where consequential, APIs, events, errors, versioning and boundary transformations.
-- **Component design:** class/module responsibilities, dependency direction, layering, and dependency injection or coding patterns only when they solve an identified issue.
-- **Execution:** algorithms, state transitions, concurrency control, idempotency, validation, error/recovery paths, performance implications and test seams.
+Choose the uncertain boundary. Define only consequential fields: meaning, identity, type/unit, unknown/null/invalid distinctions, owner, constraints, provenance and lifecycle. Place invariants with the owning business operation and enforce shared-write invariants in the database. Explain transaction boundaries and failures. Avoid turning every noun into a class.
 
-Present at least two realistic design options for difficult decisions. Ask hard questions: Is this an entity or value object? Who owns the source of truth? Should the model be mutable? Why use an abstraction rather than a function? Define acceptance of data semantics with the domain/data owner when available. Mark proposed vs approved definitions.
+Load selectively:
 
-**Gate:** Do not mark technical design approved or proceed to implementation when material model definitions, contracts or patterns lack human approval. Favor design only to the depth needed to make implementation unambiguous.
+- [Data and API contracts](references/contracts.md) for identity/invariants, persistence boundaries, concurrency, compatibility and expand/migrate/contract changes.
+- [Practical Python](references/python.md) for functions/modules/classes, validation, protocols, resources, errors, async, algorithms, packaging and tests.
+- [Runnable publication example](examples/README.md) when precise domain values, SQLite transactions and stale human decisions need a concrete implementation. The code is a teaching slice, not a production framework.
+
+For a difficult choice compare credible options against actual workload and constraints. Prefer a function or cohesive module until identity/state, lifecycle or a real substitutable boundary warrants more. Make data flow and failure behavior understandable. Reuse project tools and established interfaces; do not add wrappers, generic repositories or dependencies to express style preferences.
+
+A useful result gives implementable semantics, key signatures/schema constraints where needed, alternatives and consequences, meaningful checks, remaining assumptions and rollout implications. Distinguish proposed from accepted definitions. Ask only about unresolved consequential meaning; implementation already requested authorizes ordinary technical decisions. Respect explicit design-only limits.

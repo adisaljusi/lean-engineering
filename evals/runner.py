@@ -89,14 +89,52 @@ def fixture_files(case):
     return files_at(path)
 
 
+def installed_skill_files(names=None):
+    files = {}
+    for skill in sorted(ROOT.parent.glob('*/SKILL.md')):
+        if names is None or skill.parent.name in names:
+            for name, data in files_at(skill.parent).items():
+                files['.agents/skills/' + skill.parent.name + '/' + name] = data
+    return files
+
+
+def check_verdict(result, expected=None):
+    """A successful unittest process is not sufficient: require actual tests."""
+    import re
+    count = re.search(r'Ran (\d+) tests?', result.get('stderr', ''))
+    n = int(count[1]) if count else None
+    result['tests_run'] = n
+    if (result['status'] == 'succeeded' and n and
+        (expected is None or n == expected) and
+        not re.search(r'skipped[= ]', result.get('stderr', ''), re.I)):
+        return 'pass'
+    if (result['status'] == 'failed' and n and
+        'FAILED' in result.get('stderr', '') and
+        not re.search(r'FAILED \(errors=', result.get('stderr', ''))):
+        return 'fail'
+    return 'indeterminate'
+
+
+def smoke_verdict(case, checks, judgment):
+    if judgment['status'] != 'judged':
+        return 'indeterminate'
+    expected = ('generated_tests', 'heldout_tests') if case.get('heldout') else ()
+    external = [checks.get(k, {}).get('verdict', 'indeterminate') for k in expected]
+    if 'fail' in external or not judgment['quality_result']['passed']:
+        return 'fail'
+    if 'indeterminate' in external:
+        return 'indeterminate'
+    return 'pass'
+
+
 def agent_prompt(case, skill=None):
     # Never serialize the whole case: expect/trap belong exclusively to the judge.
     prompt = ("Read the supplied workspace context and complete this request. This is a single "
-              "noninteractive turn; record unresolved questions and stop at required approval gates. "
+              "noninteractive turn; record consequential unresolved questions and respect the requested scope. "
               "If code is requested, edit workspace files and execute feasible checks. For design, "
               "planning or review, give the requested artifact in your final answer.\n\n" + case["prompt"])
     if skill is not None:
-        prompt += "\n\nApply these skill instructions:\n" + skill
+        prompt += "\n\nApply these skill instructions. Supporting files are installed under .agents/skills/" + case["skill"] + "/; resolve references from there.\n" + skill
     return prompt
 
 
@@ -159,7 +197,7 @@ def save_execution(path, result):
 def deterministic_checks(case, before, after, output, execution):
     if execution["status"] != "succeeded":
         return {"status": "not_executed", "reason": "Agent execution did not complete."}
-    if case["id"] != "duplicate-webhook":
+    if not case.get("heldout"):
         return {"status": "checked", "nonempty_answer": bool(execution["answer"].strip()),
                 "fixture_unchanged": before == after,
                 "meaning": "Artifact checks only; semantic correctness requires independent judging."}
@@ -172,11 +210,13 @@ def deterministic_checks(case, before, after, output, execution):
             generated = command(sandbox_command(workspace, Path(runtime),
                                 [sys.executable, "-m", "unittest", "discover", "-v"]), workspace, 30)
             generated["command"] = [sys.executable, "-m", "unittest", "discover", "-v"]
-        shutil.copyfile(ROOT / "checks" / "webhook.py", workspace / "_heldout_check.py")
+        shutil.copyfile(ROOT / "checks" / case["heldout"], workspace / "_heldout_check.py")
         with tempfile.TemporaryDirectory(prefix="lean-runtime-") as runtime:
             heldout = command(sandbox_command(workspace, Path(runtime),
                               [sys.executable, "_heldout_check.py"]), workspace, 30)
             heldout["command"] = [sys.executable, "_heldout_check.py"]
+        generated["verdict"] = check_verdict(generated)
+        heldout["verdict"] = check_verdict(heldout, case["expected_checks"])
         write_json(output / "generated-tests.json", generated)
         write_json(output / "heldout-tests.json", heldout)
         return {"status": "checked", "generated_tests": generated, "heldout_tests": heldout,
@@ -214,6 +254,11 @@ def validate_judgment(data):
         raise ValueError("Missing critical failure rationale")
     data["legacy_result"] = evaluate({k: data["scores"][k] for k in DIMENSIONS} |
                                      {"critical_failure": data["critical_failure"]})
+    data["quality_result"] = {"passed": data["legacy_result"]["passed"] and
+                              data["scores"]["maintainability"] >= 1 and
+                              data["scores"]["requirements"] >= 1 and
+                              data["scores"]["design"] >= 1,
+                              "policy": "legacy score plus no zero requirements/design/maintainability"}
     return data
 
 
@@ -262,7 +307,7 @@ def render_report(summary):
         for variant in ("baseline", "lean"):
             item = case[variant]
             lines += ["", f"{variant}: execution **{item['execution_status']}**; checks **{item['checks']['status']}**; "
-                      f"judge **{item['judgment']['status']}**. Evidence: `{item['path']}`."]
+                      f"judge **{item['judgment']['status']}**; verdict **{item.get('verdict', 'unavailable')}**. Evidence: `{item['path']}`."]
             if item["judgment"]["status"] == "judged":
                 lines += ["", *[f"- {key}: {reason}" for key, reason in item["judgment"]["reasons"].items()]]
     return "\n".join(lines) + "\n"
@@ -274,7 +319,7 @@ def run(args):
     capabilities = capability_check()
     write_json(out / "capabilities.json", capabilities)
     cases = json.loads((ROOT / "cases.json").read_text())
-    selected = set(args.cases or [c["id"] for c in cases])
+    selected = set(args.cases or [c["id"] for c in cases if not c.get("holdout")])
     if selected - {c["id"] for c in cases}:
         raise ValueError("Unknown case ID")
     if args.pilot not in selected:
@@ -283,6 +328,7 @@ def run(args):
     cases = sorted((c for c in cases if c["id"] in selected), key=lambda c: c["id"] != args.pilot)
     rng = random.Random(args.seed)
     summary = {"model": args.model, "judge_model": args.judge_model, "seed": args.seed,
+               "scoring_policy": "operational-v1: legacy score plus nonzero requirements/design/maintainability and required checks",
                "repeats": args.repeats, "source_commit": command(["git", "rev-parse", "HEAD"], ROOT, 5)["stdout"].strip(),
                "cases_sha256": digest((ROOT / "cases.json").read_bytes()),
                "runner_sha256": digest(Path(__file__).read_bytes()),
@@ -309,12 +355,19 @@ def run(args):
                     workspace = Path(tmp)
                     for name, data in before.items():
                         path = workspace / name; path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(data)
+                    intervention = installed_skill_files({case['skill']}) if variant == 'lean' else {}
+                    for name, data in intervention.items():
+                        path = workspace / name; path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(data)
+                    intervention_dir = dest / 'intervention'; intervention_dir.mkdir()
+                    write_json(dest / 'intervention-manifest.json', manifest(intervention))
+                    for name, data in intervention.items():
+                        path = intervention_dir / name; path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(data)
                     if blocked:
                         execution = {"status": "not_executed", "answer": "", "stdout": "", "stderr": "",
                                      "reason": "prepare-only, unavailable isolation/CLI, or unsuccessful pilot"}
                     else:
                         execution = codex_run(workspace, prompt, args.model, args.timeout)
-                    after = files_at(workspace)
+                    after = {k: v for k, v in files_at(workspace).items() if not k.startswith(".agents/")}
                 save_execution(dest, execution)
                 snapshot = dest / "files"; snapshot.mkdir()
                 for name, data in after.items():
@@ -333,25 +386,25 @@ def run(args):
                     "prompt_sha256": digest(prompt.encode()), "skill_sha256": digest(skill.encode()) if skill else None,
                     "isolation": "bubblewrap mount + PID namespaces", "fresh_session": True})
                 record[variant] = {"execution_status": execution["status"], "judgment": judgment,
-                                   "checks": checks, "path": str(dest.relative_to(out))}
+                                   "checks": checks, "verdict": smoke_verdict(case, checks, judgment), "path": str(dest.relative_to(out))}
             summary["cases"].append(record)
             record["score_deltas"] = ({k: record["lean"]["judgment"]["scores"][k] -
                                           record["baseline"]["judgment"]["scores"][k] for k in METRICS}
                                       if all(record[v]["judgment"]["status"] == "judged" for v in order) else None)
-            if any(record[v]["execution_status"] != "succeeded" or
+            if any(record[v]["verdict"] == "indeterminate" or record[v]["execution_status"] != "succeeded" or
                    (args.judge_model and record[v]["judgment"]["status"] != "judged") for v in order):
                 blocked = True
     judged = sum(c[v]["judgment"]["status"] == "judged" for c in summary["cases"] for v in ("baseline", "lean"))
     summary["conclusion"] = ("Behavioural evaluations not executed; no evidence of improvement or regression."
                              if all(c[v]["execution_status"] == "not_executed" for c in summary["cases"] for v in ("baseline", "lean"))
                              else f"Independent judgments completed: {judged}. Inspect per-case evidence; execution alone is not correctness.")
-    complete = all(c[v]["judgment"]["status"] == "judged" for c in summary["cases"] for v in ("baseline", "lean"))
-    summary["suite_passed"] = ({v: all(c[v]["judgment"]["legacy_result"]["passed"] for c in summary["cases"])
+    complete = all(c[v]["judgment"]["status"] == "judged" and c[v]["verdict"] != "indeterminate" for c in summary["cases"] for v in ("baseline", "lean"))
+    summary["suite_passed"] = ({v: all(c[v]["verdict"] == "pass" for c in summary["cases"])
                                  for v in ("baseline", "lean")} if complete else None)
     write_json(out / "comparison.json", summary)
     (out / "report.md").write_text(render_report(summary))
     print(summary["conclusion"])
-    return 0 if complete or args.prepare_only else 2
+    return 2 if not complete else 1 if any(c[v]["verdict"] == "fail" for c in summary["cases"] for v in ("baseline", "lean")) else 0
 
 
 def main():

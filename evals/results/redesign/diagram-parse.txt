@@ -1,0 +1,2 @@
+parsed solution-architecture/examples/extraction.mmd
+parsed solution-architecture/examples/publication.mmd

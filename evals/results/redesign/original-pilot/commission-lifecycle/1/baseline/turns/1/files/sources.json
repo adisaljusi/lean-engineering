@@ -1,0 +1,74 @@
+{
+  "addendum:v2": {
+    "signed": true,
+    "pages": {
+      "addendum:v2:p1": {
+        "spans": {
+          "s1": {
+            "text": "Commission: 13%.",
+            "bbox": [
+              0.1,
+              0.2,
+              0.8,
+              0.3
+            ]
+          }
+        }
+      }
+    }
+  },
+  "addendum:v3": {
+    "signed": false,
+    "pages": {
+      "addendum:v3:p1": {
+        "spans": {
+          "s1": {
+            "text": "Commission: 14%.",
+            "bbox": [
+              0.1,
+              0.2,
+              0.8,
+              0.3
+            ]
+          }
+        }
+      }
+    }
+  },
+  "endorsement:v1": {
+    "signed": true,
+    "pages": {
+      "endorsement:v1:p1": {
+        "spans": {
+          "s2": {
+            "text": "Commission: 15%.",
+            "bbox": [
+              0.1,
+              0.4,
+              0.8,
+              0.5
+            ]
+          },
+          "s0": {
+            "text": "Commission: 0%.",
+            "bbox": [
+              0.1,
+              0.6,
+              0.8,
+              0.7
+            ]
+          },
+          "s100": {
+            "text": "Commission: 100%.",
+            "bbox": [
+              0.1,
+              0.8,
+              0.8,
+              0.9
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+test_assessment_requires_each_criterion_with_evidence (test_conversations.ConversationTests.test_assessment_requires_each_criterion_with_evidence) ... ok
+test_blocked_run_keeps_unscored_paired_inputs (test_conversations.ConversationTests.test_blocked_run_keeps_unscored_paired_inputs) ... ok
+test_business_oracle_discriminates_broken_symptom_only_and_correct_controls (test_conversations.ConversationTests.test_business_oracle_discriminates_broken_symptom_only_and_correct_controls) ... ok
+test_independent_failures_and_incomplete_evidence_cannot_be_overruled (test_conversations.ConversationTests.test_independent_failures_and_incomplete_evidence_cannot_be_overruled) ... ok
+test_native_resume_preserves_session_and_rejects_stale_output (test_conversations.ConversationTests.test_native_resume_preserves_session_and_rejects_stale_output) ... ok
+test_native_trace_is_required_even_when_process_and_answer_succeed (test_conversations.ConversationTests.test_native_trace_is_required_even_when_process_and_answer_succeed) ... ok
+test_revision_precedes_authorization_and_early_edit_remains_a_failure (test_conversations.ConversationTests.test_revision_precedes_authorization_and_early_edit_remains_a_failure) ... ok
+test_stakeholder_never_receives_private_criteria_or_treatment (test_conversations.ConversationTests.test_stakeholder_never_receives_private_criteria_or_treatment) ... ok
+test_agents_never_receive_grading_guidance (test_runner.RunnerTests.test_agents_never_receive_grading_guidance) ... ok
+test_failed_pilot_records_pair_and_blocks_remaining_cases (test_runner.RunnerTests.test_failed_pilot_records_pair_and_blocks_remaining_cases) ... ok
+test_full_pairing_uses_fresh_inputs_and_independent_judge (test_runner.RunnerTests.test_full_pairing_uses_fresh_inputs_and_independent_judge) ... ok
+test_heldout_checks_accept_a_correct_control (test_runner.RunnerTests.test_heldout_checks_accept_a_correct_control) ... ok
+test_heldout_checks_detect_known_fixture_defect (test_runner.RunnerTests.test_heldout_checks_detect_known_fixture_defect) ... ok
+test_judge_receives_original_business_decisions_after_artifact_rewrites (test_runner.RunnerTests.test_judge_receives_original_business_decisions_after_artifact_rewrites) ... ok
+test_judge_validation_preserves_legacy_gate_and_rejects_invalid_data (test_runner.RunnerTests.test_judge_validation_preserves_legacy_gate_and_rejects_invalid_data) ... ok
+test_real_filesystem_isolation_when_supported (test_runner.RunnerTests.test_real_filesystem_isolation_when_supported) ... ok
+test_sandbox_mounts_no_repository_or_sibling_results (test_runner.RunnerTests.test_sandbox_mounts_no_repository_or_sibling_results) ... ok
+test_scenarios_cover_every_skill (test_runner.RunnerTests.test_scenarios_cover_every_skill) ... ok
+test_snapshot_excludes_symlink_targets_and_caches (test_runner.RunnerTests.test_snapshot_excludes_symlink_targets_and_caches) ... ok
+test_synthetic_ocr_fixture_references_are_consistent (test_runner.RunnerTests.test_synthetic_ocr_fixture_references_are_consistent) ... ok
+test_timeout_and_missing_program_are_distinct (test_runner.RunnerTests.test_timeout_and_missing_program_are_distinct) ... ok
+test_unavailable_runtime_produces_no_scores_or_model_calls (test_runner.RunnerTests.test_unavailable_runtime_produces_no_scores_or_model_calls) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.666s
+
+OK

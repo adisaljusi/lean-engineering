@@ -1,0 +1,3 @@
+# Refund eligibility: accepted policy
+
+Only captured orders may be refunded. Eligibility is inclusive through 30 calendar days after capture; after that it is false. Dates are Python date objects in the merchant's already-resolved business timezone. An uncaptured order is represented by captured_on=None and is never eligible. A request before capture is not eligible. No fees, payment calls or approval workflow are in scope. The service returns a bool. The implementation change is authorized. Use existing standard-library tooling. No question about timezones, deadline, states or payment provider is needed to implement this contract.

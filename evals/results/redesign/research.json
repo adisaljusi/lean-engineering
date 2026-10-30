@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-30",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/dret/lectures/master/entel-2019/toc.html",
+      "status": 200,
+      "sha256": "f808de2069a34df8c242df762c4a4be3d0f20f5757e24cfd707ebec69ee9ec46"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/3.13/Doc/library/sqlite3.rst",
+      "status": 200,
+      "sha256": "0f26e1fdc84c408c9710434349d422825607dfbb6de41eb0d48b733bb4c52ff6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/3.13/Doc/library/asyncio-task.rst",
+      "status": 200,
+      "sha256": "b22ecadff4e99cf2d3fe399fa37bad13b8eebe9c7a064c8056628092f4d349bb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/versions/3.1.1.md",
+      "status": 200,
+      "sha256": "a612d2b72d422925616b2cabfa7acc0419ffaaf4b0eb42bfb11dc9b804f92749"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/agentskills/agentskills/main/docs/specification.mdx",
+      "status": 200,
+      "sha256": "b9079c0c10b7930e8c6a20ff2bc10cda2a3343c55185120e3f1116a1a529b220"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/main/README.md",
+      "status": 200,
+      "sha256": "47a3c673c697dfb809ee3f1325e582f8726cc8a0c1eea430dfba82f44afa900c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/main/docs/commands.md",
+      "status": 200,
+      "sha256": "595355b00da494d336ce495931ce6c4a90e61509f4493c48dfc8fdca5cbb36b7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ept/ddia-references/master/README.md",
+      "status": 200,
+      "sha256": "65ca640111296b7cf02a542ba645517361d316ca253778fe8f140457bc905c76"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+      "status": 200,
+      "sha256": "1a1560bc0e5973a0987291740a47696114f3d9c6b0cb90db6370f7922443765d"
+    }
+  ],
+  "web_service_attempts": "Search/open web service returned isError with no content. GitHub source fetches used instead. Full books not retrieved."
+}

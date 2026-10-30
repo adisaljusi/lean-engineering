@@ -127,7 +127,7 @@ class ConversationTests(unittest.TestCase):
     def test_assessment_requires_each_criterion_with_evidence(self):
         case = CASES[1]
         data = good_judgment(case)
-        data.pop('status'); data.pop('legacy_result')
+        data.pop('status'); data.pop('legacy_result'); data.pop('quality_result')
         data['criteria'].pop()
         fake = {'status': 'succeeded', 'stdout': '', 'stderr': '', 'answer': json.dumps(data)}
         with tempfile.TemporaryDirectory() as tmp, patch.object(runner, 'codex_run', return_value=fake):

@@ -1,0 +1,68 @@
+{
+  "model": "gpt-6.1",
+  "actor_model": "gpt-6.1",
+  "judge_model": "gpt-6.1",
+  "source_commit": "fc7f9f7022a37c6d30043982917619baea42ca57",
+  "workflow_sha256": "b8de167be27e8c1fb37d9316d14c77823c2c58f751b129bb844b20868419e15a",
+  "runner_sha256": "b6496aa55f717f2b56cd6a92c965cecd2e23123debd188aadea453c3c537135f",
+  "seed": 0,
+  "max_turns": 12,
+  "timeout_seconds": 100,
+  "turn_timeout_seconds": 35,
+  "reasoning_effort": "medium",
+  "skill_mode": "native project .agents/skills, no body injection in user prompts",
+  "utc_started": "2026-10-30T16:11:43Z",
+  "cases": [
+    {
+      "id": "commission-lifecycle",
+      "repeat": 1,
+      "execution_order": [
+        "baseline",
+        "lean"
+      ],
+      "baseline": {
+        "execution_status": "timeout",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 1,
+        "revision_delivered": false,
+        "seconds": 35.108,
+        "path": "commission-lifecycle/1/baseline"
+      },
+      "lean": {
+        "execution_status": "timeout",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 1,
+        "revision_delivered": false,
+        "seconds": 35.104,
+        "path": "commission-lifecycle/1/lean"
+      }
+    }
+  ],
+  "conclusion": "Inspect conversation completion, independent checks and criterion evidence separately; delivery is not a passing grade.",
+  "outcomes": {
+    "baseline": {
+      "pass": 0,
+      "fail": 0,
+      "indeterminate": 1
+    },
+    "lean": {
+      "pass": 0,
+      "fail": 0,
+      "indeterminate": 1
+    }
+  }
+}

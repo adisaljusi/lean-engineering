@@ -1,5 +1,24 @@
 # Lean Engineering evaluation report
 
+## Operational-guidance revision (2026-10-30)
+
+The revised skills and live adapter remain **behaviorally unvalidated**. The
+original snapshot now passes all 22 harness tests including isolation, but a
+bounded live pilot received model-host proxy CONNECT 403 errors and both subject
+arms timed out without answers. No stakeholder/assessor calls or scores exist.
+The revised harness has 28 passing tests and its Python example has six; these
+are limited code/checker results, not evidence of skill effectiveness. CLI testing
+reproduced a missing technical-design skill on master (invalid description YAML)
+and verifies the revised self-contained layout separately.
+
+See [the redesign critique and proof](../docs/REDESIGN.md) and
+[retained evidence](results/redesign/). Historical reports below are preserved
+with their original source IDs and limitations; several local source IDs are not
+fetchable from origin. New content changes address static deficiencies requested
+by the user; they are not justified by observed agent failures.
+
+---
+
 **Finding: undetermined.** No scenario generated a model answer, and no independent
 judge ran. There is no evidence yet that Lean Engineering improves or harms
 correctness, simplicity, architecture or maintainability. No scores were invented.

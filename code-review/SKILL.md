@@ -1,12 +1,16 @@
 ---
 name: code-review
-description: Review changes on two independent axes, specification compliance and engineering quality, including layering, SOLID, domain invariants, security, test coverage and unnecessary complexity.
+description: Review the actual change for behavioral correctness, maintainability, security, compatibility and justified complexity using concrete evidence.
 ---
 
 # Engineering Code Review
 
-Review the actual diff and relevant surrounding code, not the author's claims. First review **specification compliance**: link `R*/AC*` to changes, detect missing behaviors, invalid assumptions, compatibility regressions and inadequate tests. Then review **engineering quality** separately: cohesion, naming, complexity, dependency direction, boundaries, model correctness, data safety, security, concurrency, resource handling and observability.
+Inspect the diff and affected callers, contracts, schema, tests and accepted decisions. Use review-only scope when requested; authorization to implement or fix also permits ordinary remedies. Do not invent missing spec/design documents as a review prerequisite.
 
-Apply repository conventions and proportionate Clean Code/SOLID principles, not arbitrary style preferences. Identify unjustified architectural complexity and missing failure-path coverage. Give actionable findings with file/line locations, severity, reproducible evidence and recommended remedy. Distinguish bugs from optional improvements. Do not mutate code during review-only requests. Critical correctness/security findings block completion.
+First establish changed behavior and invariants: permissions, data semantics, transactions, compatibility and likely failure paths. Then inspect cohesion, dependency direction, errors/resources/concurrency, operability and whether humans can understand and change the flow. Verify claims against actual code and execution evidence.
 
-Perform a **simplification pass**: for each added file, class, wrapper, helper, interface, configuration option or dependency, ask what would break if it were removed or inlined. Flag needless indirection, speculative extension points, micro-functions that obscure flow, repeated error handling and tests coupled to implementation details. Do not reward fewer lines blindly: retain decomposition that expresses real boundaries, domain invariants or test seams. Report the simplest viable alternative and rough change footprint when complexity seems unjustified.
+Load [review decisions](references/review.md) for a concrete procedure and examples of excessive versus justified complexity.
+
+For each significant abstraction ask what responsibility, invariant or operational constraint it owns. Suggest inlining a wrapper that forwards unchanged calls without policy; preserve boundaries that isolate business rules or partial failure. Pattern names, test counts, line counts and fewer files are not evidence of quality.
+
+Return actionable findings with location, trigger, consequence, evidence and remedy. Separate demonstrated defects, uncertain risks requiring verification and optional improvements. Prioritize consequential problems; avoid style-only tooling changes and speculative rewrites. A favorable overall impression cannot erase a concrete correctness or security defect. Report scope/verification limits and do not claim tests ran unless supported by actual results.

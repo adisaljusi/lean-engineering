@@ -1,12 +1,16 @@
 ---
 name: requirements-engineering
-description: Turn a clarified feature idea into precise functional and non-functional requirements, business rules, scope, traceable IDs and measurable quality constraints before architecture or coding.
+description: Define precise business behavior, scope and consequential quality requirements from available evidence and stakeholder decisions.
 ---
 
 # Requirements Engineering
 
-Read domain docs, existing capabilities, constraints and stakeholder decisions. Document outcome, actors, in-scope and excluded behavior; distinguish business rules from solution ideas. Give each requirement an ID (`R1`, `R2`). Define domain language, invariants, triggers, states, authorization, exceptions and dependencies.
+Inspect existing capabilities, terminology, contracts, tests and accepted decisions. Use when behavior needs a durable definition or a requirements handoff is requested; reuse an existing issue/spec for small changes.
 
-Capture quality attributes only when they matter: latency, throughput, availability, recovery, security/privacy, auditability, interoperability, cost and maintainability. Express measurable scenarios or explicitly mark targets unknown. Identify affected existing behavior and compatibility constraints. Ask about contradictions rather than inventing answers.
+Define outcome, actors, scope and business meaning before prescribing technology. Give stable IDs when traceability is useful. State triggers, invariants, identity, ownership, permissions, lifecycle, exceptions and compatibility only where relevant. Distinguish unknown from zero, upload time from effective time, and proposals from published state.
 
-Produce/update `spec.md` under repository conventions. Gate: no material ambiguity is silently assumed. Do not design services, database tables or algorithms in the requirements phase.
+Use concrete examples to expose contradictions. Ask only about unknowns that change this decision; preserve accepted answers across handoffs. Mark facts, proposals, assumptions and unresolved rules plainly. A contradictory stakeholder wish is not approved policy. Do not invent numerical latency, retention or accuracy targets.
+
+Load [requirements and acceptance](references/requirements.md) for rules involving dates, approvals, evidence or multiple stakeholders. It shows how to turn decisions into verifiable statements without designing infrastructure.
+
+A useful result fits the repository's conventions and gives the next engineer observable behavior, important quality constraints, source/decision traceability and remaining questions. Quality attributes should name workload, stimulus, response and measure, or explicitly identify an unknown target. Do not require formal approval for every specification update; use the actual user authorization and consequence of changing accepted behavior. Requirements work alone does not authorize implementation.

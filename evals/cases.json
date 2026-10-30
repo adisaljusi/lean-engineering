@@ -11,7 +11,7 @@
     "skill": "technical-design",
     "prompt": "We need to update commission values when an addendum arrives. We have Contract, Section and Commission models. Please design the data definitions and code structure, but do not code yet.",
     "trap": "Agent assumes overwrite semantics and invents event sourcing, a workflow engine and a dozen microservices without asking about version history or provenance.",
-    "expect": "Ask about identity, precedence, versioning, audit and duplicates; propose minimal domain modelling and explicit field definitions, stop for approval."
+    "expect": "Ask about identity, precedence, versioning, audit and duplicates; propose minimal domain modelling and explicit field definitions, respect the design-only request."
   },
   {
     "id": "duplicate-webhook",
@@ -19,7 +19,9 @@
     "prompt": "A webhook handler currently inserts the same event twice if the sender retries. Add idempotency using existing event IDs and database uniqueness. The API and persistence layer already exist.",
     "trap": "Agent introduces Kafka, Redis, retry decorators and many one-use functions; tests each helper with mocks but no real DB uniqueness case.",
     "expect": "Prefer existing uniqueness constraint and transaction behavior, integration test duplicate delivery, concise error handling; no unnecessary infrastructure.",
-    "fixture": "duplicate-webhook"
+    "fixture": "duplicate-webhook",
+    "heldout": "webhook.py",
+    "expected_checks": 8
   },
   {
     "id": "review-overfactored",
@@ -90,7 +92,7 @@
     "fixture": "commission-acceptance",
     "prompt": "Use the approved commission requirements and business example to produce a compact set of concrete Given/When/Then acceptance scenarios linked to the requirement IDs. Prioritize consequential rules and failure modes. Identify any rule that still needs clarification; do not design or write production code or test implementations.",
     "trap": "Agent rewrites approved policy, produces happy paths only, treats missing rates as zero, misses effective-date boundaries or stale-review publication, or generates a large Cartesian product of implementation-level tests.",
-    "expect": "Use concrete example values and AC-to-R traceability. Cover authorization and tenant access, valid/invalid/unknown rates, signed and valid source evidence, no publication before approval, start-inclusive/end-exclusive dates with unaffected other sections, repeated publication, a changed decision invalidating stale review, and conflicting candidates with preserved evidence/history. Cover every R with a scenario or explicit other verification method, using concise scenario outlines or combined examples where appropriate. Assertions concern observable outcomes, not private classes or mock calls. Do not reward scenario count or require every theoretical combination. Preserve accepted rules, flag genuine missing behavior and stop for scenario approval without coding."
+    "expect": "Use concrete example values and AC-to-R traceability. Cover authorization and tenant access, valid/invalid/unknown rates, signed and valid source evidence, no publication before approval, start-inclusive/end-exclusive dates with unaffected other sections, repeated publication, a changed decision invalidating stale review, and conflicting candidates with preserved evidence/history. Cover every R with a scenario or explicit other verification method, using concise scenario outlines or combined examples where appropriate. Assertions concern observable outcomes, not private classes or mock calls. Do not reward scenario count or require every theoretical combination. Preserve accepted rules, flag genuine missing behavior and respect the scenario-only request without coding."
   },
   {
     "id": "routing-ambiguous-business-feature",
@@ -98,7 +100,7 @@
     "fixture": "commission-discovery",
     "prompt": "Take this commission automation request through Lean Engineering. Start by choosing the next useful phase and explaining the immediate work needed from the existing stakeholder context. We have not approved a specification, data model or implementation yet. Do not implement in this response.",
     "trap": "Agent mechanically produces spec/design/plan and declares all phases approved, or jumps to coding because the feature sounds technically straightforward.",
-    "expect": "Recognize unresolved business meaning and contradictory stakeholder rules. Route to focused discovery using existing documents, then requirements/acceptance work when the critical decisions are settled. Explain the next concrete questions and approval dependencies without running the whole lifecycle or generating ceremonial documents. Keep technical design/implementation behind their actual gates. Do not claim approval or imply that a bounded first-turn response completes elicitation."
+    "expect": "Recognize unresolved business meaning and contradictory stakeholder rules. Route to focused discovery using existing documents, then requirements/acceptance work when the critical decisions are settled. Explain the next concrete questions and approval dependencies without running the whole lifecycle or generating ceremonial documents. Keep technical design/implementation within the requested design-only scope. Do not claim approval or imply that a bounded first-turn response completes elicitation."
   },
   {
     "id": "routing-small-approved-fix",
@@ -106,5 +108,66 @@
     "prompt": "A validation error message has a typo. The exact corrected message is already agreed, and an existing regression test is failing on the current text. One handler owns the message; no API shape or business rule changes. Explain the next work and verification you would choose. Do not implement in this response.",
     "trap": "Agent insists on a new stakeholder interview, C4 design, ADR and three formal documents before correcting one agreed message, or claims it has fixed or tested code without executing anything.",
     "expect": "Choose a proportionate direct fix-and-verification path using the existing failing regression and handler. Do not reopen agreed semantics, impose architecture phases, create new abstractions/documents, or expand the test suite without a concrete risk. Respect the response-only request; distinguish planned verification from executed evidence. Routing to test-driven-development and evidence-verification is reasonable without requiring literal skill-name matching."
+  },
+  {
+    "id": "authorized-message-fix",
+    "skill": "lean-engineer",
+    "fixture": "authorized-message",
+    "prompt": "Fix the agreed spelling error in this service. Read README, implement and verify.",
+    "trap": "Unnecessary interview/documents or repeated permission despite explicit authorization; claims checks without execution.",
+    "expect": "Correct exact response with unchanged shape, useful executed check, no new lifecycle ceremony or abstractions.",
+    "heldout": "message.py",
+    "expected_checks": 2
+  },
+  {
+    "id": "documented-refund-feature",
+    "skill": "grill-with-docs",
+    "fixture": "documented-refund",
+    "prompt": "Implement refund eligibility from the accepted policy in this repository and verify it.",
+    "trap": "Asks deadline/timezone/state questions already answered in README or invents payment orchestration.",
+    "expect": "Read and apply documented business meaning, implement exact calendar boundaries and unknown semantics with proportionate Python and useful checks; no redundant interview/approval.",
+    "heldout": "refund.py",
+    "expected_checks": 3
+  },
+  {
+    "id": "modular-clinic-design",
+    "skill": "solution-architecture",
+    "fixture": "modular-clinic",
+    "prompt": "Inspect current scheduling context and propose a proportionate waitlist design. Explain current/proposed flow, alternatives and what would justify changing the design.",
+    "trap": "Adds services/queues without ownership/workload need, or ignores atomic booking invariants to look simple.",
+    "expect": "Reason from observed architecture and booking invariants. Compare credible options without mandating a topology; explain notification-policy uncertainty, transactions, ownership, verification, costs and concrete evolution triggers."
+  },
+  {
+    "id": "distributed-settlement-design",
+    "skill": "solution-architecture",
+    "fixture": "distributed-settlement",
+    "prompt": "Design a reliable settlement flow respecting the current system constraints. Include a useful editable flow/sequence view, alternatives, recovery and compatibility.",
+    "trap": "Rejects durable communication because simple is always better; promises exactly-once effects from broker delivery; invents compensation.",
+    "expect": "Honor independent data ownership, outage durability, idempotent effects, ordering scope, acknowledgment/crash semantics, schema compatibility, operations and unresolved business rules. Broker/outbox or another durable solution can earn full credit if invariants and costs are satisfied."
+  },
+  {
+    "id": "shipping-api-evolution",
+    "skill": "technical-design",
+    "fixture": "api-evolution",
+    "prompt": "Propose the shipping API evolution and a safe consumer migration. Compare credible options and show how to verify compatibility.",
+    "trap": "Calls new enum additive/safe or silently maps held into old semantics.",
+    "expect": "Preserve actual old-client support and precise units/unknown semantics; reason about enum strictness, consumer capability, expand/migrate/contract or versioning, staged rollback and old/new contract tests. No preferred endpoint/version pattern is mandated."
+  },
+  {
+    "id": "audit-export-workload",
+    "skill": "technical-design",
+    "fixture": "large-export",
+    "prompt": "Design the export fix using the documented workload. Explain representation/query/algorithm costs, consistency, resumability and recovery tradeoffs.",
+    "trap": "Loads all rows or uses offset pagination with unstable ties; claims restart creates same snapshot.",
+    "expect": "Meet tenant isolation, stable ordering, memory and snapshot requirements with credible alternatives and measured unknowns. Discuss query/index, streaming/chunking, tie-breakers, retention/long snapshot costs, resumability semantics and verification. No required implementation pattern."
+  },
+  {
+    "id": "holdout-device-conflicts",
+    "skill": "solution-architecture",
+    "fixture": "holdout-device-sync",
+    "prompt": "Propose a safe synchronization and evolution approach from the repository context.",
+    "trap": "Silently resolves conflicting human observations or assumes global ordering/exactly-once delivery.",
+    "expect": "Assess constraints, explicit unresolved authority, retained evidence, duplicates/reordering, version skew and recoverable operational behavior. Accept any justified design satisfying stated invariants.",
+    "holdout": true
   }
 ]

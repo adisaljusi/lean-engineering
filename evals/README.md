@@ -167,3 +167,48 @@ is skipped with a concrete reason when namespaces are unsupported. Live Codex
 and judge execution still need a successful pilot; mocks do not prove them.
 
 See `REPORT.md` and `results/` for this environment's actual outcomes and limits.
+
+## Operational-guidance redesign (2026-10-30)
+
+The revised collection is behaviorally unvalidated. Historical results above and
+in REPORT.md are preserved; they are not evidence of improvement. There are now
+21 smoke definitions: 20 development cases plus one author-visible reserved
+holdout (`holdout-device-conflicts`). Default runs exclude `holdout: true`;
+explicitly select it with `--cases` and `--pilot` only after freezing instructions
+and criteria. One small reserved case is not a statistically representative or
+blind holdout; do not claim it is. Keep future unseen cases with an independent
+owner before a confirmatory campaign.
+
+Added contrasting cases cover actual authorized typo implementation, a refund
+feature with all answers in README, a modest clinic monolith, independently owned
+distributed settlement with durable recovery needs, strict-client API evolution
+and a 50-million-row snapshot export. These exercise constraints and reasoning,
+not a required topology. Original multi-document cases remain. New implementation
+oracles have per-case expected counts (2 and 3), alongside the existing 8-check
+oracles. Counts validate completeness of a known checker, never engineering
+quality or subject test quantity.
+
+Treatment in the smoke runner still explicitly receives its selected SKILL.md;
+it now also receives that skill's complete directory under `.agents/skills`.
+Its prompt identifies the installed reference root. The intervention and hashes
+are retained separately from application artifacts. This is an instructed
+application experiment, not native skill discovery. Native discovery remains
+the workflow runner's intervention. Both run in fresh isolated workspaces with
+no source checkout mounted.
+
+The legacy six-dimension 9/12 score remains for historical comparison. New verdicts
+also require nonzero requirements, design and maintainability. Independent
+required-check failures force fail even with a favorable judge. Empty, skipped,
+missing, wrong-count, timeout and crashed required checks cannot pass. Known
+concrete failures remain recorded even if other evidence is incomplete.
+`--prepare-only` now exits 2, as does an indeterminate evaluation; exit 1 is a
+completed failed evaluation, exit 0 a completed passing evaluation. This changes
+the old preparation-success exit convention. Do not compare new verdicts against
+historical legacy-only verdicts without identifying the policy change.
+
+The rubric now assesses unnecessary questioning/reapproval, existing answers,
+justified complexity, practical Python and diagram/contract consistency. A judge
+can still be wrong: independently review pilot evidence and calibrate more than
+one plausible architecture before a repeated campaign. Do not alter scores or
+isolation to obtain a pass. Source/evidence details: `docs/REDESIGN.md` and
+`results/redesign/`.

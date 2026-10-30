@@ -1,45 +1,85 @@
-# Lean Engineering v2
+# Lean Engineering
 
-Ten composable agent skills for architecture-first, behavior-driven, test-evidenced software engineering. Inspired by modular skill workflows, without copying their source instructions.
+Ten composable skills for thoughtful engineering: read the existing system,
+resolve consequential uncertainty, explain choices, implement authorized work and
+verify it. Small changes stay small; difficult constraints can justify richer
+architecture. Skill names are entry points, not a mandatory lifecycle.
 
-## Usage
+## Install
 
-Install each subdirectory as a separate skill in your agent's supported skills location. Invoke `lean-engineer` for the full workflow or choose a single skill for focused work. Each skill is standalone and uses existing repository conventions.
+From your project, the intended interactive installation is:
 
-## Suggested lifecycle
+```sh
+npx skills add adisaljusi/lean-engineering
+```
 
-`lean-engineer` routes: `grill-with-docs` → `requirements-engineering` → `behavior-specification` → `solution-architecture` → `technical-design` → `implementation-planning` → `test-driven-development` → `code-review` → `evidence-verification`.
+**This improvement branch depends on the unmerged evaluation branch.** Until it
+is merged, the command above installs unchanged `master`, which currently exposes
+only nine skills because its technical-design description has invalid YAML.
+Install the revised ten skills from this branch explicitly:
 
-Human review gates: unresolved critical requirements, acceptance specification, material architecture/data-model decisions, and authorization to implement. Small changes may use a subset of the skills.
+```sh
+npx skills add https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering
+```
 
-## Artifact budget
+Verified CLI selection syntax (1.7.4; Node 24.19.0 used here):
 
-Keep routine feature documents to `spec.md`, `design.md`, `plan.md` (in project conventions or `specs/<feature>/`). Record consequential decisions in ADRs. Never create empty documents to satisfy a ritual.
+```sh
+# List without installation
+npx skills@1.7.4 add https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering --list
+# Full set, project-local, copied to Codex's native .agents/skills location
+npx skills@1.7.4 add https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering --skill '*' --agent codex --copy -y
+# One skill, including its own references and runnable examples
+npx skills@1.7.4 add https://github.com/adisaljusi/lean-engineering/tree/improve/operational-engineering --skill technical-design --agent codex --copy -y
+```
 
-## Principles
+Omit selection flags for the interactive skill/agent chooser. No custom installer
+or runtime is needed. Each directory contains its own supporting files; no shared
+checkout path or development symlink is required. Use the agent's installed-skill
+catalog; `lean-engineer` works without companions by doing the needed steps
+directly. Other agent runtime discovery is unverified here. Installation/file
+checks do not prove an agent reads or applies a skill.
 
-Repository conventions first. Domain models before technology. C4/cloud/data architecture as relevant; explicit technical models, contracts and data definitions. Apply Clean Code, SOLID, layered/hexagonal architecture selectively. Prefer simple reversible designs. Tests and executed evidence over assertions. No implementation without approval; no success claim for unrun checks.
+## Choose the next useful work
 
-## Validation exercises
+| Need | Entry point |
+|---|---|
+| Route/deliver a change | `lean-engineer` |
+| Resolve business/design unknowns | `grill-with-docs` |
+| Precise behavior and examples | `requirements-engineering`, `behavior-specification` |
+| Boundaries, flows, alternatives, diagrams and evolution | `solution-architecture` |
+| Concrete data/API/algorithm/Python decisions | `technical-design` |
+| Dependent delivery increments | `implementation-planning` |
+| Authorized implementation and useful tests | `test-driven-development` |
+| Review correctness/maintainability | `code-review` |
+| Execution-backed confidence and limits | `evidence-verification` |
 
-1. Ambiguous addendum processing: `grill-with-docs` must ask about contract identity, versioning, precedence, duplicates and audit provenance before designing.
-2. Data-model approval: `technical-design` must define types, invariants, nullability, ownership, evolution and alternatives, then stop for review.
-3. Planning: `implementation-planning` must identify files/modules, dependencies, tests and vertical slices, without inventing architectural patterns.
-4. Verification: `evidence-verification` must classify skipped integration checks as Not verified, not Passed.
+Each SKILL.md tells you which supporting guide to load for which decision. Visual
+architecture is bundled with architecture; Python with technical design and
+implementation. Neither needs an extra skill or mandatory engineering library.
+Existing decisions and user authorization carry across skill boundaries. Use
+existing issues/docs; create a design/ADR/plan only when it helps the work.
 
-## Behavioral evals
+## Examples and validation
 
-For conversational workflow testing inspired by Superpowers, see
-`evals/WORKFLOWS.md`: three action-based scenarios exercise discovery, changed
-requirements, approval gates, implementation and verification under pressure.
+- Targeted commission discovery: `grill-with-docs/references/discovery.md`.
+- Monolith/distributed decisions: `solution-architecture/references/decisions.md`.
+- Evidence/conflict/human-review design and editable diagrams:
+  `solution-architecture/references/extraction.md` and `examples/` in that skill.
+- Runnable Python publication with transactions/stale review:
+  `technical-design/examples/README.md`.
 
-See `evals/` for fourteen adversarial scenarios covering all ten skills and a small standard-library runner
-that compares fresh baseline and skill-instructed Codex sessions, preserves raw
-artifacts, runs held-out database checks, and requests independent rubric judging.
-Start with the pilot procedure in `evals/README.md`. Execution requires supported
-Codex access and filesystem isolation; blocked cases are reported as not executed.
-`python3 evals/score.py --self-test` validates supplied-score handling only and
-is not a behavioral evaluation. Actual local results are in `evals/REPORT.md`.
+```sh
+python scripts/validate_skills.py
+python -m unittest discover -s technical-design/examples -v
+python -m unittest discover -s evals/tests -v
+python evals/score.py --self-test
+```
 
-Install the skills in your supported coding-agent environment to use them outside
-the isolated evaluations.
+[Redesign critique, rationale and validation](docs/REDESIGN.md) separates static
+instruction deficiencies, actual installation/harness observations and hypotheses
+requiring behavioral evaluation. [Evaluation guide](evals/README.md) and
+[workflow guide](evals/WORKFLOWS.md) explain fresh baseline/treatment comparisons,
+independent stakeholders/assessors and retained failures/indeterminate attempts.
+The revised skills and live adapter remain **behaviorally unvalidated**. The live
+pilot hit model-host proxy denials; no scores or improvement claim are reported.

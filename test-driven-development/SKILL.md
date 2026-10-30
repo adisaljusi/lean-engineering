@@ -1,14 +1,16 @@
 ---
 name: test-driven-development
-description: Implement approved software changes with red-green-refactor, domain unit tests, real integration tests, critical E2E workflows, regression checks and representative AI evaluations.
+description: Implement authorized changes with meaningful failing checks, proportionate Python/code design, real boundary tests and honest regression evidence.
 ---
 
 # Test Driven Development
 
-Work one approved vertical slice at a time. Link the slice to its acceptance scenario and invariants. Where feasible, write a meaningful failing test, execute it and observe the expected failure, implement minimum code, execute the passing test, refactor without behavior change, then run relevant regressions. For infrastructure exploration, allow bounded spikes and convert findings into tests.
+Read accepted intent, owning code, existing tests and project tooling. For authorized implementation choose the smallest useful slice; no new specification or approval is required just to begin coding. Respect design-only requests.
 
-Default test policy: unit tests for domain logic and edge cases; real integration tests at affected database/API/queue boundaries; E2E checks for changed critical workflows (service-level E2E is valid for headless systems). Avoid claiming integration coverage from mocks alone. For AI/LLM components add versioned evaluation fixtures, schema checks, quality thresholds, adverse cases and regression samples; do not assume deterministic text.
+Where useful, reproduce the defect with a meaningful failing check, observe the expected failure, implement, observe success and refactor for clarity. An existing failing regression can supply the red step. For low-impact text/config changes use appropriate existing checks; do not add tests that merely mirror the edit. Bounded spikes are appropriate when the unknown is technical; convert consequential findings into stable checks.
 
-Follow approved interfaces and repository coding conventions. Revisit design if implementation exposes a faulty assumption; do not silently rewrite business rules. Record actual commands, pass/fail outcomes and omitted tests. Never claim completion without verification.
+Load [implementation and verification](references/implementation.md) for choosing test boundaries, real database failure checks, Python responsibilities and resource/concurrency risks.
 
-Keep code smaller than the imagined future framework: reuse existing modules, avoid wrappers that only forward calls, tiny one-use helpers without expressive value, and one-class-per-operation designs. Test behavior at stable boundaries instead of mirroring each private helper with its own test. Add defensive handling when the failure mode is plausible and consequential; avoid defensive branches for impossible states that invariants already exclude. Refactoring must improve readability, not merely increase the function count.
+Test domain invariants at stable boundaries and persistence/API/queue behavior with real integrations where those contracts change. Mocks isolate unavailable collaborators but do not prove transaction or delivery semantics. Add critical workflow coverage when the changed path warrants it. For model components use versioned inputs, meaningful adverse cases and repeated evaluation; deterministic schema checks do not establish extraction quality.
+
+Keep humans able to follow the flow: cohesive functions/modules, explicit data semantics, no forwarding hierarchies, class-per-operation frameworks or private-method test mirrors. Reuse repository libraries and tooling. Explain material discoveries that change accepted behavior rather than silently rewriting it. Record executed commands/outcomes and unverified boundaries; never turn a test plan into a success claim.

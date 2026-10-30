@@ -1,0 +1,19 @@
+{
+  "status": "static checks complete; remote installation pending",
+  "behavioral_effectiveness": "unvalidated",
+  "original_harness": {
+    "passed": 22,
+    "skipped": 0
+  },
+  "revised_harness": {
+    "passed": 28,
+    "skipped": 0
+  },
+  "python_example": {
+    "passed": 6
+  },
+  "diagram_syntax": "passed",
+  "diagram_render": "blocked by Chromium file URL policy",
+  "model_execution": "original subjects timed out after proxy CONNECT 403; no answers/scores",
+  "source": "fc7f9f7022a37c6d30043982917619baea42ca57"
+}

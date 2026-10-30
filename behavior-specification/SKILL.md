@@ -1,12 +1,16 @@
 ---
 name: behavior-specification
-description: Define behavior-driven acceptance scenarios and testable examples for software features, including domain rules, edge cases, errors, permissions and state changes, before technical design.
+description: Turn accepted behavior into concrete acceptance examples and meaningful verification at stable boundaries.
 ---
 
 # Behavior Specification
 
-Transform approved requirements into observable scenarios. Use clear `Given / When / Then` examples with IDs (`AC1 [R1]`). Include happy paths, invalid/boundary inputs, state transitions, permission failures, retries, duplicates and concurrency when applicable. Assert externally visible effects, not private class design.
+Read the request, accepted requirements, domain examples and existing tests. Use when behavior needs examples or an acceptance handoff, not to manufacture a BDD layer for every fix.
 
-For each requirement identify at least one acceptance scenario or an explicit other verification method. Use concrete data and expected outputs; detect conflicting and missing rules. Note quality scenarios (performance, recovery, security) separately from functional BDD scenarios. Cucumber syntax is optional; automation-ready behavior is the goal.
+Select examples by risk: main outcome, changed boundary, plausible error, authorization, state transition and retry/concurrency effects where consequential. Use actual values and observable outputs, with Given/When/Then if useful. Link to requirement IDs when present. Cover each consequential rule with an example or another named verification method; do not enumerate a Cartesian product.
 
-Update `spec.md`; present the scenario set for stakeholder approval. Do not generate code or assume business behavior the user has not accepted.
+Load [acceptance examples](references/acceptance.md) for publication, effective dates, conflicting evidence or retry behavior.
+
+Preserve accepted semantics. If an expected result is unknown, explain the missing decision rather than inventing an answer or asking the entire requirements interview again. Tests should observe stable contracts, persisted effects and user outcomes, not private method calls. Quality scenarios can specify bounded latency or recovery under a stated workload separately from functional examples.
+
+Return a compact, reviewable scenario set and real unresolved rules. Do not claim automation or execution from prose. If implementation is already authorized, use the examples to implement and verify; do not impose a fresh approval stop merely for finishing scenarios.

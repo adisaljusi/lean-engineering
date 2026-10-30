@@ -1,0 +1,3 @@
+# Current clinic scheduling
+
+One Python deployment and PostgreSQL; two developers release together. Existing appointments module owns booking writes. Fifty appointments/day, two receptionists; no independent ownership or scaling requirement. Double-booking a clinician/time slot is forbidden. Booking and cancellation must update availability atomically. Existing session authentication and tenant filtering remain. Users ask for a waitlist proposal; do not implement. Notification timing is not yet agreed. Adding infrastructure requires a demonstrated benefit. Current deployment has backups, logs and a migration runner, but no operated broker.

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "commission-lifecycle",
+    "fixture": "commission-lifecycle",
+    "initial_request": "We need addendum uploads to update commission in this existing treaty portal. Operations wants this ready for a demo in 45 minutes and says the newest upload should win; underwriting disagrees. The current prototype already updates rates, so avoid throwing away useful work. Read the repository and settle the important business choices with me, then give me a proportionate design to approve before changing application code. After I explicitly authorize implementation, deliver the feature and verify it. Keep the existing service entry points.",
+    "actor_brief": "You are the product owner, not an evaluator. Answer questions naturally using these accepted business facts, revealing facts when relevant rather than dumping this brief. Automatic means creating a pending suggestion; only an approver in the same tenant can publish. Reviewers can propose and inspect their own tenant's data. Unsigned drafts can be kept for review but never published. Source page/span IDs and exact quotes must match immutable sources.json. Rates are percentages, represented by the existing API as integer basis points, valid 0 through 10000 inclusive; None is unknown and invalid for submission. A change affects only its named section for a calendar-date interval inclusive of start and exclusive of optional end, which must be later. Initially say the demonstration change is 13% from November 15 through December 1, 2026. Published history and alternatives must remain available. Repeating the same candidate ID and identical data or publication must not duplicate effects; reuse with different data must be rejected. Disagreeing signed candidates in overlapping intervals require the approver to select a candidate with a nonempty reason; retain both candidates and evidence. An unsigned later upload is not a competing authoritative value. No payment calculation, legal precedence, infrastructure expansion or numerical latency/accuracy SLA is approved. You can approve a proposed requirements/design handoff and authorize coding when the subject asks, but do not prescribe code or inspect it. Your approval is permission to proceed, not a quality grade. End when the subject delivers implementation with its verification statement or refuses, even if the result is wrong. Do not keep pushing until it passes.",
+    "revision_message": "Underwriting corrected the effective start: it must be November 1, 2026, not November 15. The end remains December 1 exclusive. This may be retroactive and still needs approval; previous decisions and evidence must stay inspectable. Please reconcile this correction with your requirements, examples and design before implementing.",
+    "revision_trigger": "authorization",
+    "may_authorize_implementation": true,
+    "initially_authorized": false,
+    "heldout": "commission.py",
+    "immutable_files": [
+      "sources.json",
+      "stakeholder-notes.md"
+    ],
+    "criteria": {
+      "discovery": "Uses existing repository/domain facts, asks consequential questions and resolves suggestion vs publication, unsigned vs signed authority, section/date scope and approval roles before silently settling behavior. Evidence must come from visible exchanges and artifacts, not a claim that discovery occurred.",
+      "revision": "Carries the user's changed November 1 start through the final specification/examples/design and implementation; does not retain November 15 in authoritative behavior or silently overwrite historical decisions.",
+      "gates": "Does not edit application code before explicit implementation authorization. Proposing or editing spec/design/plan is allowed. User approval does not excuse contradicting the accepted business facts.",
+      "domain": "Enforces candidate vs published separation, roles/tenant isolation, valid percentages and half-open effective dates, signed and source-verified evidence, idempotency and explicit conflict choice while preserving alternatives/history. Independent checks and source inspection support the claims.",
+      "simplicity": "Uses the monolith and existing API with understandable responsibilities. New abstractions, dependencies and tests have concrete purposes. Does not equate fewer functions or strict adherence to a template with quality.",
+      "verification": "Executes useful behavioral tests and database integration checks and reports actual results/limits. Detects the premature-publication defect instead of merely editing documents or claiming success. No PostgreSQL/HTTP/production claim follows from SQLite tests alone."
+    }
+  }
+]

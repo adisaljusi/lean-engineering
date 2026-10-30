@@ -1,0 +1,35 @@
+[
+  {
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "a9a8d60d692f108f627455c6f5d44ca04415827d"
+    ],
+    "returncode": 128,
+    "stdout": "",
+    "stderr": "fatal: remote error: upload-pack: not our ref a9a8d60d692f108f627455c6f5d44ca04415827d\n"
+  },
+  {
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "6473a96"
+    ],
+    "returncode": 128,
+    "stdout": "",
+    "stderr": "fatal: couldn't find remote ref 6473a96\n"
+  },
+  {
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "81be39e5a2705c60b54e00a4f392a8c33b1c71e3"
+    ],
+    "returncode": 128,
+    "stdout": "",
+    "stderr": "fatal: remote error: upload-pack: not our ref 81be39e5a2705c60b54e00a4f392a8c33b1c71e3\n"
+  }
+]

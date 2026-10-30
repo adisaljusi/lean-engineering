@@ -1,18 +1,16 @@
 ---
 name: implementation-planning
-description: Convert approved specs and technical design into concise test-first vertical slices with explicit code organization, Clean Code, SOLID, dependency direction, layers, interfaces and verification tasks.
+description: Plan dependent engineering work as demonstrable increments with concrete file changes, compatibility and risk-based verification.
 ---
 
 # Implementation Planning
 
-Inspect existing source tree, tests, build and CI conventions before planning. Confirm requirements, BDD scenarios, C4 architecture and significant technical models are accepted. Produce `plan.md` containing small independently demonstrable slices linked to `R*` and `AC*` identifiers.
+Inspect the requested outcome, accepted decisions, owning source, tests, CI and repository conventions. Use a plan when work has dependent steps, migration risk or a requested handoff. A tiny agreed fix needs only the direct change and existing regression check.
 
-For each slice specify touched files/modules, responsibilities, interfaces/contracts, input/output definitions, expected failing tests, implementation steps, integration dependencies and exit checks. Identify any migration, rollout, rollback or operational changes. Prefer vertical changes delivering observable behavior over broad technical-layer tasks.
+Start with the smallest demonstrable behavior across affected boundaries. For each useful increment state touched modules, behavior/contract, dependencies, verification and any rollout/rollback. Use existing requirement IDs if available. Avoid foundation-only tasks that postpone discovering whether the flow works.
 
-Explicitly assess **engineering design quality**: descriptive naming, cohesion, minimal duplication, functions/classes with focused responsibility, separation of concerns, SOLID where useful, dependency direction, test seams, and error handling. Prefer established layering or hexagonal boundaries when suited to the repo, but do not impose ceremony or new abstractions for small features. Flag divergence from existing patterns and justify it.
+Load [delivery planning](references/delivery.md) for staged migrations or multi-document extraction. It includes a concrete slice and verification procedure.
 
-Use YAGNI and KISS. Avoid implementation transcripts, speculative abstractions or unchecked TODOs. Ensure every requirement has a planned proof and every new module has a clear owner. Do not implement until the user authorizes work.
+Check each proposed module/interface/dependency against a current responsibility, invariant or operational need. Retain meaningful boundaries; do not minimize file or function counts blindly. Prioritize domain invariants, changed contracts, real integration failure paths and critical workflows. Explain consequential omissions, not every theoretical test combination.
 
-Before approval perform a **complexity budget check**: can this be done by changing existing code? Is every proposed new class, layer, adapter, helper, file, generic type and dependency needed for today's requirements? Prefer a small cohesive function over a pattern hierarchy. State what was intentionally *not* abstracted and why. Do not split functions merely to make them shorter; extract only when naming a coherent responsibility or removing genuine duplication improves comprehension.
-
-Prioritize tests by risk: domain invariants, likely failures, changed contracts and important user journeys first. Cover material edge cases, not every theoretical combination. Identify which cases are consciously omitted and the risk. A test plan should be maintainable by a human developer, not just executable by an agent.
+Return actionable steps using existing issue/docs conventions; no required spec/design/plan trilogy. A planning-only request stops at the plan. An implementation request already permits ordinary reversible work: continue into implementation without requesting approval because planning ended. Surface a material behavior change or destructive action when it falls outside existing authorization.

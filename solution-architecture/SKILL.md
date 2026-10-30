@@ -1,14 +1,22 @@
 ---
 name: solution-architecture
-description: Review and design C4, cloud and domain-level solution architecture using DDIA principles, explicit quality drivers, system boundaries, data ownership, alternatives and ADRs.
+description: Inspect and design system boundaries, ownership and execution/data flows; compare architectural alternatives, failure behavior, migration and evolution with useful diagrams.
 ---
 
 # Solution Architecture
 
-Read approved `spec.md`, existing topology and architectural constraints. Start with actors, external dependencies, bounded contexts and ownership. Use C4 system context and container diagrams where they clarify relationships; component/dynamic/deployment views only when useful. Preserve current system conventions.
+Use for consequential system choices or architecture explanation. Inspect the current code, topology, schema, deployment configuration, contracts, operational evidence and previous decisions before recommending changes. Label gaps in evidence; do not invent an as-is architecture.
 
-Compare simplest viable design with credible alternatives. Assess actual quality drivers and applicable DDIA trade-offs: consistency, transactions, replication, ordering, concurrency, idempotency, retries, backpressure, availability, schema evolution and recovery. Do not introduce microservices, queues, events, new databases or agents without a requirement justifying their cost.
+Choose depth: a local change may need a paragraph and dependency sketch; cross-process/state changes need explicit flows, quality drivers and failure handling. Identify business capabilities and owners, then workload, consistency, recovery, security, cost and team constraints that actually distinguish options.
 
-For relevant cloud systems, describe deployables, IAM/trust boundaries, networking, secrets, monitoring, deployment/rollback, resilience, scaling and cost. Record high-impact decisions as lightweight ADRs: context, choice, alternatives, consequences, revisit trigger.
+Select references, do not read the whole library:
 
-Write the solution-architecture portion of `design.md`; obtain approval before detailed implementation planning. Do not confuse feature architecture with a company-wide enterprise architecture rewrite.
+- [Architecture decisions](references/decisions.md): module/service boundaries, dependency direction, alternatives, current versus future, migration and worked monolith/distributed choices.
+- [Data and communication](references/data-and-communication.md): transactions, workloads, algorithms, messaging, outbox/inbox, recovery, sagas and schema evolution when data or process boundaries matter.
+- [Visual architecture](references/visuals.md): choose and validate a diagram for the question; current/proposed flow and multi-document evidence example.
+- [Extraction worked example](references/extraction.md): immutable OCR evidence, conflicts, normalization, human decisions and reproducible runs.
+- [Sources](references/sources.md): attributed foundations and further reading; methods above are original synthesis, not book excerpts.
+
+Describe the current system and smallest credible change. Compare credible alternatives only for consequential choices; explain recommendation, costs, assumptions, verification and evidence that would change it. Distinguish current, proposed and possible future architecture. Future options need adoption triggers and operating costs, not speculative implementation.
+
+Include compatibility, rollout/rollback, ownership and observability where affected. Use an existing design note or ADR only when useful. Match actual authorization: design-only stops at a proposal; authorized implementation proceeds without phase approval. Avoid both unjustified infrastructure and omitting necessary durability, isolation or recovery to look simple.
