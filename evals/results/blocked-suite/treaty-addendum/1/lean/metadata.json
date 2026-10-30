@@ -1,0 +1,9 @@
+{
+  "model": "gpt-5.4",
+  "reasoning_effort": "medium",
+  "timeout_seconds": 300,
+  "prompt_sha256": "082c1d6d99cc607592d248948c6cc4778fa9b1e4e2a30bc768451a2b7939cfcf",
+  "skill_sha256": "3f3a9802b04e0123dea6893d1d4b9edb0382017336dee8f664d348a96a12144b",
+  "isolation": "bubblewrap mount + PID namespaces",
+  "fresh_session": true
+}

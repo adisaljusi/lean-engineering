@@ -1,0 +1,14 @@
+{
+  "status": "succeeded",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "seconds": 0.054,
+  "command": [
+    "python3",
+    "-m",
+    "compileall",
+    "-q",
+    "evals"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "workflows": 3,
+  "paired_contexts": 6,
+  "equal_initial_requests": true,
+  "equal_fixture_inputs": true,
+  "subject_turns": 0,
+  "actor_calls": 0,
+  "assessor_calls": 0,
+  "scores_assigned": 0,
+  "source_commit": "a9a8d60d692f108f627455c6f5d44ca04415827d"
+}

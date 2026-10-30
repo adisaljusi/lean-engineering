@@ -1,0 +1,14 @@
+{
+  "status": "succeeded",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_records_event_and_business_effect (test_app.WebhookTests.test_records_event_and_business_effect) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
+  "seconds": 0.074,
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-v"
+  ]
+}

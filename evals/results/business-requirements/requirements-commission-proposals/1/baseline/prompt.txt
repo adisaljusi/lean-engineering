@@ -1,0 +1,3 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+Turn the accepted stakeholder decisions into a concise requirements specification for commission change proposals. Separate business rules, scope and quality constraints. Make it useful for subsequent behavior specification and engineering handoff. Do not design tables, services or algorithms and do not implement.

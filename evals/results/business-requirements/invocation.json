@@ -1,0 +1,26 @@
+{
+  "status": "failed",
+  "returncode": 2,
+  "stdout": "Behavioural evaluations not executed; no evidence of improvement or regression.\n",
+  "stderr": "",
+  "seconds": 0.153,
+  "command": [
+    "python3",
+    "evals/runner.py",
+    "--model",
+    "gpt-5.4",
+    "--judge-model",
+    "gpt-5.4",
+    "--pilot",
+    "discovery-commission-change",
+    "--cases",
+    "discovery-commission-change",
+    "requirements-commission-proposals",
+    "requirements-conflicting-stakeholders",
+    "acceptance-commission-publication",
+    "routing-ambiguous-business-feature",
+    "routing-small-approved-fix",
+    "--output",
+    "evals/results/business-requirements"
+  ]
+}

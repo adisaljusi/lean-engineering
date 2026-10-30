@@ -1,0 +1,14 @@
+{
+  "status": "succeeded",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_existing_property_rate (test_app.ExistingPortalTests.test_existing_property_rate) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
+  "seconds": 0.074,
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-v"
+  ]
+}

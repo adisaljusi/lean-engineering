@@ -1,0 +1,3 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+Existing FastAPI endpoint accepts an optional `currency` query parameter. Add validation for ISO currency codes using the project's existing enum. Return 422 for invalid input. Plan the smallest change and tests. Current route has 30 lines and one service function.

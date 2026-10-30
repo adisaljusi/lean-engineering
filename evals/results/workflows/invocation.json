@@ -1,0 +1,21 @@
+{
+  "status": "failed",
+  "returncode": 2,
+  "stdout": "Conversational behavioral evaluations not executed; no skill-effectiveness evidence.\n",
+  "stderr": "",
+  "seconds": 0.154,
+  "command": [
+    "python3",
+    "evals/conversations.py",
+    "--model",
+    "gpt-5.4",
+    "--actor-model",
+    "gpt-5.4",
+    "--judge-model",
+    "gpt-5.4",
+    "--pilot",
+    "commission-lifecycle",
+    "--output",
+    "evals/results/workflows"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "cases": 8,
+  "paired_contexts": 16,
+  "checks": [
+    "equal paired input manifests",
+    "matching input/output SHA-256 files",
+    "all execution statuses not_executed",
+    "no judgment scores",
+    "runner hash matches committed source"
+  ],
+  "source_commit": "81be39e5a2705c60b54e00a4f392a8c33b1c71e3"
+}

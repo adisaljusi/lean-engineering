@@ -1,0 +1,3 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+Take this commission automation request through Lean Engineering. Start by choosing the next useful phase and explaining the immediate work needed from the existing stakeholder context. We have not approved a specification, data model or implementation yet. Do not implement in this response.

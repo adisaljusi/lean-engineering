@@ -1,0 +1,19 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+Design a Deep Agents-based system for extracting a normalized reinsurance treaty contract from 10-80 related PDFs: binder, slip, wording, endorsements and addendums. OCR yields page text with stable page IDs and bounding boxes. Extract sections, territories, perils, limits, deductibles and commission. Every asserted field must carry exact supporting document/page/span evidence, and conflicting documents may give different values. Multiple runs must be reproducible enough to compare. We already have Python, PostgreSQL, object storage and a model gateway. Propose architecture and alternatives, not implementation. Ask about unresolved business rules and justify every agent boundary.
+
+Apply these skill instructions:
+---
+name: solution-architecture
+description: Review and design C4, cloud and domain-level solution architecture using DDIA principles, explicit quality drivers, system boundaries, data ownership, alternatives and ADRs.
+---
+
+# Solution Architecture
+
+Read approved `spec.md`, existing topology and architectural constraints. Start with actors, external dependencies, bounded contexts and ownership. Use C4 system context and container diagrams where they clarify relationships; component/dynamic/deployment views only when useful. Preserve current system conventions.
+
+Compare simplest viable design with credible alternatives. Assess actual quality drivers and applicable DDIA trade-offs: consistency, transactions, replication, ordering, concurrency, idempotency, retries, backpressure, availability, schema evolution and recovery. Do not introduce microservices, queues, events, new databases or agents without a requirement justifying their cost.
+
+For relevant cloud systems, describe deployables, IAM/trust boundaries, networking, secrets, monitoring, deployment/rollback, resilience, scaling and cost. Record high-impact decisions as lightweight ADRs: context, choice, alternatives, consequences, revisit trigger.
+
+Write the solution-architecture portion of `design.md`; obtain approval before detailed implementation planning. Do not confuse feature architecture with a company-wide enterprise architecture rewrite.

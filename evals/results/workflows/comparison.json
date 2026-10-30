@@ -1,0 +1,144 @@
+{
+  "model": "gpt-5.4",
+  "actor_model": "gpt-5.4",
+  "judge_model": "gpt-5.4",
+  "source_commit": "a9a8d60d692f108f627455c6f5d44ca04415827d",
+  "workflow_sha256": "b8de167be27e8c1fb37d9316d14c77823c2c58f751b129bb844b20868419e15a",
+  "runner_sha256": "b6496aa55f717f2b56cd6a92c965cecd2e23123debd188aadea453c3c537135f",
+  "seed": 0,
+  "max_turns": 12,
+  "timeout_seconds": 1800,
+  "turn_timeout_seconds": 180,
+  "reasoning_effort": "medium",
+  "skill_mode": "native project .agents/skills, no body injection in user prompts",
+  "utc_started": "2026-10-30T10:33:53Z",
+  "cases": [
+    {
+      "id": "commission-lifecycle",
+      "repeat": 1,
+      "execution_order": [
+        "baseline",
+        "lean"
+      ],
+      "baseline": {
+        "execution_status": "not_executed",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 0,
+        "revision_delivered": false,
+        "seconds": 0.003,
+        "path": "commission-lifecycle/1/baseline"
+      },
+      "lean": {
+        "execution_status": "not_executed",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 0,
+        "revision_delivered": false,
+        "seconds": 0.009,
+        "path": "commission-lifecycle/1/lean"
+      }
+    },
+    {
+      "id": "multidoc-design-pressure",
+      "repeat": 1,
+      "execution_order": [
+        "baseline",
+        "lean"
+      ],
+      "baseline": {
+        "execution_status": "not_executed",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 0,
+        "revision_delivered": false,
+        "seconds": 0.002,
+        "path": "multidoc-design-pressure/1/baseline"
+      },
+      "lean": {
+        "execution_status": "not_executed",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 0,
+        "revision_delivered": false,
+        "seconds": 0.007,
+        "path": "multidoc-design-pressure/1/lean"
+      }
+    },
+    {
+      "id": "webhook-delivery-pressure",
+      "repeat": 1,
+      "execution_order": [
+        "lean",
+        "baseline"
+      ],
+      "lean": {
+        "execution_status": "not_executed",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 0,
+        "revision_delivered": false,
+        "seconds": 0.009,
+        "path": "webhook-delivery-pressure/1/lean"
+      },
+      "baseline": {
+        "execution_status": "not_executed",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 0,
+        "revision_delivered": false,
+        "seconds": 0.002,
+        "path": "webhook-delivery-pressure/1/baseline"
+      }
+    }
+  ],
+  "conclusion": "Conversational behavioral evaluations not executed; no skill-effectiveness evidence.",
+  "outcomes": {
+    "baseline": {
+      "pass": 0,
+      "fail": 0,
+      "indeterminate": 3
+    },
+    "lean": {
+      "pass": 0,
+      "fail": 0,
+      "indeterminate": 3
+    }
+  }
+}

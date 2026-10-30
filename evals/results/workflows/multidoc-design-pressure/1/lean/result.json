@@ -1,0 +1,14 @@
+{
+  "execution_status": "not_executed",
+  "conversation_completed": false,
+  "verdict": "indeterminate",
+  "checks": {
+    "status": "not_executed"
+  },
+  "judgment": {
+    "status": "not_judged"
+  },
+  "turns": 0,
+  "revision_delivered": false,
+  "seconds": 0.007
+}

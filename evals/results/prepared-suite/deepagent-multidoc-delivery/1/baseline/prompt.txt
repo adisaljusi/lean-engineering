@@ -1,0 +1,3 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+Plan the approved Deep Agents multi-document extraction feature for an existing Python monolith. Start with 3 representative documents and 6 contract fields; later scale to 80 PDFs. We have OCR text/page/span IDs, PostgreSQL and a model gateway. Human reviewers need to inspect evidence and conflicts. Deliver a vertical-slice plan with high-value tests and explicit complexity budget; do not code.

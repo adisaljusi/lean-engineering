@@ -1,0 +1,12 @@
+{
+  "status": "succeeded",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "seconds": 0.004,
+  "command": [
+    "git",
+    "diff",
+    "--check"
+  ]
+}

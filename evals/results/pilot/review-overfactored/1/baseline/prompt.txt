@@ -1,0 +1,3 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+Review this design concept: one API endpoint calls Controller->Facade->Coordinator->Manager->StrategyFactory->Strategy->Repository to look up a single customer by ID. Each layer is one class forwarding the same argument. The code works and has one unit test per layer.

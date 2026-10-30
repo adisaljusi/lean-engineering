@@ -1,0 +1,3 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+A validation error message has a typo. The exact corrected message is already agreed, and an existing regression test is failing on the current text. One handler owns the message; no API shape or business rule changes. Explain the next work and verification you would choose. Do not implement in this response.

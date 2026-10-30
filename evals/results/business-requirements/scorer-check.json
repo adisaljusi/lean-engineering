@@ -1,0 +1,12 @@
+{
+  "status": "succeeded",
+  "returncode": 0,
+  "stdout": "Scorer self-test passed\n",
+  "stderr": "",
+  "seconds": 0.025,
+  "command": [
+    "python3",
+    "evals/score.py",
+    "--self-test"
+  ]
+}

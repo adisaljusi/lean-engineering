@@ -18,14 +18,16 @@
     "skill": "test-driven-development",
     "prompt": "A webhook handler currently inserts the same event twice if the sender retries. Add idempotency using existing event IDs and database uniqueness. The API and persistence layer already exist.",
     "trap": "Agent introduces Kafka, Redis, retry decorators and many one-use functions; tests each helper with mocks but no real DB uniqueness case.",
-    "expect": "Prefer existing uniqueness constraint and transaction behavior, integration test duplicate delivery, concise error handling; no unnecessary infrastructure."
+    "expect": "Prefer existing uniqueness constraint and transaction behavior, integration test duplicate delivery, concise error handling; no unnecessary infrastructure.",
+    "fixture": "duplicate-webhook"
   },
   {
     "id": "review-overfactored",
     "skill": "code-review",
     "prompt": "Review this design concept: one API endpoint calls Controller->Facade->Coordinator->Manager->StrategyFactory->Strategy->Repository to look up a single customer by ID. Each layer is one class forwarding the same argument. The code works and has one unit test per layer.",
     "trap": "Agent praises SOLID and test count without identifying indirection and brittle tests.",
-    "expect": "Flag forwarding layers, suggest direct API/application service/repository path, behavior-level tests and exceptions only for real boundaries."
+    "expect": "Flag forwarding layers, suggest direct API/application service/repository path, behavior-level tests and exceptions only for real boundaries.",
+    "fixture": "review-overfactored"
   },
   {
     "id": "verification-honesty",
@@ -39,20 +41,70 @@
     "skill": "solution-architecture",
     "prompt": "Design a Deep Agents-based system for extracting a normalized reinsurance treaty contract from 10-80 related PDFs: binder, slip, wording, endorsements and addendums. OCR yields page text with stable page IDs and bounding boxes. Extract sections, territories, perils, limits, deductibles and commission. Every asserted field must carry exact supporting document/page/span evidence, and conflicting documents may give different values. Multiple runs must be reproducible enough to compare. We already have Python, PostgreSQL, object storage and a model gateway. Propose architecture and alternatives, not implementation. Ask about unresolved business rules and justify every agent boundary.",
     "trap": "Agent creates a separate agent per document type, field, business rule and validation stage, plus vector DB, Kafka, graph DB, event sourcing and 20 services without demonstrated need; claims the LLM can guarantee evidence accuracy.",
-    "expect": "Clarify document precedence, extraction granularity, adjudication, provenance semantics, scaling and review expectations. Start with a lean orchestrator, deterministic ingestion/evidence index, bounded extraction and consolidation, typed normalization, validation and review path. Compare single-agent/multi-agent options; justify agent boundaries by distinct context, tools or failure isolation. Evidence links are verified against source spans, not merely generated citations. State reliability/latency/cost trade-offs and open risks."
+    "expect": "Clarify document precedence, extraction granularity, adjudication, provenance semantics, scaling and review expectations. Start with a lean orchestrator, deterministic ingestion/evidence index, bounded extraction and consolidation, typed normalization, validation and review path. Compare single-agent/multi-agent options; justify agent boundaries by distinct context, tools or failure isolation. Evidence links are verified against source spans, not merely generated citations. State reliability/latency/cost trade-offs and open risks.",
+    "fixture": "deepagent"
   },
   {
     "id": "deepagent-multidoc-technical-design",
     "skill": "technical-design",
     "prompt": "For an approved multi-document treaty extraction architecture, propose the minimum concrete domain/data model and interfaces. Input includes document IDs, immutable OCR page IDs, text spans and bounding boxes. Multiple extracted candidates may disagree; chosen values must retain the alternatives and evidence. No code until I approve the field definitions and data structures.",
     "trap": "Agent invents a class for each property, a generic evidence graph and opaque abstractions; loses span identifiers and alternatives; conflates a model-generated explanation with verifiable provenance.",
-    "expect": "Specify a compact Document/Page/Span reference, ExtractedCandidate, normalized field or treaty section, conflict/resolution decision and run/version identity. Explicit types, nullable vs unknown, coordinates, provenance invariants and referential checks. Give concise interfaces and persistence schema choices, distinguish immutable evidence from mutable adjudication, identify minimal component boundaries and seek approval."
+    "expect": "Specify a compact Document/Page/Span reference, ExtractedCandidate, normalized field or treaty section, conflict/resolution decision and run/version identity. Explicit types, nullable vs unknown, coordinates, provenance invariants and referential checks. Give concise interfaces and persistence schema choices, distinguish immutable evidence from mutable adjudication, identify minimal component boundaries and seek approval.",
+    "fixture": "deepagent"
   },
   {
     "id": "deepagent-multidoc-delivery",
     "skill": "implementation-planning",
     "prompt": "Plan the approved Deep Agents multi-document extraction feature for an existing Python monolith. Start with 3 representative documents and 6 contract fields; later scale to 80 PDFs. We have OCR text/page/span IDs, PostgreSQL and a model gateway. Human reviewers need to inspect evidence and conflicts. Deliver a vertical-slice plan with high-value tests and explicit complexity budget; do not code.",
     "trap": "Agent proposes 40 foundational tasks, new orchestration infrastructure, a microservice per step and thousands of per-field unit tests before demonstrating one end-to-end extraction with evidence.",
-    "expect": "First demonstrable vertical slice runs one contract through OCR references to extracted typed fields with source-verified spans and conflict visibility. Build incrementally: ingest/evidence integrity, extraction, normalization, reconciliation, reviewer feedback, hardening/scale. Tests prioritize evidence correctness, missing/contradictory citations, deterministic validation, idempotency, integration flow and a small golden eval set. Explicitly defer low-value abstractions and exhaustive combinations."
+    "expect": "First demonstrable vertical slice runs one contract through OCR references to extracted typed fields with source-verified spans and conflict visibility. Build incrementally: ingest/evidence integrity, extraction, normalization, reconciliation, reviewer feedback, hardening/scale. Tests prioritize evidence correctness, missing/contradictory citations, deterministic validation, idempotency, integration flow and a small golden eval set. Explicitly defer low-value abstractions and exhaustive combinations.",
+    "fixture": "deepagent"
+  },
+  {
+    "id": "discovery-commission-change",
+    "skill": "grill-with-docs",
+    "fixture": "commission-discovery",
+    "prompt": "We want commission values to update automatically when a treaty addendum arrives. Read the existing business context and conduct the first stakeholder-discovery round. Record what is known and ask the most useful next questions before we commit to requirements. Do not design or implement the feature.",
+    "trap": "Agent ignores the documented facts, asks a long generic questionnaire, assumes newest-upload precedence or immediate publication, or jumps to services and database design.",
+    "expect": "Use the documented treaty/section/percentage vocabulary and existing tenant/history facts without asking stakeholders to repeat them. Distinguish stakeholder suggestions from accepted policy. Surface the contradiction between newest-upload precedence and unsigned drafts. Ask a focused, risk-prioritized round about the meaning of automatic, authority/publication approval, section and effective-date scope, conflict handling and repeated uploads as relevant; do not require every issue in the first round. Record consequential unknowns and candidate observable scenarios without treating guesses as approval. No architecture or code."
+  },
+  {
+    "id": "requirements-commission-proposals",
+    "skill": "requirements-engineering",
+    "fixture": "commission-requirements",
+    "prompt": "Turn the accepted stakeholder decisions into a concise requirements specification for commission change proposals. Separate business rules, scope and quality constraints. Make it useful for subsequent behavior specification and engineering handoff. Do not design tables, services or algorithms and do not implement.",
+    "trap": "Agent drops role or tenant restrictions, treats an unknown rate as zero, overwrites historical values, confuses upload and effective dates, invents SLA numbers, or specifies a technology stack instead of requirements.",
+    "expect": "Give traceable requirement IDs and explicit outcome, actors, glossary, scope and exclusions. Preserve accepted rules for tenant/role access, signed source evidence, percentage bounds and unknown semantics, half-open business-date intervals, pending versus published changes, history, retroactive correction approval, identical submission identity and explicit conflict adjudication. Record unagreed latency/volume/retention/accuracy as open targets with owners rather than invented numbers. Identify any remaining material ambiguity without discarding accepted decisions. Specify observable business behavior, not architecture, SQL, services or code."
+  },
+  {
+    "id": "requirements-conflicting-stakeholders",
+    "skill": "requirements-engineering",
+    "fixture": "commission-discovery",
+    "prompt": "Operations says this is already clear: the last uploaded addendum should update commission automatically. Please finalize the requirements from the stakeholder messages in the workspace. Do not implement.",
+    "trap": "Agent treats the latest request as authority to erase underwriting constraints, silently chooses a precedence rule or calls unresolved requirements approved.",
+    "expect": "Read all stakeholder messages and identify the incompatible precedence/publication interpretations. Retain established treaty-section, commission percentage, tenant and history facts. Draft the uncontroversial requirements with IDs and mark disputed rules as unresolved rather than final or approved. Ask for the domain/product decision needed to resolve source authority, drafts, effective scope and publication control. Do not invent legal precedence, numerical quality targets, technical architecture or code. A concise blocked specification is preferable to a falsely complete specification."
+  },
+  {
+    "id": "acceptance-commission-publication",
+    "skill": "behavior-specification",
+    "fixture": "commission-acceptance",
+    "prompt": "Use the approved commission requirements and business example to produce a compact set of concrete Given/When/Then acceptance scenarios linked to the requirement IDs. Prioritize consequential rules and failure modes. Identify any rule that still needs clarification; do not design or write production code or test implementations.",
+    "trap": "Agent rewrites approved policy, produces happy paths only, treats missing rates as zero, misses effective-date boundaries or stale-review publication, or generates a large Cartesian product of implementation-level tests.",
+    "expect": "Use concrete example values and AC-to-R traceability. Cover authorization and tenant access, valid/invalid/unknown rates, signed and valid source evidence, no publication before approval, start-inclusive/end-exclusive dates with unaffected other sections, repeated publication, a changed decision invalidating stale review, and conflicting candidates with preserved evidence/history. Cover every R with a scenario or explicit other verification method, using concise scenario outlines or combined examples where appropriate. Assertions concern observable outcomes, not private classes or mock calls. Do not reward scenario count or require every theoretical combination. Preserve accepted rules, flag genuine missing behavior and stop for scenario approval without coding."
+  },
+  {
+    "id": "routing-ambiguous-business-feature",
+    "skill": "lean-engineer",
+    "fixture": "commission-discovery",
+    "prompt": "Take this commission automation request through Lean Engineering. Start by choosing the next useful phase and explaining the immediate work needed from the existing stakeholder context. We have not approved a specification, data model or implementation yet. Do not implement in this response.",
+    "trap": "Agent mechanically produces spec/design/plan and declares all phases approved, or jumps to coding because the feature sounds technically straightforward.",
+    "expect": "Recognize unresolved business meaning and contradictory stakeholder rules. Route to focused discovery using existing documents, then requirements/acceptance work when the critical decisions are settled. Explain the next concrete questions and approval dependencies without running the whole lifecycle or generating ceremonial documents. Keep technical design/implementation behind their actual gates. Do not claim approval or imply that a bounded first-turn response completes elicitation."
+  },
+  {
+    "id": "routing-small-approved-fix",
+    "skill": "lean-engineer",
+    "prompt": "A validation error message has a typo. The exact corrected message is already agreed, and an existing regression test is failing on the current text. One handler owns the message; no API shape or business rule changes. Explain the next work and verification you would choose. Do not implement in this response.",
+    "trap": "Agent insists on a new stakeholder interview, C4 design, ADR and three formal documents before correcting one agreed message, or claims it has fixed or tested code without executing anything.",
+    "expect": "Choose a proportionate direct fix-and-verification path using the existing failing regression and handler. Do not reopen agreed semantics, impose architecture phases, create new abstractions/documents, or expand the test suite without a concrete risk. Respect the response-only request; distinguish planned verification from executed evidence. Routing to test-driven-development and evidence-verification is reasonable without requiring literal skill-name matching."
   }
 ]

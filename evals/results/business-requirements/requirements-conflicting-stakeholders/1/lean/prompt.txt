@@ -1,0 +1,17 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+Operations says this is already clear: the last uploaded addendum should update commission automatically. Please finalize the requirements from the stakeholder messages in the workspace. Do not implement.
+
+Apply these skill instructions:
+---
+name: requirements-engineering
+description: Turn a clarified feature idea into precise functional and non-functional requirements, business rules, scope, traceable IDs and measurable quality constraints before architecture or coding.
+---
+
+# Requirements Engineering
+
+Read domain docs, existing capabilities, constraints and stakeholder decisions. Document outcome, actors, in-scope and excluded behavior; distinguish business rules from solution ideas. Give each requirement an ID (`R1`, `R2`). Define domain language, invariants, triggers, states, authorization, exceptions and dependencies.
+
+Capture quality attributes only when they matter: latency, throughput, availability, recovery, security/privacy, auditability, interoperability, cost and maintainability. Express measurable scenarios or explicitly mark targets unknown. Identify affected existing behavior and compatibility constraints. Ask about contradictions rather than inventing answers.
+
+Produce/update `spec.md` under repository conventions. Gate: no material ambiguity is silently assumed. Do not design services, database tables or algorithms in the requirements phase.

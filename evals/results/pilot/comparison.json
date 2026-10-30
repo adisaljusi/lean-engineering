@@ -1,0 +1,48 @@
+{
+  "model": "gpt-5.4",
+  "judge_model": "gpt-5.4",
+  "seed": 0,
+  "repeats": 1,
+  "source_commit": "c4dba83ef49689fca22d188fc5d196e496972cd2",
+  "cases_sha256": "0df910ec07b92570a8c535f698f2832af2da117d0c508cf5906e582270d4e0b8",
+  "runner_sha256": "1a17fa3628cee6f05a8644787b1faba932afbf43aabe43e74fcf4dc4c8878209",
+  "rubric_sha256": "842ff3c0150044eeef19188b4fdc5e205fa0653a128c79a730b70007929f8a25",
+  "utc_started": "2026-10-29T20:52:30Z",
+  "cases": [
+    {
+      "id": "review-overfactored",
+      "repeat": 1,
+      "execution_order": [
+        "baseline",
+        "lean"
+      ],
+      "baseline": {
+        "execution_status": "not_executed",
+        "judgment": {
+          "status": "not_judged",
+          "reason": "No completed agent run or no independent judge configured"
+        },
+        "checks": {
+          "status": "not_executed",
+          "reason": "Agent execution did not complete."
+        },
+        "path": "review-overfactored/1/baseline"
+      },
+      "lean": {
+        "execution_status": "not_executed",
+        "judgment": {
+          "status": "not_judged",
+          "reason": "No completed agent run or no independent judge configured"
+        },
+        "checks": {
+          "status": "not_executed",
+          "reason": "Agent execution did not complete."
+        },
+        "path": "review-overfactored/1/lean"
+      },
+      "score_deltas": null
+    }
+  ],
+  "conclusion": "Behavioural evaluations not executed; no evidence of improvement or regression.",
+  "suite_passed": null
+}

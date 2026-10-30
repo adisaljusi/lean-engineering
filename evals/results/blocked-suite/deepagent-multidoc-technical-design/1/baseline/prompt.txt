@@ -1,0 +1,3 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+For an approved multi-document treaty extraction architecture, propose the minimum concrete domain/data model and interfaces. Input includes document IDs, immutable OCR page IDs, text spans and bounding boxes. Multiple extracted candidates may disagree; chosen values must retain the alternatives and evidence. No code until I approve the field definitions and data structures.

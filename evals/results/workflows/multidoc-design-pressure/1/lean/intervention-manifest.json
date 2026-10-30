@@ -1,0 +1,12 @@
+{
+  ".agents/skills/behavior-specification/SKILL.md": "ab637c3ce54ccec0d439dee11d4f45463663339de09a4e67172c70f8d5722fd9",
+  ".agents/skills/code-review/SKILL.md": "3631e7f858743017cbc8036621945198f39d8434fd8151e7ee6d3554355fa6ca",
+  ".agents/skills/evidence-verification/SKILL.md": "bdff6e7ce5f785a6254bc02b5d0f155924165beabc585ce08dd708675201ed3f",
+  ".agents/skills/grill-with-docs/SKILL.md": "fe603d82c38d44660167e74842cd13571731235960e66d890b05e166ff24ba83",
+  ".agents/skills/implementation-planning/SKILL.md": "b6c789f9ce0c45f1b173a03645a96b3653ce8ba35a67775469a92b12c1361a71",
+  ".agents/skills/lean-engineer/SKILL.md": "3f5632ea272eba5c0abfca2e1ca26bbed3292959dcfd978eac9c060d2b523d6d",
+  ".agents/skills/requirements-engineering/SKILL.md": "5e442ec9feae1b74b72521a9c3538229c664e9558deac57b41ec05b2a95ada64",
+  ".agents/skills/solution-architecture/SKILL.md": "e2e36990a8874b113b6d830e2229b4d7b59db456f4ecb693ed6f91c5ec213ce3",
+  ".agents/skills/technical-design/SKILL.md": "3f3a9802b04e0123dea6893d1d4b9edb0382017336dee8f664d348a96a12144b",
+  ".agents/skills/test-driven-development/SKILL.md": "99e439cae027b181192eac27677b67b5e19dd166b1ffaf3a533ef257e4b070c4"
+}

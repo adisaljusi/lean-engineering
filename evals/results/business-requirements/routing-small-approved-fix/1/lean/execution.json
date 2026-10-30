@@ -1,0 +1,4 @@
+{
+  "status": "not_executed",
+  "reason": "prepare-only, unavailable isolation/CLI, or unsuccessful pilot"
+}

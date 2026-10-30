@@ -29,6 +29,17 @@ Repository conventions first. Domain models before technology. C4/cloud/data arc
 
 ## Behavioral evals
 
-See `evals/` for eight adversarial prompts, including three advanced multi-document Deep Agents extraction scenarios focused on architecture, technical data/evidence design and incremental delivery. Run each with the target skill in a fresh agent session, preserve its answer, and score it independently using the 0–2 rubric. `python3 evals/score.py --self-test` validates the scorer only; it is not a behavioral test of an AI agent.
+For conversational workflow testing inspired by Superpowers, see
+`evals/WORKFLOWS.md`: three action-based scenarios exercise discovery, changed
+requirements, approval gates, implementation and verification under pressure.
 
-This ZIP is a distributable draft, not an automatically installed skill set. Behavioral validation requires running the skills in a supported coding-agent environment.
+See `evals/` for fourteen adversarial scenarios covering all ten skills and a small standard-library runner
+that compares fresh baseline and skill-instructed Codex sessions, preserves raw
+artifacts, runs held-out database checks, and requests independent rubric judging.
+Start with the pilot procedure in `evals/README.md`. Execution requires supported
+Codex access and filesystem isolation; blocked cases are reported as not executed.
+`python3 evals/score.py --self-test` validates supplied-score handling only and
+is not a behavioral evaluation. Actual local results are in `evals/REPORT.md`.
+
+Install the skills in your supported coding-agent environment to use them outside
+the isolated evaluations.

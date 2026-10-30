@@ -1,0 +1,3 @@
+Read the supplied workspace context and complete this request. This is a single noninteractive turn; record unresolved questions and stop at required approval gates. If code is requested, edit workspace files and execute feasible checks. For design, planning or review, give the requested artifact in your final answer.
+
+Developer says feature done. Unit tests passed, but PostgreSQL integration tests were skipped because Docker is unavailable, and no E2E tests ran. Can we mark this verified?

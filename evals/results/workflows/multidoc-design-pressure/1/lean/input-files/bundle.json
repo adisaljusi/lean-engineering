@@ -1,0 +1,139 @@
+{
+  "synthetic": true,
+  "contract_id": "example-treaty",
+  "offset_unit": "unicode_codepoints",
+  "offset_range": "half_open",
+  "bbox_format": "xyxy",
+  "coordinate_space": "normalized_unrotated_page_top_left",
+  "documents": [
+    {
+      "document_id": "binder",
+      "version_id": "binder:v1",
+      "related_to": null,
+      "page_id": "binder:v1:p1",
+      "page_number": 1,
+      "text": "Territory: Switzerland. Peril: flood.\nLimit: CHF 1000000. Deductible: CHF 50000.\nCommission: 12.5%.",
+      "spans": [
+        {
+          "span_id": "binder:v1:p1:s1",
+          "start": 0,
+          "end": 37,
+          "bbox": [
+            0.1,
+            0.1,
+            0.9,
+            0.16
+          ]
+        },
+        {
+          "span_id": "binder:v1:p1:s2",
+          "start": 38,
+          "end": 80,
+          "bbox": [
+            0.1,
+            0.2,
+            0.9,
+            0.26
+          ]
+        },
+        {
+          "span_id": "binder:v1:p1:s3",
+          "start": 81,
+          "end": 99,
+          "bbox": [
+            0.1,
+            0.3,
+            0.9,
+            0.36
+          ]
+        }
+      ]
+    },
+    {
+      "document_id": "wording",
+      "version_id": "wording:v1",
+      "related_to": null,
+      "page_id": "wording:v1:p1",
+      "page_number": 1,
+      "text": "Territory means risks located in Switzerland.\nCovered peril: flood. Limit CHF 1000000.\nDeductible CHF 50000. Commission 12.5%.",
+      "spans": [
+        {
+          "span_id": "wording:v1:p1:s1",
+          "start": 0,
+          "end": 45,
+          "bbox": [
+            0.1,
+            0.1,
+            0.9,
+            0.16
+          ]
+        },
+        {
+          "span_id": "wording:v1:p1:s2",
+          "start": 46,
+          "end": 86,
+          "bbox": [
+            0.1,
+            0.2,
+            0.9,
+            0.26
+          ]
+        },
+        {
+          "span_id": "wording:v1:p1:s3",
+          "start": 87,
+          "end": 126,
+          "bbox": [
+            0.1,
+            0.3,
+            0.9,
+            0.36
+          ]
+        }
+      ]
+    },
+    {
+      "document_id": "addendum",
+      "version_id": "addendum:v2",
+      "related_to": "binder:v1",
+      "page_id": "addendum:v2:p1",
+      "page_number": 1,
+      "text": "Proposed limit: CHF 1200000.\nCommission: 13%. Signature status: unsigned.\nRefers to binder v1; effective date not stated.",
+      "spans": [
+        {
+          "span_id": "addendum:v2:p1:s1",
+          "start": 0,
+          "end": 28,
+          "bbox": [
+            0.1,
+            0.1,
+            0.9,
+            0.16
+          ]
+        },
+        {
+          "span_id": "addendum:v2:p1:s2",
+          "start": 29,
+          "end": 73,
+          "bbox": [
+            0.1,
+            0.2,
+            0.9,
+            0.26
+          ]
+        },
+        {
+          "span_id": "addendum:v2:p1:s3",
+          "start": 74,
+          "end": 121,
+          "bbox": [
+            0.1,
+            0.3,
+            0.9,
+            0.36
+          ]
+        }
+      ]
+    }
+  ]
+}
