@@ -1,6 +1,6 @@
 {
   "date": "2026-11-01",
-  "status": "static checks passed; remote installation pending",
+  "status": "completed within available capabilities",
   "harness": {
     "command": [
       "python",
@@ -40,5 +40,34 @@
   "scorer_selftest": "passed; supplied-score validation only",
   "whitespace": "passed",
   "behavioral_status": "unvalidated; no model calls or scores; current configured network excludes model hosts and prior CONNECT-403 attempt is retained",
-  "installation": "pending remote check"
+  "installation": {
+    "status": "passed",
+    "evidence": "installation-remote.json",
+    "source_commit": "1b059b7a4f5137025fd7fa4869590fda882009ff",
+    "full_set": 10,
+    "individual": "technical-design; six runnable example tests passed",
+    "router": "all eight workflow/index/method/walkthrough guides present with companions absent",
+    "installed_files_match_source": true,
+    "scope": "CLI packaging and file availability; native model application unvalidated"
+  },
+  "prepared": [
+    {
+      "runner": "smoke",
+      "pairs": 2,
+      "source_commit": "1b059b7a4f5137025fd7fa4869590fda882009ff",
+      "mode": "prepare-only",
+      "exit": 2,
+      "model_calls": 0,
+      "assigned_scores": 0
+    },
+    {
+      "runner": "native",
+      "pairs": 1,
+      "source_commit": "1b059b7a4f5137025fd7fa4869590fda882009ff",
+      "mode": "prepare-only",
+      "exit": 2,
+      "model_calls": 0,
+      "assigned_scores": 0
+    }
+  ]
 }

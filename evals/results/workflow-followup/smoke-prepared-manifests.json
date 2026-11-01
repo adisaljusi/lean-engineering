@@ -1,0 +1,58 @@
+[
+  {
+    "path": "resume-corrected-feature/1/baseline",
+    "fixture": {
+      "README.md": "3a2300e2e418e99e8cf24e0425597b5c2ce1c32cf82f3f765a9690925e7ea20f",
+      "app.py": "692920c3c83a750df40c96088d035f0b97b30a325c5a7b757a7ef311a3e45509",
+      "decisions.md": "7a0eb175fe784bc0fc4ed70b1d55b67b5969b7e83d237c99fedc9fc3b94187b1",
+      "handoff.md": "1fda38308b43e2ed43508a4ffef982b3cda3f9eebc18535648845309343b1abe",
+      "test_app.py": "8a277ccc3030058013a8bf9fef5f4b9072c8faa1183329db962e007f7d9fea66"
+    },
+    "intervention": {}
+  },
+  {
+    "path": "resume-corrected-feature/1/lean",
+    "fixture": {
+      "README.md": "3a2300e2e418e99e8cf24e0425597b5c2ce1c32cf82f3f765a9690925e7ea20f",
+      "app.py": "692920c3c83a750df40c96088d035f0b97b30a325c5a7b757a7ef311a3e45509",
+      "decisions.md": "7a0eb175fe784bc0fc4ed70b1d55b67b5969b7e83d237c99fedc9fc3b94187b1",
+      "handoff.md": "1fda38308b43e2ed43508a4ffef982b3cda3f9eebc18535648845309343b1abe",
+      "test_app.py": "8a277ccc3030058013a8bf9fef5f4b9072c8faa1183329db962e007f7d9fea66"
+    },
+    "intervention": {
+      ".agents/skills/lean-engineer/SKILL.md": "f27f4bc4cfcbba12c7f3b78409c9e1947824f0ee77a1bfaf03e4e03c9651b9d5",
+      ".agents/skills/lean-engineer/references/design-decision.md": "beaa326a2d0e0384ec7cd06874b28266e63600de2463c8fbd0c4c4b037db4b6a",
+      ".agents/skills/lean-engineer/references/direct-change.md": "800b7d6c0bd5f39e1d110cb31218277bfb2d08368cc6593e302d2e8a62c6b3e9",
+      ".agents/skills/lean-engineer/references/feature-delivery.md": "db3f47a967acf8af4411376c629d81972c7cf8914adb1998972cf75986fb1d8e",
+      ".agents/skills/lean-engineer/references/investigation.md": "8dc01fd5fcfe8780d3167b79f79a186f6408b774be97f98a905a187e385dc191",
+      ".agents/skills/lean-engineer/references/methods.md": "3ce65cec5ce08abf2d1e8f2f50348fb4cdccb8787d0bcebfd993aac8baf63884",
+      ".agents/skills/lean-engineer/references/project-workflow.md": "7f3f2c4b0a8f0bc6984a33530b0a1c1064f50148ea32da01ad8ec5036707d1e5",
+      ".agents/skills/lean-engineer/references/walkthrough.md": "1035bf310a308e9257509db7cf626bfaaf01a27454d04b741b3c6b4cc20d305d",
+      ".agents/skills/lean-engineer/references/workflows.md": "ac29137e990ea0f34249cfdd1d6d1b68dcc1516558aca6fd37aa94ee82b6fdaa"
+    }
+  },
+  {
+    "path": "library-method-only/1/baseline",
+    "fixture": {
+      "README.md": "19c5caf07a7dee8ca9bbbf0488605700bdf2e1990b2e0bfd05a7f9cd5fd423a5"
+    },
+    "intervention": {}
+  },
+  {
+    "path": "library-method-only/1/lean",
+    "fixture": {
+      "README.md": "19c5caf07a7dee8ca9bbbf0488605700bdf2e1990b2e0bfd05a7f9cd5fd423a5"
+    },
+    "intervention": {
+      ".agents/skills/lean-engineer/SKILL.md": "f27f4bc4cfcbba12c7f3b78409c9e1947824f0ee77a1bfaf03e4e03c9651b9d5",
+      ".agents/skills/lean-engineer/references/design-decision.md": "beaa326a2d0e0384ec7cd06874b28266e63600de2463c8fbd0c4c4b037db4b6a",
+      ".agents/skills/lean-engineer/references/direct-change.md": "800b7d6c0bd5f39e1d110cb31218277bfb2d08368cc6593e302d2e8a62c6b3e9",
+      ".agents/skills/lean-engineer/references/feature-delivery.md": "db3f47a967acf8af4411376c629d81972c7cf8914adb1998972cf75986fb1d8e",
+      ".agents/skills/lean-engineer/references/investigation.md": "8dc01fd5fcfe8780d3167b79f79a186f6408b774be97f98a905a187e385dc191",
+      ".agents/skills/lean-engineer/references/methods.md": "3ce65cec5ce08abf2d1e8f2f50348fb4cdccb8787d0bcebfd993aac8baf63884",
+      ".agents/skills/lean-engineer/references/project-workflow.md": "7f3f2c4b0a8f0bc6984a33530b0a1c1064f50148ea32da01ad8ec5036707d1e5",
+      ".agents/skills/lean-engineer/references/walkthrough.md": "1035bf310a308e9257509db7cf626bfaaf01a27454d04b741b3c6b4cc20d305d",
+      ".agents/skills/lean-engineer/references/workflows.md": "ac29137e990ea0f34249cfdd1d6d1b68dcc1516558aca6fd37aa94ee82b6fdaa"
+    }
+  }
+]

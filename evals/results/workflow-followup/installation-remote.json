@@ -1,0 +1,159 @@
+{
+  "source": "https://github.com/adisaljusi/lean-engineering.git#improve/operational-engineering",
+  "cli": "skills@1.7.4",
+  "runs": [
+    {
+      "command": [
+        "npx",
+        "--yes",
+        "skills@1.7.4",
+        "add",
+        "https://github.com/adisaljusi/lean-engineering.git#improve/operational-engineering",
+        "--skill",
+        "*",
+        "--agent",
+        "codex",
+        "--copy",
+        "-y"
+      ],
+      "cwd": "/tmp/lean-install-kv2id01d/all",
+      "returncode": 0,
+      "stdout": "\n\u2502\n\u25cf   codex  Agent detected \u2014 installing non-interactively\n\u001b[?25l\u2502\n\u25c7  Source: https://github.com/adisaljusi/lean-engineering.git @ improve/operational-engineering\n\u001b[?25h\u001b[?25l\u2502\n\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026..\u001b[1G\u001b[J\u25d0  Cloning repository\u2026..\u001b[1G\u001b[J\u25d3  Cloning repository\u2026..\u001b[1G\u001b[J\u25d1  Cloning repository\u2026..\u001b[1G\u001b[J\u25d2  Cloning repository\u2026..\u001b[1G\u001b[J\u25d0  Cloning repository\u2026..\u001b[1G\u001b[J\u25d3  Cloning repository\u2026..\u001b[1G\u001b[J\u25d1  Cloning repository\u2026..\u001b[1G\u001b[J\u25c7  Repository cloned\n\u001b[?25h\u001b[?25l\u2502\n\u001b[1G\u001b[J\u25c7  Found 10 skills\n\u001b[?25h\u2502\n\u25cf  Installing all 10 skills\n\n\u2502\n\u25c7  Installation Summary \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                             \u2502\n\u2502  ./.agents/skills/behavior-specification    \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u2502  ./.agents/skills/code-review               \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u2502  ./.agents/skills/evidence-verification     \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u2502  ./.agents/skills/grill-with-docs           \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u2502  ./.agents/skills/implementation-planning   \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u2502  ./.agents/skills/lean-engineer             \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u2502  ./.agents/skills/requirements-engineering  \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u2502  ./.agents/skills/solution-architecture     \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u2502  ./.agents/skills/technical-design          \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u2502  ./.agents/skills/test-driven-development   \u2502\n\u2502    copy \u2192 Codex                             \u2502\n\u2502                                             \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\u001b[?25l\u2502\n\u001b[1G\u001b[J\u25c7  Installation complete\n\u001b[?25h\n\u2502\n\u25c7  Installed 10 skills \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                 \u2502\n\u2502  \u2713 behavior-specification (copied)              \u2502\n\u2502    \u2192 ./.agents/skills/behavior-specification    \u2502\n\u2502  \u2713 code-review (copied)                         \u2502\n\u2502    \u2192 ./.agents/skills/code-review               \u2502\n\u2502  \u2713 evidence-verification (copied)               \u2502\n\u2502    \u2192 ./.agents/skills/evidence-verification     \u2502\n\u2502  \u2713 grill-with-docs (copied)                     \u2502\n\u2502    \u2192 ./.agents/skills/grill-with-docs           \u2502\n\u2502  \u2713 implementation-planning (copied)             \u2502\n\u2502    \u2192 ./.agents/skills/implementation-planning   \u2502\n\u2502  \u2713 lean-engineer (copied)                       \u2502\n\u2502    \u2192 ./.agents/skills/lean-engineer             \u2502\n\u2502  \u2713 requirements-engineering (copied)            \u2502\n\u2502    \u2192 ./.agents/skills/requirements-engineering  \u2502\n\u2502  \u2713 solution-architecture (copied)               \u2502\n\u2502    \u2192 ./.agents/skills/solution-architecture     \u2502\n\u2502  \u2713 technical-design (copied)                    \u2502\n\u2502    \u2192 ./.agents/skills/technical-design          \u2502\n\u2502  \u2713 test-driven-development (copied)             \u2502\n\u2502    \u2192 ./.agents/skills/test-driven-development   \u2502\n\u2502                                                 \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u2502\n\u2514  Done!  Review skills before use; they run with full agent permissions.\n\n",
+      "stderr": "",
+      "validation": {
+        "skills": 10,
+        "local_links": 27,
+        "status": "passed"
+      },
+      "files": {
+        "behavior-specification/SKILL.md": "1bc0ba1c119ac3a477f541415e5c7420facccd9a8b21382fea49c9b5b62881d7",
+        "behavior-specification/references/acceptance.md": "9561d91ecbf44b50290afa1da1fc5bb26f11866d1e07a12a6c51ef5e5ba57c29",
+        "code-review/SKILL.md": "6c0f70aa5c7e261569404cf655c35d63cb95c71f24a0108e61fc849325a83c37",
+        "code-review/references/review.md": "25ae71837a777da63fd1fd361fe9d150f40ac6014dc2cf158904ab94c45eabca",
+        "evidence-verification/SKILL.md": "0e95e664add41f40500df00f1d20d749abc6270ee988e7d6d10ecbe7d8b5edf3",
+        "evidence-verification/references/evidence.md": "12c69d750be5dcd1d14ec0a17b6e6b13545e964dfd40ea057e790e8302456b99",
+        "grill-with-docs/SKILL.md": "b48a7727e6d4bab7e042195b3d6b9419841af24fecae1ce47e39ab6f3465f4c6",
+        "grill-with-docs/references/discovery.md": "87475f4e473eee329e21ae6e9d35ff4db84498693dbfb93d27f441b1c9fcae06",
+        "implementation-planning/SKILL.md": "cc1c0540fbe8289558ffa96a9d7c4be6805aa86c228dc5979099405668b4fe70",
+        "implementation-planning/references/delivery.md": "902cd031dd3fb2798a13a8aa6dbf7bd54d6a9426d1c955cda7d1f15494986c88",
+        "lean-engineer/SKILL.md": "f27f4bc4cfcbba12c7f3b78409c9e1947824f0ee77a1bfaf03e4e03c9651b9d5",
+        "lean-engineer/references/design-decision.md": "beaa326a2d0e0384ec7cd06874b28266e63600de2463c8fbd0c4c4b037db4b6a",
+        "lean-engineer/references/direct-change.md": "800b7d6c0bd5f39e1d110cb31218277bfb2d08368cc6593e302d2e8a62c6b3e9",
+        "lean-engineer/references/feature-delivery.md": "db3f47a967acf8af4411376c629d81972c7cf8914adb1998972cf75986fb1d8e",
+        "lean-engineer/references/investigation.md": "8dc01fd5fcfe8780d3167b79f79a186f6408b774be97f98a905a187e385dc191",
+        "lean-engineer/references/methods.md": "3ce65cec5ce08abf2d1e8f2f50348fb4cdccb8787d0bcebfd993aac8baf63884",
+        "lean-engineer/references/project-workflow.md": "7f3f2c4b0a8f0bc6984a33530b0a1c1064f50148ea32da01ad8ec5036707d1e5",
+        "lean-engineer/references/walkthrough.md": "1035bf310a308e9257509db7cf626bfaaf01a27454d04b741b3c6b4cc20d305d",
+        "lean-engineer/references/workflows.md": "ac29137e990ea0f34249cfdd1d6d1b68dcc1516558aca6fd37aa94ee82b6fdaa",
+        "requirements-engineering/SKILL.md": "c3ddb91102d51fac39354267caeff617ff28b9698bca85698bf744dcd21dc6e3",
+        "requirements-engineering/references/requirements.md": "aa26134602774d8fec217d3c9768cdbe25e42a59d6bc8fbda58e078f6cd10f3a",
+        "solution-architecture/SKILL.md": "750269955f443254f875af1430083163c3975025222cdf2ca90ef8118d8cb8cd",
+        "solution-architecture/examples/extraction.mmd": "dba063836aeea5a2f659f6262babd342bc245936e26fe18f5b99fe6c9d8a67b5",
+        "solution-architecture/examples/publication.mmd": "38c7c6571433e6e5e96f5f1004c5c6a00bb994cbb57ec166391d12eb5ac591e3",
+        "solution-architecture/examples/puppeteer.json": "a7acb373205f33833a139908b09c2511fe597a212e5684f19e02443651189ab3",
+        "solution-architecture/examples/validate.mjs": "e33d69c7dfeed7f1b07158306a8fa148fc4137292b1c5a5baa5c81eda8d4e166",
+        "solution-architecture/references/data-and-communication.md": "b40fcde3817e71880aed3355385a7975fa6607298fc7557f475c88c86aedb15a",
+        "solution-architecture/references/decisions.md": "820a3b8b6418cca5e5fef7269cdcf6256ae7ccd51c643836d6ebfcffa1d53e4d",
+        "solution-architecture/references/extraction.md": "c3830f271971e2f9194be04c2b9a8589dd13436a72c497fa53fe81e82fc9ebf9",
+        "solution-architecture/references/sources.md": "911032f9aec35658670ae527bbfee540553195c817f63cd1205481297343eaf6",
+        "solution-architecture/references/visuals.md": "f90378e9e626d73040d09f77f527b122be9e705f613b9c83a09c70196fcfddc6",
+        "technical-design/SKILL.md": "b21f595d166ba2eaf1fe630f8176ffa31bcd0e0a2d7a883189b895d794c4fd34",
+        "technical-design/examples/README.md": "8700ba86357795f7cdb897c3e73ff017881eeaa4d7053f99ec6ab368493ba79a",
+        "technical-design/examples/publication.py": "1be327707ddd806c113d6e01f1d9c40438b34d3f344037ef4b7a032dbdf99481",
+        "technical-design/examples/test_publication.py": "9fc4f91588384198a85a8da98d6a57442906a93b531903045b69b32cbb503a6e",
+        "technical-design/references/contracts.md": "e889016b0b2c1a3fe2644584baee3696ad75c7e09498e3d09c3b01148e293855",
+        "technical-design/references/python.md": "299a390ecd8641de043ed62de74ca04eae5bc43e58cd8fad2cad1cb8ac2ed4e9",
+        "test-driven-development/SKILL.md": "ae62192e5e3ed8ddf6f09ab70a41f467607d5eab037f587d1d17ee9ed9ed43a4",
+        "test-driven-development/references/implementation.md": "501c90a26ef8e5188c686276842af3c9aa5a782ab334ff30a3d4c52283176793"
+      }
+    },
+    {
+      "command": [
+        "npx",
+        "--yes",
+        "skills@1.7.4",
+        "add",
+        "https://github.com/adisaljusi/lean-engineering.git#improve/operational-engineering",
+        "--skill",
+        "technical-design",
+        "--agent",
+        "codex",
+        "--copy",
+        "-y"
+      ],
+      "cwd": "/tmp/lean-install-kv2id01d/single",
+      "returncode": 0,
+      "stdout": "\n\u2502\n\u25cf   codex  Agent detected \u2014 installing non-interactively\n\u001b[?25l\u2502\n\u25c7  Source: https://github.com/adisaljusi/lean-engineering.git @ improve/operational-engineering\n\u001b[?25h\u001b[?25l\u2502\n\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026..\u001b[1G\u001b[J\u25c7  Repository cloned\n\u001b[?25h\u001b[?25l\u2502\n\u001b[1G\u001b[J\u25c7  Found 10 skills\n\u001b[?25h\u2502\n\u25cf  Selected 1 skill: technical-design\n\n\u2502\n\u25c7  Installation Summary \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                     \u2502\n\u2502  ./.agents/skills/technical-design  \u2502\n\u2502    copy \u2192 Codex                     \u2502\n\u2502                                     \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\u001b[?25l\u2502\n\u001b[1G\u001b[J\u25c7  Installation complete\n\u001b[?25h\n\u2502\n\u25c7  Installed 1 skill \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                         \u2502\n\u2502  \u2713 technical-design (copied)            \u2502\n\u2502    \u2192 ./.agents/skills/technical-design  \u2502\n\u2502                                         \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u2502\n\u2514  Done!  Review skills before use; they run with full agent permissions.\n\n",
+      "stderr": "",
+      "validation": {
+        "skills": 1,
+        "local_links": 3,
+        "status": "passed"
+      },
+      "files": {
+        "technical-design/SKILL.md": "b21f595d166ba2eaf1fe630f8176ffa31bcd0e0a2d7a883189b895d794c4fd34",
+        "technical-design/examples/README.md": "8700ba86357795f7cdb897c3e73ff017881eeaa4d7053f99ec6ab368493ba79a",
+        "technical-design/examples/publication.py": "1be327707ddd806c113d6e01f1d9c40438b34d3f344037ef4b7a032dbdf99481",
+        "technical-design/examples/test_publication.py": "9fc4f91588384198a85a8da98d6a57442906a93b531903045b69b32cbb503a6e",
+        "technical-design/references/contracts.md": "e889016b0b2c1a3fe2644584baee3696ad75c7e09498e3d09c3b01148e293855",
+        "technical-design/references/python.md": "299a390ecd8641de043ed62de74ca04eae5bc43e58cd8fad2cad1cb8ac2ed4e9"
+      },
+      "example": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "test_database_rejects_invalid_shared_write (test_publication.PublicationTests.test_database_rejects_invalid_shared_write) ... ok\ntest_failure_after_update_rolls_back_both_effects (test_publication.PublicationTests.test_failure_after_update_rolls_back_both_effects) ... ok\ntest_other_connection_stale_review_cannot_overwrite (test_publication.PublicationTests.test_other_connection_stale_review_cannot_overwrite) ... ok\ntest_permissions_and_tenant_scope (test_publication.PublicationTests.test_permissions_and_tenant_scope) ... ok\ntest_precise_rate_boundaries (test_publication.PublicationTests.test_precise_rate_boundaries) ... ok\ntest_retry_and_identity_conflict (test_publication.PublicationTests.test_retry_and_identity_conflict) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.005s\n\nOK\n"
+      }
+    },
+    {
+      "command": [
+        "npx",
+        "--yes",
+        "skills@1.7.4",
+        "add",
+        "https://github.com/adisaljusi/lean-engineering.git#improve/operational-engineering",
+        "--skill",
+        "lean-engineer",
+        "--agent",
+        "codex",
+        "--copy",
+        "-y"
+      ],
+      "cwd": "/tmp/lean-install-kv2id01d/router",
+      "returncode": 0,
+      "stdout": "\n\u2502\n\u25cf   codex  Agent detected \u2014 installing non-interactively\n\u001b[?25l\u2502\n\u25c7  Source: https://github.com/adisaljusi/lean-engineering.git @ improve/operational-engineering\n\u001b[?25h\u001b[?25l\u2502\n\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026\u001b[1G\u001b[J\u25d0  Cloning repository\u2026\u001b[1G\u001b[J\u25d3  Cloning repository\u2026\u001b[1G\u001b[J\u25d1  Cloning repository\u2026\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026.\u001b[1G\u001b[J\u25d0  Cloning repository\u2026.\u001b[1G\u001b[J\u25d3  Cloning repository\u2026.\u001b[1G\u001b[J\u25d1  Cloning repository\u2026.\u001b[1G\u001b[J\u25d2  Cloning repository\u2026..\u001b[1G\u001b[J\u25d0  Cloning repository\u2026..\u001b[1G\u001b[J\u25d3  Cloning repository\u2026..\u001b[1G\u001b[J\u25d1  Cloning repository\u2026..\u001b[1G\u001b[J\u25d2  Cloning repository\u2026..\u001b[1G\u001b[J\u25d0  Cloning repository\u2026..\u001b[1G\u001b[J\u25d3  Cloning repository\u2026..\u001b[1G\u001b[J\u25d1  Cloning repository\u2026..\u001b[1G\u001b[J\u25d2  Cloning repository\u2026...\u001b[1G\u001b[J\u25c7  Repository cloned\n\u001b[?25h\u001b[?25l\u2502\n\u001b[1G\u001b[J\u25c7  Found 10 skills\n\u001b[?25h\u2502\n\u25cf  Selected 1 skill: lean-engineer\n\n\u2502\n\u25c7  Installation Summary \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                  \u2502\n\u2502  ./.agents/skills/lean-engineer  \u2502\n\u2502    copy \u2192 Codex                  \u2502\n\u2502                                  \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\u001b[?25l\u2502\n\u001b[1G\u001b[J\u25c7  Installation complete\n\u001b[?25h\n\u2502\n\u25c7  Installed 1 skill \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                      \u2502\n\u2502  \u2713 lean-engineer (copied)            \u2502\n\u2502    \u2192 ./.agents/skills/lean-engineer  \u2502\n\u2502                                      \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u2502\n\u2514  Done!  Review skills before use; they run with full agent permissions.\n\n",
+      "stderr": "",
+      "validation": {
+        "skills": 1,
+        "local_links": 12,
+        "status": "passed"
+      },
+      "files": {
+        "lean-engineer/SKILL.md": "f27f4bc4cfcbba12c7f3b78409c9e1947824f0ee77a1bfaf03e4e03c9651b9d5",
+        "lean-engineer/references/design-decision.md": "beaa326a2d0e0384ec7cd06874b28266e63600de2463c8fbd0c4c4b037db4b6a",
+        "lean-engineer/references/direct-change.md": "800b7d6c0bd5f39e1d110cb31218277bfb2d08368cc6593e302d2e8a62c6b3e9",
+        "lean-engineer/references/feature-delivery.md": "db3f47a967acf8af4411376c629d81972c7cf8914adb1998972cf75986fb1d8e",
+        "lean-engineer/references/investigation.md": "8dc01fd5fcfe8780d3167b79f79a186f6408b774be97f98a905a187e385dc191",
+        "lean-engineer/references/methods.md": "3ce65cec5ce08abf2d1e8f2f50348fb4cdccb8787d0bcebfd993aac8baf63884",
+        "lean-engineer/references/project-workflow.md": "7f3f2c4b0a8f0bc6984a33530b0a1c1064f50148ea32da01ad8ec5036707d1e5",
+        "lean-engineer/references/walkthrough.md": "1035bf310a308e9257509db7cf626bfaaf01a27454d04b741b3c6b4cc20d305d",
+        "lean-engineer/references/workflows.md": "ac29137e990ea0f34249cfdd1d6d1b68dcc1516558aca6fd37aa94ee82b6fdaa"
+      },
+      "workflow_guides": {
+        "methods.md": true,
+        "workflows.md": true,
+        "project-workflow.md": true,
+        "walkthrough.md": true,
+        "direct-change.md": true,
+        "feature-delivery.md": true,
+        "design-decision.md": true,
+        "investigation.md": true
+      },
+      "companions_absent": true,
+      "fallback_instruction_present": true
+    }
+  ],
+  "native_model_discovery": "not verified; requires live agent traces",
+  "passed": true,
+  "verified_source_commit": "1b059b7a4f5137025fd7fa4869590fda882009ff",
+  "installed_files_match_source": true
+}

@@ -1,0 +1,71 @@
+{
+  "model": "gpt-6.1",
+  "actor_model": "gpt-6.1",
+  "judge_model": "gpt-6.1",
+  "source_commit": "1b059b7a4f5137025fd7fa4869590fda882009ff",
+  "workflow_sha256": "4c99e7dc4733fbbec9432cdd1fba45280b089171a3cea2435cbb029c88b69aa8",
+  "runner_sha256": "bcfd9d828b88ffac39f23aaa82c3d53c22bd85c538856ede2849885a66abf2ef",
+  "shared_runner_sha256": "c3d5a127c76cbde4bf881f8af075ca781b42967e45506700e4a96962d9119074",
+  "rubric_sha256": "ed36ea5fd744b0c17258eed7c6aa7e5782bf3f2f00f09079ab569f17b9ad46e2",
+  "scoring_policy": "operational-v1: quality plus all required checks/criteria and valid stakeholder exposure",
+  "seed": 0,
+  "max_turns": 12,
+  "timeout_seconds": 1800,
+  "turn_timeout_seconds": 180,
+  "reasoning_effort": "medium",
+  "skill_mode": "native project .agents/skills, no body injection in user prompts",
+  "utc_started": "2026-11-01T22:24:08Z",
+  "cases": [
+    {
+      "id": "resume-corrected-delivery",
+      "repeat": 1,
+      "execution_order": [
+        "baseline",
+        "lean"
+      ],
+      "baseline": {
+        "execution_status": "not_executed",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 0,
+        "revision_delivered": false,
+        "seconds": 0.002,
+        "path": "resume-corrected-delivery/1/baseline"
+      },
+      "lean": {
+        "execution_status": "not_executed",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 0,
+        "revision_delivered": false,
+        "seconds": 0.019,
+        "path": "resume-corrected-delivery/1/lean"
+      }
+    }
+  ],
+  "conclusion": "Conversational behavioral evaluations not executed; no skill-effectiveness evidence.",
+  "outcomes": {
+    "baseline": {
+      "pass": 0,
+      "fail": 0,
+      "indeterminate": 1
+    },
+    "lean": {
+      "pass": 0,
+      "fail": 0,
+      "indeterminate": 1
+    }
+  }
+}
