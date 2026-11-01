@@ -39,6 +39,8 @@ def check(source):
                 row['example'] = {'returncode': example.returncode, 'stdout': example.stdout, 'stderr': example.stderr}
                 assert example.returncode == 0, row
             if name == 'router':
+                row['workflow_guides'] = {name: (skills/'lean-engineer'/'references'/name).is_file() for name in ('methods.md', 'workflows.md', 'project-workflow.md', 'walkthrough.md', 'direct-change.md', 'feature-delivery.md', 'design-decision.md', 'investigation.md')}
+                assert all(row['workflow_guides'].values())
                 row['companions_absent'] = not (skills/'technical-design').exists()
                 row['fallback_instruction_present'] = 'If one is absent, do the needed work directly' in (skills/'lean-engineer'/'SKILL.md').read_text()
                 assert row['companions_absent'] and row['fallback_instruction_present']

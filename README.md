@@ -42,6 +42,25 @@ catalog; `lean-engineer` works without companions by doing the needed steps
 directly. Other agent runtime discovery is unverified here. Installation/file
 checks do not prove an agent reads or applies a skill.
 
+## How to use the library
+
+Use a method on its own, follow a task playbook, or optionally compose the same
+methods into a project workflow. No additional framework/runtime is required.
+
+| Use | Example request | Reference that teaches how |
+|---|---|---|
+| One method | “Use solution-architecture to compare these options; design only.” | The skill's decision/data-flow/visual guides |
+| Task workflow | “Use lean-engineer to implement this feature from the existing docs.” | [Task playbooks](lean-engineer/references/workflows.md): direct change, feature, design or investigation |
+| Ongoing project | “Use Lean Engineering's project workflow for this feature and preserve a resumable handoff.” | [Optional project workflow](lean-engineer/references/project-workflow.md) |
+
+Playbooks define inputs, ordered actions, branching/rework, useful results and
+stopping conditions. The [method catalog](lean-engineer/references/methods.md)
+routes each decision to its substantive guide. The [worked walkthrough](lean-engineer/references/walkthrough.md)
+shows discovery → architecture/data decisions → corrected intent → authorized
+implementation/verification → resume, without resetting accepted decisions.
+See [the usage guide](docs/USAGE.md) for direct links and adoption examples.
+Naming a skill or pattern is not a substitute for reading/applying its method.
+
 ## Choose the next useful work
 
 | Need | Entry point |

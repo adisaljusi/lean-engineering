@@ -198,3 +198,15 @@ and both turns timed out without answers. There were no stakeholder or assessor
 calls and no behavioral scores. Re-running after instruction edits against the
 same denied destination would not establish anything. Revised prepare-only
 inputs validate packaging only. See `results/redesign/` and `docs/REDESIGN.md`.
+
+## Resume and optional-framework follow-up (2026-11-01)
+
+The sixth workflow, `resume-corrected-delivery`, starts with an explicitly stale
+handoff, accepted later 45-day eligibility policy and authorized implementation.
+A subject must inspect decisions and actual source rather than trust a “resume”
+summary, ask for repeated consent or rerun an entire lifecycle. The stakeholder
+answers only from the accepted documents and stops on delivered work/refusal;
+it does not coach a passing repair. Existing stakeholder-policy and correctness
+criteria still apply. Model behavior remains unvalidated. The corresponding
+library-only smoke case checks that using the methods does not silently adopt
+project process files or infrastructure.

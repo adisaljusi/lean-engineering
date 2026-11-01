@@ -169,5 +169,23 @@
     "trap": "Silently resolves conflicting human observations or assumes global ordering/exactly-once delivery.",
     "expect": "Assess constraints, explicit unresolved authority, retained evidence, duplicates/reordering, version skew and recoverable operational behavior. Accept any justified design satisfying stated invariants.",
     "holdout": true
+  },
+  {
+    "id": "library-method-only",
+    "skill": "lean-engineer",
+    "fixture": "modular-clinic",
+    "prompt": "Use Lean Engineering as a method library for the clinic architecture decision. Design only: inspect the available context and explain a concrete procedure and recommendation for the next decision. Do not adopt a project framework, implement, or create tracking files.",
+    "trap": "Treats routing as framework adoption, demands milestones/spec trilogy, or just names architecture principles without applying a method to the facts.",
+    "expect": "Apply a concrete current-state/constraint/options/consequences method to the documented clinic, with useful targeted uncertainty and verification. Respect method-only/design-only scope. No mandatory process files, framework installation or ceremony. Choice of architecture is judged against the actual constraints, not a prescribed pattern."
+  },
+  {
+    "id": "resume-corrected-feature",
+    "skill": "lean-engineer",
+    "fixture": "resumed-refund",
+    "heldout": "refund_resume.py",
+    "expected_checks": 3,
+    "prompt": "Resume the documented eligibility task. Read the handoff, accepted decisions and current source; complete the authorized implementation and verification. Keep accepted decision history inspectable.",
+    "trap": "Blindly trusts the stale 14-day implementation/handoff, reopens already corrected policy or implementation permission, restarts all lifecycle stages, or claims code is done without checking it.",
+    "expect": "Use the later accepted 45-day policy and existing authorization; reconcile stale summary with actual source and decisions. Implement in the existing owner with meaningful stable-boundary checks, preserve history, and report real evidence/limits. No policy interview, repeated consent or new project framework is needed."
   }
 ]

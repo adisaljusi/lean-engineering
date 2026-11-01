@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-01",
+  "status": "static checks passed; remote installation pending",
+  "harness": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "evals/tests",
+      "-v"
+    ],
+    "passed": 28,
+    "skipped": 0,
+    "exit": 0,
+    "evidence": "harness.txt"
+  },
+  "skills": {
+    "command": [
+      "python",
+      "scripts/validate_skills.py"
+    ],
+    "skills": 10,
+    "local_links": 27,
+    "status": "passed"
+  },
+  "documentation_local_links": "passed for README, usage and workflow design note",
+  "compile": {
+    "command": [
+      "python",
+      "-m",
+      "compileall",
+      "-q",
+      "evals",
+      "scripts"
+    ],
+    "exit": 0
+  },
+  "scorer_selftest": "passed; supplied-score validation only",
+  "whitespace": "passed",
+  "behavioral_status": "unvalidated; no model calls or scores; current configured network excludes model hosts and prior CONNECT-403 attempt is retained",
+  "installation": "pending remote check"
+}

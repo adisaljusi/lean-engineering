@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-01",
+  "sources": [
+    {
+      "repo": "obra/superpowers",
+      "sha": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "path": "README.md",
+      "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/README.md",
+      "sha256": "79f29f50c735862d2e304ea547b4c9aa67d9db6909ff6fb7b5ea922d7bcbc3e7"
+    },
+    {
+      "repo": "obra/superpowers",
+      "sha": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "path": "skills/writing-plans/SKILL.md",
+      "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/writing-plans/SKILL.md",
+      "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+    },
+    {
+      "repo": "obra/superpowers",
+      "sha": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "path": "skills/systematic-debugging/SKILL.md",
+      "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/systematic-debugging/SKILL.md",
+      "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
+    },
+    {
+      "repo": "obra/superpowers",
+      "sha": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "path": "skills/executing-plans/SKILL.md",
+      "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/executing-plans/SKILL.md",
+      "sha256": "e4649e59880ef2643d1da128e3d607e87e3f969410d72095a5bf65811b6036dc"
+    },
+    {
+      "repo": "gsd-build/get-shit-done",
+      "sha": "bdcaab2c752d9a33a1a1ca9acf3a3c81fb991815",
+      "path": "README.md",
+      "url": "https://github.com/gsd-build/get-shit-done/blob/bdcaab2c752d9a33a1a1ca9acf3a3c81fb991815/README.md",
+      "sha256": "6530ef6aad23383980a7c405d32c40e73c798ee4263a883f804aef31548569b6"
+    },
+    {
+      "repo": "open-gsd/gsd-core",
+      "sha": "72c4e14dfa56ecc98c04b3fd6736bea2dd3195dc",
+      "path": "README.md",
+      "url": "https://github.com/open-gsd/gsd-core/blob/72c4e14dfa56ecc98c04b3fd6736bea2dd3195dc/README.md",
+      "sha256": "66fe062ee3705af835b09ffa8da112fd14bc8a6025f0d4fb22b4291d353268a9"
+    },
+    {
+      "repo": "open-gsd/gsd-core",
+      "sha": "72c4e14dfa56ecc98c04b3fd6736bea2dd3195dc",
+      "path": "docs/how-to/plan-a-phase.md",
+      "url": "https://github.com/open-gsd/gsd-core/blob/72c4e14dfa56ecc98c04b3fd6736bea2dd3195dc/docs/how-to/plan-a-phase.md",
+      "sha256": "eb7a31e866d1306d98594545f2c0739ceb647657054a6a5c668b492914bb80b3"
+    },
+    {
+      "repo": "open-gsd/gsd-core",
+      "sha": "72c4e14dfa56ecc98c04b3fd6736bea2dd3195dc",
+      "path": "docs/how-to/recover-and-troubleshoot.md",
+      "url": "https://github.com/open-gsd/gsd-core/blob/72c4e14dfa56ecc98c04b3fd6736bea2dd3195dc/docs/how-to/recover-and-troubleshoot.md",
+      "sha256": "797a35192ee593ea86977a922dafc2d3b3ce5c1f8b13ecbb345f18d19183baea"
+    },
+    {
+      "repo": "open-gsd/gsd-core",
+      "sha": "72c4e14dfa56ecc98c04b3fd6736bea2dd3195dc",
+      "path": "docs/explanation/the-phase-loop.md",
+      "url": "https://github.com/open-gsd/gsd-core/blob/72c4e14dfa56ecc98c04b3fd6736bea2dd3195dc/docs/explanation/the-phase-loop.md",
+      "sha256": "4b82eb65d7583e634d7efffee9a711809411d0d36e3d587bbae2374281ebb6de"
+    }
+  ],
+  "purpose": "methodology research only; no external framework installed or executed"
+}

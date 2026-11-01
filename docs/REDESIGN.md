@@ -149,3 +149,13 @@ provide supported model-host access, qualify one fresh paired native pilot,
 inspect actual reference reads/role exposures, then repeat comparable campaigns
 with independent assessment and unseen cases. Preserve all failures and
 indeterminate attempts; do not lower isolation/scoring to produce a win.
+
+## Workflow clarity follow-up (2026-11-01)
+
+The user identified a remaining gap: method guides alone did not specify how to
+perform and hand off work. The follow-up adds separately loaded task procedures,
+a method-to-reference catalog, a worked correction/delivery/resume walkthrough
+and optional project coordination. Individual methods and router-only use remain
+available. See [usage](USAGE.md), [research/rationale](WORKFLOW-DESIGN.md) and
+`evals/results/workflow-followup/` for this revision's evidence. Earlier counts
+and validation above describe the October 30 snapshot, not the follow-up.

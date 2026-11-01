@@ -376,3 +376,15 @@ logs and checker negative control), `results/pilot/` (blocked pilot), and
 The runner source commit for the final preparation is
 `81be39e5a2705c60b54e00a4f392a8c33b1c71e3`; all results and this report are committed separately
 on `eval/automated-quality-comparison`.
+
+## Explicit workflow follow-up (2026-11-01)
+
+Methods are now connected by separately loaded direct-change, feature-delivery,
+design-decision and investigation procedures. The project coordination/resume
+workflow is optional. A worked example carries evidence and corrected accepted
+intent through handoffs; installation alone does not prove agents apply it.
+Two smoke definitions and one native resumed-delivery workflow extend the
+instruments, using existing runners and checker/role policies. Current harness:
+28 tests passed (including expanded correct/buggy oracle controls), zero skipped.
+No new model outputs or effectiveness scores exist; new inputs are prepared only.
+See `docs/WORKFLOW-DESIGN.md` and `results/workflow-followup/` for current evidence.

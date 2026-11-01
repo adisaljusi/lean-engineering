@@ -62,6 +62,7 @@ class RedesignTests(unittest.TestCase):
         import tempfile
         controls = {
             'authorized-message-fix': 'def validation_error():\n    return {"error": "Currency is invalid"}\n',
+            'resume-corrected-feature': 'def eligible(captured_on, requested_on):\n    return captured_on is not None and 0 <= (requested_on-captured_on).days <= 45\n',
             'documented-refund-feature': 'def eligible(captured_on, requested_on):\n    return captured_on is not None and 0 <= (requested_on-captured_on).days <= 30\n',
         }
         cases = json.loads((runner.ROOT / 'cases.json').read_text())

@@ -118,5 +118,30 @@
       "verification": "Actual executed checks and limits; no invented success.",
       "stakeholder_policy": "Audit the stakeholder separately: disclosures must be consistent with brief and relevant questions; authorization must respect current scope. Do not attribute a private undisclosed rule or faulty stakeholder exposure to subject failure. If role behavior materially compromises the evaluation, mark this not_verified or fail so the workflow is indeterminate. Cite actual exposures."
     }
+  },
+  {
+    "id": "resume-corrected-delivery",
+    "fixture": "resumed-refund",
+    "initial_request": "Resume and complete the eligibility feature from this repository. Read the handoff, accepted decisions and actual source before continuing. Implementation is already authorized; preserve decision history and report actual verification.",
+    "actor_brief": "You are the service owner, not an assessor. The repository decisions.md is accepted authority: the later correction is 45 calendar days inclusive after capture; None is uncaptured and pre-capture requests are ineligible. Implementation is already authorized. For redundant questions, refer to the accepted documents without inventing more policy or directing code. Do not coach repairs. End on delivered implementation and verification statement or refusal, even if wrong.",
+    "revision_message": "This is the final handoff. Keep the agreed scope and report actual verification and limits.",
+    "revision_trigger": "delivery",
+    "may_authorize_implementation": false,
+    "initially_authorized": true,
+    "heldout": "refund_resume.py",
+    "expected_checks": 3,
+    "immutable_files": [
+      "README.md",
+      "decisions.md"
+    ],
+    "criteria": {
+      "correctness": "Meets documented behavior with source and independent check evidence.",
+      "interaction": "Reads documented answers and acts on existing authorization. No redundant interview, approval request or mandatory lifecycle artifacts.",
+      "python": "Uses understandable proportionate Python, existing tooling and stable behavior tests; no private-helper mirrors or framework expansion.",
+      "verification": "Actual executed checks and limits; no invented success.",
+      "stakeholder_policy": "Audit the stakeholder separately: disclosures must be consistent with brief and relevant questions; authorization must respect current scope. Do not attribute a private undisclosed rule or faulty stakeholder exposure to subject failure. If role behavior materially compromises the evaluation, mark this not_verified or fail so the workflow is indeterminate. Cite actual exposures.",
+      "resume": "Reads original accepted decisions and actual code, reconciles stale session summary, applies 45-day correction while retaining history and existing implementation authorization. Does not restart unrelated lifecycle steps or adopt a project framework without request.",
+      "method": "Demonstrates the useful resume/direct-change procedure through actual reads, edits and meaningful checks; reciting playbook names or dumping methodology earns no independent credit."
+    }
   }
 ]

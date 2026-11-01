@@ -212,3 +212,20 @@ can still be wrong: independently review pilot evidence and calibrate more than
 one plausible architecture before a repeated campaign. Do not alter scores or
 isolation to obtain a pass. Source/evidence details: `docs/REDESIGN.md` and
 `results/redesign/`.
+
+## Explicit workflow follow-up (2026-11-01)
+
+There are now 23 smoke definitions (22 development, one unchanged reserved
+holdout) and six native conversational workflows. `library-method-only` checks
+that a task uses concrete engineering methods without treating the library as
+mandatory project-framework adoption. `resume-corrected-feature` and native
+`resume-corrected-delivery` exercise stale session notes versus a later accepted
+business correction and existing implementation authorization. The subject must
+read, reconcile, implement and verify; reciting a workflow is not evidence.
+
+The resumed feature's checker uses the existing interface and case-owned expected
+count. Original buggy and correct controls are harness checks, not model samples.
+No runner architecture or scoring changes were needed. All new cases remain
+behaviorally unvalidated; frozen preparations and actual packaging checks are
+retained under `results/workflow-followup/`. The methods/playbooks are documented
+in `docs/USAGE.md` and `docs/WORKFLOW-DESIGN.md`.
