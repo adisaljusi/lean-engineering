@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "status": "static checks passed; remote installation pending",
+  "status": "completed within available capabilities",
   "topic_entries": 48,
   "scope": "declared book-derived engineering topics in this library; not every chapter/pattern in each full book",
   "skills": {
@@ -32,5 +32,24 @@
   "compile": "passed",
   "whitespace": "passed",
   "book_access": "per-entry basis records author summary/reference, TOC/overview or synthesis; full books not retrieved",
-  "behavioral_status": "unvalidated; no new model calls or assigned scores"
+  "behavioral_status": "unvalidated; no new model calls or assigned scores",
+  "installation": {
+    "status": "passed",
+    "evidence": "installation-remote.json",
+    "verified_source_commit": "3462511e20c9ceea1411b5f78a8ffca8425bb2e7",
+    "installed_files_match_source": true,
+    "full_set": {
+      "skills": 10,
+      "topic_entries": 48,
+      "valid_local_links": 111
+    },
+    "individual_installs": {
+      "technical-design": 18,
+      "solution-architecture": 29,
+      "grill-with-docs": 1
+    },
+    "router_only": "workflow references/fallback present with companions absent",
+    "runnable_python_example": "six tests passed from individual technical-design installation",
+    "scope": "CLI discovery, copies, file hashes, local links and example execution; native model application unvalidated"
+  }
 }
