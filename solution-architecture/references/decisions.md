@@ -40,3 +40,13 @@ Credible options: existing broker with transactional outbox at order owner; or p
 Costs: stale state, duplicate traffic, version compatibility, replay and on-call ownership. If stock must be reserved before charging, settle compensation/reconciliation policy; messaging does not solve the business rule. Verify publish-before-mark crash, duplicates, outage recovery and version skew. One process/database is simpler if independent ownership/outage constraints disappear; do not merge regulated stores merely to simplify a diagram.
 
 A useful decision explains problem/current facts, options, choice/why now, costs, assumptions, migration/verification and revisit evidence. Use an ADR/table when useful, not mandatory forms. Attribution/further reading: the bundled sources guide.
+
+## Named architecture concepts
+
+Read the relevant entry for its attributed idea, applicability, procedure and example; do not load all entries by default.
+
+- [Dependency direction and business-rule isolation](topics/dependency-direction.md).
+- [Quality attributes and architectural trade-offs](topics/quality-attributes.md).
+- [Coupling, cohesion and ownership boundaries](topics/coupling-and-ownership.md).
+- [Modular monoliths and distributed services](topics/monolith-and-services.md).
+- [Incremental migration and compatibility stages](topics/incremental-migration.md).

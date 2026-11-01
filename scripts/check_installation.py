@@ -18,7 +18,10 @@ def check(source):
               'native_model_discovery': 'not verified; requires live agent traces'}
     with tempfile.TemporaryDirectory(prefix='lean-install-') as tmp:
         root = Path(tmp)
-        for name, selection, expected in [('all', '*', 10), ('single', 'technical-design', 1), ('router', 'lean-engineer', 1)]:
+        installations = [('all', '*', 10), ('single', 'technical-design', 1),
+                         ('architecture', 'solution-architecture', 1), ('discovery', 'grill-with-docs', 1),
+                         ('router', 'lean-engineer', 1)]
+        for name, selection, expected in installations:
             dest = root / name; dest.mkdir()
             argv = ['npx', '--yes', 'skills@1.7.4', 'add', source,
                     '--skill', selection, '--agent', 'codex', '--copy', '-y']
@@ -31,6 +34,7 @@ def check(source):
             skills = dest / '.agents' / 'skills'
             row['validation'] = validate(skills)
             assert row['validation']['skills'] == expected, row
+            row['topic_entries'] = {skill.name: len(list((skill/'references'/'topics').glob('*.md'))) for skill in skills.iterdir() if skill.is_dir() and (skill/'references'/'topic-index.md').is_file()}
             row['files'] = {str(p.relative_to(skills)): hashlib.sha256(p.read_bytes()).hexdigest()
                             for p in sorted(skills.rglob('*')) if p.is_file()}
             if name == 'single':
@@ -45,7 +49,7 @@ def check(source):
                 row['fallback_instruction_present'] = 'If one is absent, do the needed work directly' in (skills/'lean-engineer'/'SKILL.md').read_text()
                 assert row['companions_absent'] and row['fallback_instruction_present']
             report['runs'].append(row)
-    report['passed'] = len(report['runs']) == 3 and all(r['returncode'] == 0 for r in report['runs'])
+    report['passed'] = len(report['runs']) == len(installations) and all(r['returncode'] == 0 for r in report['runs'])
     return report
 
 

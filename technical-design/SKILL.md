@@ -9,6 +9,8 @@ Inspect accepted behavior, current architecture, modules, schemas, dependencies 
 
 Choose the uncertain boundary. Define only consequential fields: meaning, identity, type/unit, unknown/null/invalid distinctions, owner, constraints, provenance and lifecycle. Place invariants with the owning business operation and enforce shared-write invariants in the database. Explain transaction boundaries and failures. Avoid turning every noun into a class.
 
+When applying a named book concept, read its [topic reference entry](references/topic-index.md) for the material and decision procedure. Select only the relevant entry; a book title or source link alone is not guidance.
+
 Load selectively:
 
 - [Data and API contracts](references/contracts.md) for identity/invariants, persistence boundaries, concurrency, compatibility and expand/migrate/contract changes.

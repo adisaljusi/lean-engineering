@@ -229,3 +229,15 @@ No runner architecture or scoring changes were needed. All new cases remain
 behaviorally unvalidated; frozen preparations and actual packaging checks are
 retained under `results/workflow-followup/`. The methods/playbooks are documented
 in `docs/USAGE.md` and `docs/WORKFLOW-DESIGN.md`.
+
+## Book-topic material (2026-11-02)
+
+Dedicated topic entries now explain attributed concepts and original application,
+with source precision recorded separately. Existing transaction/retry, distributed
+settlement, API-evolution, export-workload, multi-document and discovery cases
+already exercise relevant invariants; judge their substantive reasoning rather
+than whether a book/topic filename appears. The rubric clarifies common material
+misapplications (atomicity/isolation, ordering/delivery, domain/service boundaries).
+Installation and reference-link checks establish availability, not model reading
+or correct application. This content revision remains behaviorally unvalidated;
+no new model scores or observed model failures are reported.

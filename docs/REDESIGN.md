@@ -159,3 +159,17 @@ and optional project coordination. Individual methods and router-only use remain
 available. See [usage](USAGE.md), [research/rationale](WORKFLOW-DESIGN.md) and
 `evals/results/workflow-followup/` for this revision's evidence. Earlier counts
 and validation above describe the October 30 snapshot, not the follow-up.
+
+## Book-material follow-up (2026-11-02)
+
+The user clarified that references must explain the material inside the books for
+each topic, not merely list sources. The [topic catalogue](BOOK-TOPICS.md) now
+routes to 48 substantive topic entries across architecture, technical design and
+discovery. Each distinguishes the attributed idea from original procedure,
+worked application, trade-offs/simpler choices and verification. Important
+transaction/consistency/model distinctions are explicit. Publisher/author
+TOCs verify named locators; author summaries support named concepts; unavailable
+full passages and exact pages are not claimed. GoF/algorithm synthesis records
+its narrower source basis. The bibliography remains attribution and is no longer
+the only route to book material. Individual skill packaging and raw evidence
+are recorded under `evals/results/book-topics/`; no behavioral effect is claimed.

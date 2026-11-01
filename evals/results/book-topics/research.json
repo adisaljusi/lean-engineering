@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-02",
+  "method": "Public primary-source browsing; original summaries and application examples. Full books were not retrieved.",
+  "records": "topics.json records the foundation, verified locator when available, source and evidence basis for every topic.",
+  "public_author_material": [
+    "Robert C. Martin: The Clean Architecture article",
+    "Sam Newman: Building Microservices second-edition contents and Monolith to Microservices overview",
+    "Eric Evans: DDD Reference (2015 companion PDF)",
+    "Martin Fowler: Transaction Script, Domain Model, Data Mapper, Repository, Unit of Work summaries",
+    "Hohpe/Woolf: Request-Reply, Publish-Subscribe Channel, Message Router, Message Translator, Correlation Identifier, Idempotent Receiver, Dead Letter Channel"
+  ],
+  "publisher_toc_access": [
+    "DDIA first edition (2017)",
+    "Clean Architecture",
+    "Fundamentals of Software Architecture (2020)",
+    "Software Architecture: The Hard Parts (2021)",
+    "Mastering API Architecture (2022)",
+    "Continuous API Management first edition (2018)",
+    "Communication Patterns (2023)"
+  ],
+  "narrower_access": [
+    "GoF catalog verified book identity; full named-pattern text/locations were not retrieved. Entries explicitly mark book-synthesis.",
+    "Introduction to Algorithms publisher overview verified fourth-edition identity/scope; no chapter/page locator claimed."
+  ],
+  "supplementary_material": [
+    "Chris Richardson: Transactional Outbox (not attributed as a named original EIP pattern)",
+    "Fowler: CQRS and Event Sourcing articles; CQRS not claimed as a named DDIA chapter",
+    "Simon Brown: C4 diagrams; C4 not attributed to Jacqui Read as originator"
+  ],
+  "failed_attempts": [
+    "Two guessed developer-to-architect per-book URLs were inaccessible; canonical publisher TOCs were used instead."
+  ],
+  "retained_tool_response_sha256": {
+    "topic-start-2": "f1b9c9018be34e6e99885619915e0d83133a1e46fc533b64c609fd6316b7bc63",
+    "topic-books": "400d75c56d83913ce0297d6d04b71e2a89e08bd03bc182aa92ac6d9409fc5de9",
+    "topic-catalogs": "fa465ea132e0bb0ef9585e160b8126ec043723e496f889384763b69f5f01db78",
+    "topic-patterns": "5470ced12e6e16e0350f742b0fc06ca75eb68f388ca15caf710d863e259396b2",
+    "topic-tocs": "a6c0b26332cd5c40b6b72249a2f6737de8f4ee89197dbc0d9bbaff2ca699b5b6",
+    "topic-ddd-clean": "9611c94aff3ce2e1e875d6ded5b8b59e4f842edffa4e166ec45140dcc4845f9a",
+    "topic-supplements": "9a3028a344cd02003a66e45a7f528571591edace236af9c01d25b91be3809808",
+    "topic-eip": "a69b2e0d98186abe09a02a54f0b0cd86b1ec2c66a67d1241944bde95a32794f0",
+    "topic-locators-extra": "cd14989ba2dece83a5392f67eb5e3c44fcf244be39478a16ae07d7cd729d0b60",
+    "topic-clean-c4": "483f2b9688192493a08bbc4de36fd5b8ada3f3ce8f2bdc7879bda75c5fc103d4",
+    "topic-solid-locator": "b51fdad6d2b9601420dd7c60575e65f8334a1517f0045cfc26c73964c9d342fb"
+  },
+  "hash_scope": "Hashes identify returned research-tool data, not downloaded full-book bytes or proof of passage access."
+}

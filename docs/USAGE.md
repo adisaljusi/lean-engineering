@@ -20,6 +20,12 @@ also ask for a plan or review only. Neither a playbook nor project mode override
 that scope. Adoption of a shared repository policy needs the user's/team's actual
 request; installing the skills does not create one.
 
+## Book material for a particular topic
+
+Use the [topic catalogue](BOOK-TOPICS.md), then read the entry relevant to the current decision. For example, DDIA transaction material explains atomicity/isolation and concurrent anomalies before its publication/rollback procedure. DDD entries explain identity, values, aggregates and context boundaries. GoF entries explain the actual substitution/construction/wrapping problem before recommending a Python representation. Book/source citations alone do not fulfill this step.
+
+Each entry states what source/locator was verified and separates attributed synthesis from original application. The installed index stays inside its owning skill. No full-book load, external framework or runtime book download is required.
+
 ## Direct reference map
 
 Read the guide for the current decision. Its procedure/examples are the source of

@@ -84,3 +84,12 @@ maintainability in addition to the retained legacy score. Independent concrete
 check failures cannot be overridden by favorable model scores. Missing, zero,
 skipped or crashed required checks remain indeterminate. Preserve a known defect
 even when another dimension lacks evidence; report both in the evidence.
+
+When a subject invokes book-derived concepts, assess the substance and its
+application to the actual constraints, not the title/citation/reference-read
+count. For example, atomicity does not prove isolation, snapshot isolation does
+not eliminate every write-skew anomaly, message delivery is not an exactly-once
+external effect, and DDD boundaries do not mandate service boundaries. A topic
+reference being present/read is exposure evidence only. Missing full-book access
+must not be turned into fabricated passage/page claims. Accept independently
+reasoned baseline designs under the same substantive criteria.

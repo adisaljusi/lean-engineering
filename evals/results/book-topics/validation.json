@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-02",
+  "status": "static checks passed; remote installation pending",
+  "topic_entries": 48,
+  "scope": "declared book-derived engineering topics in this library; not every chapter/pattern in each full book",
+  "skills": {
+    "command": [
+      "python",
+      "scripts/validate_skills.py"
+    ],
+    "skills": 10,
+    "local_links": 111,
+    "status": "passed"
+  },
+  "harness": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "evals/tests",
+      "-v"
+    ],
+    "passed": 28,
+    "skipped": 0,
+    "exit": 0,
+    "evidence": "harness.txt"
+  },
+  "catalogue_links": "passed",
+  "entry_structure": "all declared entries have material, applicability, procedure, worked application, trade-offs/simpler choice and verification; structure does not establish semantic correctness",
+  "compile": "passed",
+  "whitespace": "passed",
+  "book_access": "per-entry basis records author summary/reference, TOC/overview or synthesis; full books not retrieved",
+  "behavioral_status": "unvalidated; no new model calls or assigned scores"
+}

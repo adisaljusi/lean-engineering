@@ -35,3 +35,7 @@ For example, the architecture method's result is a chosen boundary and its conse
 Follow the selected local playbook in `workflows.md`, which includes a complete basic procedure. Inspect facts, make the next decision, perform authorized work and check the result directly. For a complex method the catalog cannot supply, consult available authoritative repository/library documentation and state the limitation; do not pretend the absent guide was read. Do not install external frameworks or load a source checkout as an implicit dependency. Ask only if missing consequential knowledge actually blocks safe progress.
 
 Method outputs can live in conversation, an issue, existing design notes or code/tests. A new document is justified by handoff, risk or a user's request, not by the number of methods used.
+
+## Material behind a named concept
+
+When the current decision invokes DDIA, DDD, Clean Architecture, SOLID, a GoF/persistence/integration pattern or API literature, load the owning skill's `references/topic-index.md` and the selected topic entry. `solution-architecture` owns system/data/communication/visual topics, `technical-design` owns domain/persistence/design/API/algorithm topics, and `grill-with-docs` owns shared domain language. These references explain the book material plus its application; the bibliography is attribution, not a substitute for the method. Resolve through installed skill locations and retain the existing missing-companion fallback.

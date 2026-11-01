@@ -1,0 +1,434 @@
+[
+  {
+    "topic": "Dependency direction and business-rule isolation",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/dependency-direction.md",
+    "book": "Robert C. Martin \u2014 Clean Architecture: A Craftsman\u2019s Guide to Software Structure and Design",
+    "locator": "Chapter 22: The Clean Architecture \u2014 The Dependency Rule; supplemented by the author\u2019s Dependency Rule / boundary-crossing article",
+    "source": "https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html",
+    "basis": "author-summary"
+  },
+  {
+    "topic": "Quality attributes and architectural trade-offs",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/quality-attributes.md",
+    "book": "Mark Richards and Neal Ford \u2014 Fundamentals of Software Architecture (2020)",
+    "locator": "Chapters 4\u20136: Architecture Characteristics Defined; Identifying Architectural Characteristics; Measuring and Governing Architecture Characteristics",
+    "source": "https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Coupling, cohesion and ownership boundaries",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/coupling-and-ownership.md",
+    "book": "Neal Ford, Mark Richards, Pramod Sadalage and Zhamak Dehghani \u2014 Software Architecture: The Hard Parts (2021)",
+    "locator": "Chapter 2: Discerning Coupling in Software Architecture; Chapter 3: Architectural Modularity",
+    "source": "https://www.oreilly.com/library/view/software-architecture-the/9781492086888/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Modular monoliths and distributed services",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/monolith-and-services.md",
+    "book": "Sam Newman \u2014 Building Microservices, second edition",
+    "locator": "Second edition, Chapters 1\u20134: What Are Microservices?; How to Model Microservices; Splitting the Monolith; Microservice Communication Styles",
+    "source": "https://samnewman.io/books/building_microservices_2nd_edition/",
+    "basis": "author-toc"
+  },
+  {
+    "topic": "Incremental migration and compatibility stages",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/incremental-migration.md",
+    "book": "Sam Newman \u2014 Monolith to Microservices",
+    "locator": "Author topic list: incremental decomposition, migration patterns and database decomposition",
+    "source": "https://samnewman.io/books/monolith-to-microservices/",
+    "basis": "author-overview"
+  },
+  {
+    "topic": "Workloads, access patterns and indexes",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/workloads-and-indexes.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 3: Storage and Retrieval \u2014 indexing structures; Transaction Processing or Analytics?",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Atomicity, isolation and transaction boundaries",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/transactions.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 7: Transactions \u2014 Preventing Lost Updates; Write Skew and Phantoms; Serializability",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Consistency guarantees and application invariants",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/consistency.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 9: Consistency and Consensus \u2014 Consistency Guarantees; Linearizability; Ordering Guarantees",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Replication and stale-read consequences",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/replication.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 5: Replication \u2014 Synchronous Versus Asynchronous Replication; Handling Node Outages; Reading Your Own Writes",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Partitioning, skew and cross-partition invariants",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/partitioning.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 6: Partitioning \u2014 Skewed Workloads and Relieving Hot Spots; Secondary Indexes; Rebalancing Partitions",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Batch processing and reproducible inputs",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/batch-processing.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 10: Batch Processing \u2014 Batch Processing with Unix Tools; The Output of Batch Workflows; Materialization of Intermediate State",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Streams, checkpoints and derived state",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/stream-processing.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 11: Stream Processing \u2014 Partitioned Logs; Reasoning About Time; Fault Tolerance",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Request/reply and synchronous versus asynchronous waiting",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/request-reply.md",
+    "book": "Gregor Hohpe and Bobby Woolf \u2014 Enterprise Integration Patterns",
+    "locator": "Named pattern: Request-Reply",
+    "source": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Publish/subscribe and independent consumers",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/publish-subscribe.md",
+    "book": "Gregor Hohpe and Bobby Woolf \u2014 Enterprise Integration Patterns",
+    "locator": "Named pattern: Publish-Subscribe Channel",
+    "source": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Message routing and destination policy",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/routing.md",
+    "book": "Gregor Hohpe and Bobby Woolf \u2014 Enterprise Integration Patterns",
+    "locator": "Named pattern: Message Router",
+    "source": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageRouter.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Message translation and boundary semantics",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/transformation.md",
+    "book": "Gregor Hohpe and Bobby Woolf \u2014 Enterprise Integration Patterns",
+    "locator": "Named pattern: Message Translator",
+    "source": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageTranslator.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Correlation, causation and message identity",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/correlation.md",
+    "book": "Gregor Hohpe and Bobby Woolf \u2014 Enterprise Integration Patterns",
+    "locator": "Named pattern: Correlation Identifier",
+    "source": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/CorrelationIdentifier.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Ordering, causality and revision scope",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/ordering.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 9: Consistency and Consensus \u2014 Ordering and Causality; Sequence Number Ordering; Total Order Broadcast",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Idempotent receivers and duplicate effects",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/idempotency.md",
+    "book": "Gregor Hohpe and Bobby Woolf \u2014 Enterprise Integration Patterns",
+    "locator": "Named pattern: Idempotent Receiver",
+    "source": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/IdempotentReceiver.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Timeouts, retries and partial failure",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/timeouts-and-retries.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 8: The Trouble with Distributed Systems \u2014 Faults and Partial Failures; Timeouts and Unbounded Delays",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Backpressure and bounded concurrency",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/backpressure.md",
+    "book": "Sam Newman \u2014 Building Microservices, second edition",
+    "locator": "Second edition, Chapter 12: Resiliency; Chapter 13: Scaling",
+    "source": "https://samnewman.io/books/building_microservices_2nd_edition/",
+    "basis": "author-toc"
+  },
+  {
+    "topic": "Transactional outbox and consumer inbox",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/outbox-inbox.md",
+    "book": "Sam Newman \u2014 Building Microservices, second edition",
+    "locator": "Second edition, Chapter 6: Workflow (distributed-workflow context); outbox mechanism verified separately in author pattern material",
+    "source": "https://samnewman.io/books/building_microservices_2nd_edition/",
+    "basis": "author-toc"
+  },
+  {
+    "topic": "Sagas, compensation and workflow ownership",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/sagas.md",
+    "book": "Sam Newman \u2014 Building Microservices, second edition",
+    "locator": "Second edition, Chapter 6: Workflow \u2014 Sagas and distributed transactions",
+    "source": "https://samnewman.io/books/building_microservices_2nd_edition/",
+    "basis": "author-toc"
+  },
+  {
+    "topic": "CQRS and separate read/write models",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/cqrs.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Related DDIA material: Chapter 11, Databases and Streams; this named CQRS interpretation is supported by Fowler\u2019s supplementary article",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Event sourcing and authoritative history",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/event-sourcing.md",
+    "book": "Martin Kleppmann \u2014 Designing Data-Intensive Applications, first edition (2017)",
+    "locator": "Chapter 11: Stream Processing \u2014 Event Sourcing; State, Streams, and Immutability",
+    "source": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Poison messages, quarantine and safe replay",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/poison-messages.md",
+    "book": "Gregor Hohpe and Bobby Woolf \u2014 Enterprise Integration Patterns",
+    "locator": "Named pattern: Dead Letter Channel",
+    "source": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Observability and operational responsibility",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/observability.md",
+    "book": "Sam Newman \u2014 Building Microservices, second edition",
+    "locator": "Second edition, Chapter 10: From Monitoring to Observability; Chapter 12: Resiliency",
+    "source": "https://samnewman.io/books/building_microservices_2nd_edition/",
+    "basis": "author-toc"
+  },
+  {
+    "topic": "Architecture views, audience and visual communication",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/visual-communication.md",
+    "book": "Jacqui Read \u2014 Communication Patterns: A Guide for Developers and Architects (2023)",
+    "locator": "Chapters 1\u20136: visual communication; Chapter 10: Knowledge Management Principles; Chapter 12: Effective Practices",
+    "source": "https://www.oreilly.com/library/view/communication-patterns/9781098140533/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Entities, value objects and precise identity",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/identity-and-values.md",
+    "book": "Eric Evans \u2014 Domain-Driven Design: Tackling Complexity in the Heart of Software",
+    "locator": "DDD Reference named patterns: Entities; Value Objects",
+    "source": "https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf",
+    "basis": "author-reference"
+  },
+  {
+    "topic": "Aggregates, invariants and transaction ownership",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/aggregates-and-invariants.md",
+    "book": "Eric Evans \u2014 Domain-Driven Design: Tackling Complexity in the Heart of Software",
+    "locator": "DDD Reference named pattern: Aggregates; consistency boundary guidance",
+    "source": "https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf",
+    "basis": "author-reference"
+  },
+  {
+    "topic": "Transaction Script for straightforward operations",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/transaction-script.md",
+    "book": "Martin Fowler (with contributors) \u2014 Patterns of Enterprise Application Architecture",
+    "locator": "Named pattern: Transaction Script (author catalog identifies Chapter 09)",
+    "source": "https://martinfowler.com/eaaCatalog/transactionScript.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Domain Model for interacting business rules",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/domain-model.md",
+    "book": "Martin Fowler (with contributors) \u2014 Patterns of Enterprise Application Architecture",
+    "locator": "Named pattern: Domain Model (author catalog identifies Chapter 09)",
+    "source": "https://martinfowler.com/eaaCatalog/domainModel.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Data Mapper and persistence independence",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/data-mapper.md",
+    "book": "Martin Fowler (with contributors) \u2014 Patterns of Enterprise Application Architecture",
+    "locator": "Named pattern: Data Mapper",
+    "source": "https://martinfowler.com/eaaCatalog/dataMapper.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Repository as a domain collection boundary",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/repository.md",
+    "book": "Martin Fowler (with contributors) \u2014 Patterns of Enterprise Application Architecture",
+    "locator": "Named pattern: Repository",
+    "source": "https://martinfowler.com/eaaCatalog/repository.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Unit of Work and coordinated persistence",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/unit-of-work.md",
+    "book": "Martin Fowler (with contributors) \u2014 Patterns of Enterprise Application Architecture",
+    "locator": "Named pattern: Unit of Work",
+    "source": "https://martinfowler.com/eaaCatalog/unitOfWork.html",
+    "basis": "author-pattern-summary"
+  },
+  {
+    "topic": "Strategy and replaceable policy",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/strategy.md",
+    "book": "Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides \u2014 Design Patterns: Elements of Reusable Object-Oriented Software",
+    "locator": "Named GoF pattern: Strategy; exact chapter/page not retrieved",
+    "source": "https://www.oreilly.com/library/view/design-patterns-elements/0201633612/",
+    "basis": "book-synthesis"
+  },
+  {
+    "topic": "Adapter and an existing incompatible interface",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/adapter.md",
+    "book": "Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides \u2014 Design Patterns: Elements of Reusable Object-Oriented Software",
+    "locator": "Named GoF pattern: Adapter; exact chapter/page not retrieved",
+    "source": "https://www.oreilly.com/library/view/design-patterns-elements/0201633612/",
+    "basis": "book-synthesis"
+  },
+  {
+    "topic": "Factory Method and controlled construction",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/factory-method.md",
+    "book": "Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides \u2014 Design Patterns: Elements of Reusable Object-Oriented Software",
+    "locator": "Named GoF pattern: Factory Method; exact chapter/page not retrieved",
+    "source": "https://www.oreilly.com/library/view/design-patterns-elements/0201633612/",
+    "basis": "book-synthesis"
+  },
+  {
+    "topic": "Decorator and composable behavior",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/decorator.md",
+    "book": "Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides \u2014 Design Patterns: Elements of Reusable Object-Oriented Software",
+    "locator": "Named GoF pattern: Decorator; exact chapter/page not retrieved",
+    "source": "https://www.oreilly.com/library/view/design-patterns-elements/0201633612/",
+    "basis": "book-synthesis"
+  },
+  {
+    "topic": "Algorithm cost and data-structure selection",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/algorithm-and-data-structures.md",
+    "book": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein \u2014 Introduction to Algorithms, fourth edition",
+    "locator": "Algorithm analysis and data structures; no chapter/page locator claimed",
+    "source": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+    "basis": "publisher-overview"
+  },
+  {
+    "topic": "API contracts and consumer-oriented design",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/api-contracts.md",
+    "book": "James Gough, Daniel Bryant and Matthew Auburn \u2014 Mastering API Architecture (2022)",
+    "locator": "Chapters 1\u20132: Design, Build, and Specify APIs; Testing APIs",
+    "source": "https://www.oreilly.com/library/view/mastering-api-architecture/9781492090625/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Schema evolution and backward compatibility",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/schema-and-api-evolution.md",
+    "book": "James Gough, Daniel Bryant and Matthew Auburn \u2014 Mastering API Architecture (2022)",
+    "locator": "Chapter 1: Design, Build, and Specify APIs \u2014 API Versioning; Detecting Changes",
+    "source": "https://www.oreilly.com/library/view/mastering-api-architecture/9781492090625/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "API product lifecycle and consumer change management",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/api-lifecycle.md",
+    "book": "Mehdi Medjaoui, Erik Wilde, Ronnie Mitra and Mike Amundsen \u2014 Continuous API Management, first edition (2018)",
+    "locator": "First edition, Chapters 3\u20136: The API as a Product; The Ten Pillars of an API Product; Continuous API Improvement; The API Product Lifecycle",
+    "source": "https://www.oreilly.com/library/view/continuous-api-management/9781492043546/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "API governance as explicit decision ownership",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/api-governance.md",
+    "book": "Mehdi Medjaoui, Erik Wilde, Ronnie Mitra and Mike Amundsen \u2014 Continuous API Management, first edition (2018)",
+    "locator": "First edition, Chapter 2: API Governance \u2014 governing decisions; centralization/decentralization; governance patterns",
+    "source": "https://www.oreilly.com/library/view/continuous-api-management/9781492043546/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "Bounded contexts, model boundaries and translation",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/bounded-contexts.md",
+    "book": "Eric Evans \u2014 Domain-Driven Design: Tackling Complexity in the Heart of Software",
+    "locator": "DDD Reference named patterns: Bounded Context; Context Map; Anti-Corruption Layer",
+    "source": "https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf",
+    "basis": "author-reference"
+  },
+  {
+    "topic": "Ubiquitous language and business meaning",
+    "skill": "grill-with-docs",
+    "path": "grill-with-docs/references/topics/ubiquitous-language.md",
+    "book": "Eric Evans \u2014 Domain-Driven Design: Tackling Complexity in the Heart of Software",
+    "locator": "DDD Reference named pattern: Ubiquitous Language; language within Bounded Context",
+    "source": "https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf",
+    "basis": "author-reference"
+  },
+  {
+    "topic": "SOLID as concrete change and contract decisions",
+    "skill": "technical-design",
+    "path": "technical-design/references/topics/solid.md",
+    "book": "Robert C. Martin \u2014 Clean Architecture: A Craftsman\u2019s Guide to Software Structure and Design",
+    "locator": "Part III, Chapters 7\u201311: SRP, OCP, LSP, ISP and DIP",
+    "source": "https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/",
+    "basis": "publisher-toc"
+  },
+  {
+    "topic": "C4 context, container and component views",
+    "skill": "solution-architecture",
+    "path": "solution-architecture/references/topics/c4-views.md",
+    "book": "James Gough, Daniel Bryant and Matthew Auburn \u2014 Mastering API Architecture (2022)",
+    "locator": "Introduction \u2014 Using C4 Diagrams; C4 Context Diagram; C4 Container Diagram; C4 Component Diagram",
+    "source": "https://www.oreilly.com/library/view/mastering-api-architecture/9781492090625/",
+    "basis": "publisher-toc"
+  }
+]

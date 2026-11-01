@@ -28,3 +28,5 @@ User corrects the start from November 15 to November 1. Record the accepted star
 A compact note: Fact: tenant isolation (README). Decision: approvers publish suggestions (user turn). Assumption: reuse existing date parser (reversible technical choice). Unresolved: whether conflicting signed candidates require a reason (changes review behavior). Next: resolve conflict policy; meanwhile inspect current publication transaction.
 
 Check every question: is it unanswered, does it change today's choice, does it expose the practical consequence? An exhaustive questionnaire delays decisions and obscures risk. For an agreed typo, inspect/fix/verify is simpler. Further foundation: Eric Evans, *Domain-Driven Design* (2003), shared language and boundaries. This method and exchange are original synthesis, not a quotation.
+
+The [ubiquitous-language topic entry](topics/ubiquitous-language.md) explains the DDD material behind this method and how to preserve accepted meaning through handoffs.

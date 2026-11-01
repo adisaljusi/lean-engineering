@@ -39,3 +39,30 @@ Outbox prevents local commit/notification divergence at the cost of relay, reten
 Expand first: accept old/new representations with conflict rules, deploy compatible readers, backfill/reconcile, migrate producers, observe old usage, then remove support. Additive fields can break strict decoders; enum additions can break exhaustive clients. Test actual consumers. State rollback's irreversible point.
 
 Verify duplicate/reordered delivery, retry exhaustion, timeout after remote success, crashes around commit/ack, version skew and backlog recovery. Measure throughput/oldest pending age under representative bursts. Log correlation/run IDs, revisions, status and diagnosable errors without sensitive text; name operator/alert response. Missing operational responsibility is a design gap even with a tidy happy-path diagram.
+
+## Topic material before choosing a data/integration pattern
+
+Read the relevant entry for its attributed idea, applicability, procedure and example; do not load all entries by default.
+
+- [Workloads, access patterns and indexes](topics/workloads-and-indexes.md).
+- [Atomicity, isolation and transaction boundaries](topics/transactions.md).
+- [Consistency guarantees and application invariants](topics/consistency.md).
+- [Replication and stale-read consequences](topics/replication.md).
+- [Partitioning, skew and cross-partition invariants](topics/partitioning.md).
+- [Batch processing and reproducible inputs](topics/batch-processing.md).
+- [Streams, checkpoints and derived state](topics/stream-processing.md).
+- [Request/reply and synchronous versus asynchronous waiting](topics/request-reply.md).
+- [Publish/subscribe and independent consumers](topics/publish-subscribe.md).
+- [Message routing and destination policy](topics/routing.md).
+- [Message translation and boundary semantics](topics/transformation.md).
+- [Correlation, causation and message identity](topics/correlation.md).
+- [Ordering, causality and revision scope](topics/ordering.md).
+- [Idempotent receivers and duplicate effects](topics/idempotency.md).
+- [Timeouts, retries and partial failure](topics/timeouts-and-retries.md).
+- [Backpressure and bounded concurrency](topics/backpressure.md).
+- [Transactional outbox and consumer inbox](topics/outbox-inbox.md).
+- [Sagas, compensation and workflow ownership](topics/sagas.md).
+- [CQRS and separate read/write models](topics/cqrs.md).
+- [Event sourcing and authoritative history](topics/event-sourcing.md).
+- [Poison messages, quarantine and safe replay](topics/poison-messages.md).
+- [Observability and operational responsibility](topics/observability.md).

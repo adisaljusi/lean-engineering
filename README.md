@@ -81,6 +81,17 @@ implementation. Neither needs an extra skill or mandatory engineering library.
 Existing decisions and user authorization carry across skill boundaries. Use
 existing issues/docs; create a design/ADR/plan only when it helps the work.
 
+## Book material by topic
+
+The [topic catalogue](docs/BOOK-TOPICS.md) links to dedicated entries explaining
+book concepts and how to use them: dependency direction, SOLID, transactions,
+replication, partitioning, domain identity/invariants, messaging patterns,
+persistence/design patterns, API evolution and more. Each has a concrete method,
+worked application, costs/simpler choices, verification and an honest source
+basis/locator. These are substantive reference notes, not a bibliography or
+claims of access to unavailable full books. Select entries through each owning
+skill's topic index; individual installation includes them.
+
 ## Examples and validation
 
 - Targeted commission discovery: `grill-with-docs/references/discovery.md`.

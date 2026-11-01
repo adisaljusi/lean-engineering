@@ -44,3 +44,10 @@ and JSDOM 26.1.0. In a scratch directory, install those exact packages, copy
 `validate.mjs` there, and run `node validate.mjs /absolute/path/extraction.mmd
 /absolute/path/publication.mmd`. It initializes a DOM before importing Mermaid;
 plain Node import without a DOM fails in sanitization. This checks parsing only.
+
+## Material behind the visual guidance
+
+Read the relevant entry for its attributed idea, applicability, procedure and example; do not load all entries by default.
+
+- [Architecture views, audience and visual communication](topics/visual-communication.md).
+- [C4 context, container and component views](topics/c4-views.md).

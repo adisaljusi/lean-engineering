@@ -11,6 +11,8 @@ For each unknown, identify the decision its answer changes and the consequence o
 
 Ask the smallest useful set, without a quota. Prefer a business example: “Does automatic create a proposal or publish the rate? That determines whether human review is required.” Avoid choosing brokers before settling publication meaning. Explain why a question matters when that helps the user answer. Do not repeat questions answered in documentation or earlier turns; cite that evidence and ask only about a real contradiction.
 
+When applying a named book concept, read its [topic reference entry](references/topic-index.md) for the material and decision procedure. Select only the relevant entry; a book title or source link alone is not guidance.
+
 Load [decision-led discovery](references/discovery.md) for ambiguous features, conflicting sources or changing decisions. It provides a procedure and worked exchange.
 
 Record known facts with sources, accepted decisions, explicit assumptions and unresolved issues in the existing feature notes or conversation. Update them after corrections. Return the immediate decision, targeted questions (if any), and useful candidate observable examples. Continue independent authorized work while awaiting an answer; do not implement behavior dependent on an unresolved consequential rule. Do not demand a new interview, spec or approval because discovery ended.

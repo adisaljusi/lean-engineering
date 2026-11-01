@@ -9,6 +9,8 @@ Use for consequential system choices or architecture explanation. Inspect the cu
 
 Choose depth: a local change may need a paragraph and dependency sketch; cross-process/state changes need explicit flows, quality drivers and failure handling. Identify business capabilities and owners, then workload, consistency, recovery, security, cost and team constraints that actually distinguish options.
 
+When applying a named book concept, read its [topic reference entry](references/topic-index.md) for the material and decision procedure. Select only the relevant entry; a book title or source link alone is not guidance.
+
 Select references, do not read the whole library:
 
 - [Architecture decisions](references/decisions.md): module/service boundaries, dependency direction, alternatives, current versus future, migration and worked monolith/distributed choices.
