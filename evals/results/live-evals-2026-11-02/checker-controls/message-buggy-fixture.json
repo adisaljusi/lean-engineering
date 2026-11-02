@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "test_exact_response (__main__.MessageContract.test_exact_response) ... FAIL\ntest_stable_result (__main__.MessageContract.test_stable_result) ... ok\n\n======================================================================\nFAIL: test_exact_response (__main__.MessageContract.test_exact_response)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/runtime/heldout.py\", line 5, in test_exact_response\n    self.assertEqual(validation_error(), {\"error\": \"Currency is invalid\"})\nAssertionError: {'error': 'Curency is invalid'} != {'error': 'Currency is invalid'}\n- {'error': 'Curency is invalid'}\n+ {'error': 'Currency is invalid'}\n?              +\n\n\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nFAILED (failures=1)\n",
+  "seconds": 0.079,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-c",
+    "import sys, unittest, runpy; sys.path.insert(0, '/workspace'); runpy.run_path('/runtime/heldout.py', run_name='__main__')"
+  ],
+  "checker_sha256": "aa137a8f6a238dcd4fa0d6fdf335e0dcda73456668d7c1662da4d6327c6cdad4",
+  "tests_run": 2,
+  "verdict": "fail"
+}

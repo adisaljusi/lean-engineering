@@ -1,0 +1,17 @@
+flowchart LR
+  subgraph Immutable["Immutable evidence - ingestion owner"]
+    D["Document version + bytes hash"] -->|OCR version| P["Page text + dimensions"]
+    P -->|half-open character offsets| S["Span ID + quote + box"]
+  end
+  subgraph Run["Proposed extraction - worker owner"]
+    M["Run manifest: source/OCR/model/prompt/schema versions"] -->|bounded async jobs| C["Candidates: raw values + span references"]
+    S -->|exact reference verification| C
+    C -->|versioned rules; keep raw| N["Normalized candidates + conflicts"]
+  end
+  subgraph Review["Review and publication - application owner"]
+    N -->|show all alternatives| H["Authorized human adjudication"]
+    S -->|page/box preview with tenant checks| H
+    H -->|append decision + expected revision| T["Publication transaction"]
+    T -->|reject stale revision; retry review| H
+    T -->|atomic pointer and history| V["Published version; evidence retained"]
+  end

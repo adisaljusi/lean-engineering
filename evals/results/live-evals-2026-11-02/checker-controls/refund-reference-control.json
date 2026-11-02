@@ -1,0 +1,16 @@
+{
+  "status": "succeeded",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_calendar_boundaries (__main__.RefundContract.test_calendar_boundaries) ... ok\ntest_not_tied_to_today (__main__.RefundContract.test_not_tied_to_today) ... ok\ntest_uncaptured (__main__.RefundContract.test_uncaptured) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+  "seconds": 0.083,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-c",
+    "import sys, unittest, runpy; sys.path.insert(0, '/workspace'); runpy.run_path('/runtime/heldout.py', run_name='__main__')"
+  ],
+  "checker_sha256": "3745b8f01267d8e56360add88dce4c9b1d7264c522097361ea25fed362d7b4f1",
+  "tests_run": 3,
+  "verdict": "pass"
+}

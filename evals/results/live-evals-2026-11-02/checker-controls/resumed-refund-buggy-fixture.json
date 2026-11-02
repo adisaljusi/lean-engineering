@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "test_corrected_boundary (__main__.ResumedContract.test_corrected_boundary) ... \n  test_corrected_boundary (__main__.ResumedContract.test_corrected_boundary) (days=15) ... FAIL\n  test_corrected_boundary (__main__.ResumedContract.test_corrected_boundary) (days=45) ... FAIL\ntest_historical_dates_not_wall_clock (__main__.ResumedContract.test_historical_dates_not_wall_clock) ... FAIL\ntest_uncaptured (__main__.ResumedContract.test_uncaptured) ... ok\n\n======================================================================\nFAIL: test_corrected_boundary (__main__.ResumedContract.test_corrected_boundary) (days=15)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/runtime/heldout.py\", line 9, in test_corrected_boundary\n    self.assertIs(eligible(capture, capture + timedelta(days=days)), expected)\nAssertionError: False is not True\n\n======================================================================\nFAIL: test_corrected_boundary (__main__.ResumedContract.test_corrected_boundary) (days=45)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/runtime/heldout.py\", line 9, in test_corrected_boundary\n    self.assertIs(eligible(capture, capture + timedelta(days=days)), expected)\nAssertionError: False is not True\n\n======================================================================\nFAIL: test_historical_dates_not_wall_clock (__main__.ResumedContract.test_historical_dates_not_wall_clock)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/runtime/heldout.py\", line 13, in test_historical_dates_not_wall_clock\n    self.assertIs(eligible(date(2020, 12, 1), date(2021, 1, 15)), True)\nAssertionError: False is not True\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nFAILED (failures=3)\n",
+  "seconds": 0.077,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-c",
+    "import sys, unittest, runpy; sys.path.insert(0, '/workspace'); runpy.run_path('/runtime/heldout.py', run_name='__main__')"
+  ],
+  "checker_sha256": "ee1697c78716ad3502106534a69a5fbd37030a4b377cf4d9b06c1e45941b3cf2",
+  "tests_run": 3,
+  "verdict": "fail"
+}

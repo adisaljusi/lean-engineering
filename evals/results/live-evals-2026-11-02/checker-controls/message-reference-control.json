@@ -1,0 +1,16 @@
+{
+  "status": "succeeded",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_exact_response (__main__.MessageContract.test_exact_response) ... ok\ntest_stable_result (__main__.MessageContract.test_stable_result) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+  "seconds": 0.072,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-c",
+    "import sys, unittest, runpy; sys.path.insert(0, '/workspace'); runpy.run_path('/runtime/heldout.py', run_name='__main__')"
+  ],
+  "checker_sha256": "aa137a8f6a238dcd4fa0d6fdf335e0dcda73456668d7c1662da4d6327c6cdad4",
+  "tests_run": 2,
+  "verdict": "pass"
+}

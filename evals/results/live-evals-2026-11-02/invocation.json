@@ -1,0 +1,30 @@
+{
+  "status": "failed",
+  "returncode": 2,
+  "stdout": "Inspect conversation completion, independent checks and criterion evidence separately; delivery is not a passing grade.\n",
+  "stderr": "",
+  "seconds": 90.449,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "evals/conversations.py",
+    "--model",
+    "gpt-6.1",
+    "--actor-model",
+    "gpt-6.1",
+    "--judge-model",
+    "gpt-6.1",
+    "--cases",
+    "authorized-small-fix",
+    "--pilot",
+    "authorized-small-fix",
+    "--turn-timeout",
+    "45",
+    "--timeout",
+    "240",
+    "--max-turns",
+    "6",
+    "--output",
+    "work/live-evals-2026-11-02/native-pilot"
+  ],
+  "source_commit": "a3ba4fba8df3ba6ce25c14413a1a346f76399214"
+}

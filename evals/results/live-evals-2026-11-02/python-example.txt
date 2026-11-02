@@ -1,0 +1,11 @@
+test_database_rejects_invalid_shared_write (test_publication.PublicationTests.test_database_rejects_invalid_shared_write) ... ok
+test_failure_after_update_rolls_back_both_effects (test_publication.PublicationTests.test_failure_after_update_rolls_back_both_effects) ... ok
+test_other_connection_stale_review_cannot_overwrite (test_publication.PublicationTests.test_other_connection_stale_review_cannot_overwrite) ... ok
+test_permissions_and_tenant_scope (test_publication.PublicationTests.test_permissions_and_tenant_scope) ... ok
+test_precise_rate_boundaries (test_publication.PublicationTests.test_precise_rate_boundaries) ... ok
+test_retry_and_identity_conflict (test_publication.PublicationTests.test_retry_and_identity_conflict) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.005s
+
+OK

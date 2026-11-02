@@ -1,0 +1,16 @@
+{
+  "status": "succeeded",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_conflicting_retry_preserves_original (__main__.WebhookContract.test_conflicting_retry_preserves_original) ... ok\ntest_database_enforces_uniqueness (__main__.WebhookContract.test_database_enforces_uniqueness) ... ok\ntest_distinct_events_remain_distinct (__main__.WebhookContract.test_distinct_events_remain_distinct) ... ok\ntest_failure_rolls_back_and_allows_retry (__main__.WebhookContract.test_failure_rolls_back_and_allows_retry) ... ok\ntest_independent_concurrent_connections (__main__.WebhookContract.test_independent_concurrent_connections) ... ok\ntest_retry_has_one_effect (__main__.WebhookContract.test_retry_has_one_effect) ... ok\ntest_upgrade_does_not_choose_conflicting_history (__main__.WebhookContract.test_upgrade_does_not_choose_conflicting_history) ... ok\ntest_upgrade_preserves_valid_history (__main__.WebhookContract.test_upgrade_preserves_valid_history) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.015s\n\nOK\n",
+  "seconds": 0.101,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-c",
+    "import sys, unittest, runpy; sys.path.insert(0, '/workspace'); runpy.run_path('/runtime/heldout.py', run_name='__main__')"
+  ],
+  "checker_sha256": "4e1aa2f133f2b6d991135f17ebcfd90086427093c3efb13453f0d187b9d283df",
+  "tests_run": 8,
+  "verdict": "pass"
+}

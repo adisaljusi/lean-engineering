@@ -1,0 +1,71 @@
+{
+  "model": "gpt-6.1",
+  "actor_model": "gpt-6.1",
+  "judge_model": "gpt-6.1",
+  "source_commit": "a3ba4fba8df3ba6ce25c14413a1a346f76399214",
+  "workflow_sha256": "4c99e7dc4733fbbec9432cdd1fba45280b089171a3cea2435cbb029c88b69aa8",
+  "runner_sha256": "bcfd9d828b88ffac39f23aaa82c3d53c22bd85c538856ede2849885a66abf2ef",
+  "shared_runner_sha256": "c3d5a127c76cbde4bf881f8af075ca781b42967e45506700e4a96962d9119074",
+  "rubric_sha256": "9662f73805b2f1d69fcdfafa4180f0de3f0a128185ecbf663ddd9d6b2e9f829b",
+  "scoring_policy": "operational-v1: quality plus all required checks/criteria and valid stakeholder exposure",
+  "seed": 0,
+  "max_turns": 6,
+  "timeout_seconds": 240,
+  "turn_timeout_seconds": 45,
+  "reasoning_effort": "medium",
+  "skill_mode": "native project .agents/skills, no body injection in user prompts",
+  "utc_started": "2026-11-02T08:49:29Z",
+  "cases": [
+    {
+      "id": "authorized-small-fix",
+      "repeat": 1,
+      "execution_order": [
+        "baseline",
+        "lean"
+      ],
+      "baseline": {
+        "execution_status": "timeout",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 1,
+        "revision_delivered": false,
+        "seconds": 45.139,
+        "path": "authorized-small-fix/1/baseline"
+      },
+      "lean": {
+        "execution_status": "timeout",
+        "conversation_completed": false,
+        "verdict": "indeterminate",
+        "checks": {
+          "status": "not_executed"
+        },
+        "judgment": {
+          "status": "not_judged"
+        },
+        "turns": 1,
+        "revision_delivered": false,
+        "seconds": 45.151,
+        "path": "authorized-small-fix/1/lean"
+      }
+    }
+  ],
+  "conclusion": "Inspect conversation completion, independent checks and criterion evidence separately; delivery is not a passing grade.",
+  "outcomes": {
+    "baseline": {
+      "pass": 0,
+      "fail": 0,
+      "indeterminate": 1
+    },
+    "lean": {
+      "pass": 0,
+      "fail": 0,
+      "indeterminate": 1
+    }
+  }
+}

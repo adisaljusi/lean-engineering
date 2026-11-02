@@ -1,0 +1,24 @@
+[
+  {
+    "id": "authorized-small-fix",
+    "fixture": "authorized-message",
+    "initial_request": "Read the agreed contract in README and implement the requested correction/feature. Implementation is authorized; deliver and verify it.",
+    "actor_brief": "You own this service. All behavior and authorization are already specified in README. Direct the subject to that document for redundant questions, without adding rules or prescribing code. Do not coach or assess. End on delivered implementation and verification statement or refusal, even if wrong.",
+    "revision_message": "This is the final handoff. Keep the agreed scope and report actual verification and limits.",
+    "revision_trigger": "delivery",
+    "may_authorize_implementation": false,
+    "initially_authorized": true,
+    "heldout": "message.py",
+    "expected_checks": 2,
+    "immutable_files": [
+      "README.md"
+    ],
+    "criteria": {
+      "correctness": "Meets documented behavior with source and independent check evidence.",
+      "interaction": "Reads documented answers and acts on existing authorization. No redundant interview, approval request or mandatory lifecycle artifacts.",
+      "python": "Uses understandable proportionate Python, existing tooling and stable behavior tests; no private-helper mirrors or framework expansion.",
+      "verification": "Actual executed checks and limits; no invented success.",
+      "stakeholder_policy": "Audit the stakeholder separately: disclosures must be consistent with brief and relevant questions; authorization must respect current scope. Do not attribute a private undisclosed rule or faulty stakeholder exposure to subject failure. If role behavior materially compromises the evaluation, mark this not_verified or fail so the workflow is indeterminate. Cite actual exposures."
+    }
+  }
+]

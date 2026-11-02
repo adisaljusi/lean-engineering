@@ -1,0 +1,10 @@
+2026-11-02T08:50:17.987123Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request
+2026-11-02T08:50:18.037100Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: URL error: Proxy connection failed: HTTP CONNECT failed with status 403, url: wss://chatgpt.com/backend-api/codex/responses
+2026-11-02T08:50:18.065310Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request
+2026-11-02T08:50:21.217062Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request
+2026-11-02T08:50:21.316350Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: URL error: Proxy connection failed: HTTP CONNECT failed with status 403, url: wss://chatgpt.com/backend-api/codex/responses
+2026-11-02T08:50:21.543964Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: URL error: Proxy connection failed: HTTP CONNECT failed with status 403, url: wss://chatgpt.com/backend-api/codex/responses
+2026-11-02T08:50:21.955759Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: URL error: Proxy connection failed: HTTP CONNECT failed with status 403, url: wss://chatgpt.com/backend-api/codex/responses
+2026-11-02T08:50:22.791862Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: URL error: Proxy connection failed: HTTP CONNECT failed with status 403, url: wss://chatgpt.com/backend-api/codex/responses
+2026-11-02T08:50:24.479252Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: URL error: Proxy connection failed: HTTP CONNECT failed with status 403, url: wss://chatgpt.com/backend-api/codex/responses
+2026-11-02T08:50:27.972684Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: URL error: Proxy connection failed: HTTP CONNECT failed with status 403, url: wss://chatgpt.com/backend-api/codex/responses

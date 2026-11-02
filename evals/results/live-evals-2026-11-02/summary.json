@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-02",
+  "source_commit": "a3ba4fba8df3ba6ce25c14413a1a346f76399214",
+  "live_pilot": {
+    "case": "authorized-small-fix",
+    "baseline": "indeterminate",
+    "treatment": "indeterminate",
+    "subject_cli_turns_attempted": 2,
+    "completed_subject_answers": 0,
+    "stakeholder_calls": 0,
+    "assessor_calls": 0,
+    "assigned_scores": 0,
+    "per_turn_timeout_seconds": 45,
+    "pilot_exit": 2,
+    "observed_error": "Proxy HTTP CONNECT 403 to wss://chatgpt.com/backend-api/codex/responses",
+    "isolation": "capability probe succeeded; not weakened",
+    "paired_fixture_inputs_identical": true,
+    "treatment_native_installation": "10 skills, supporting files and 48 topic entries present; actual model reading not demonstrated",
+    "requested_role_model": "gpt-6.1; availability unverified because endpoint access failed",
+    "scope": "CLI attempts are retained; no completed model execution or skill-effectiveness result"
+  },
+  "checker_controls": {
+    "cases": 5,
+    "runs": 10,
+    "all_discriminate_buggy_and_reference_controls": true,
+    "evidence": "checker-summary.json",
+    "meaning": "checker calibration, not baseline/treatment agent behavior"
+  },
+  "harness_tests": {
+    "passed": 28,
+    "skipped": 0,
+    "evidence": "harness.txt"
+  },
+  "python_example_tests": {
+    "passed": 6,
+    "evidence": "python-example.txt"
+  },
+  "holdout": "not run; unchanged",
+  "conclusion": "Skill effectiveness remains undetermined. Additional model cases were not launched after endpoint denial."
+}

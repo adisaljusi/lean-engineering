@@ -1,0 +1,10 @@
+{
+  "policy_type": "restricted",
+  "vpn_configured": false,
+  "destinations": {
+    "chatgpt.com": "not allowed by configured allowlist",
+    "api.openai.com": "not allowed by configured allowlist"
+  },
+  "api_key_variable_present": false,
+  "note": "Git hosting domains containing chatgpt in their name are not model endpoint authorization. Configured policy is not itself a model connectivity test; inspect the actual pilot error."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "test_calendar_boundaries (__main__.RefundContract.test_calendar_boundaries) ... \n  test_calendar_boundaries (__main__.RefundContract.test_calendar_boundaries) (days=-1) ... FAIL\n  test_calendar_boundaries (__main__.RefundContract.test_calendar_boundaries) (days=31) ... FAIL\ntest_not_tied_to_today (__main__.RefundContract.test_not_tied_to_today) ... ok\ntest_uncaptured (__main__.RefundContract.test_uncaptured) ... ok\n\n======================================================================\nFAIL: test_calendar_boundaries (__main__.RefundContract.test_calendar_boundaries) (days=-1)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/runtime/heldout.py\", line 9, in test_calendar_boundaries\n    self.assertIs(eligible(start, start + timedelta(days=days)), expected)\nAssertionError: True is not False\n\n======================================================================\nFAIL: test_calendar_boundaries (__main__.RefundContract.test_calendar_boundaries) (days=31)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/runtime/heldout.py\", line 9, in test_calendar_boundaries\n    self.assertIs(eligible(start, start + timedelta(days=days)), expected)\nAssertionError: True is not False\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nFAILED (failures=2)\n",
+  "seconds": 0.072,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-c",
+    "import sys, unittest, runpy; sys.path.insert(0, '/workspace'); runpy.run_path('/runtime/heldout.py', run_name='__main__')"
+  ],
+  "checker_sha256": "3745b8f01267d8e56360add88dce4c9b1d7264c522097361ea25fed362d7b4f1",
+  "tests_run": 3,
+  "verdict": "fail"
+}

@@ -388,3 +388,19 @@ instruments, using existing runners and checker/role policies. Current harness:
 28 tests passed (including expanded correct/buggy oracle controls), zero skipped.
 No new model outputs or effectiveness scores exist; new inputs are prepared only.
 See `docs/WORKFLOW-DESIGN.md` and `results/workflow-followup/` for current evidence.
+
+## Requested live evaluation attempt (2026-11-02)
+
+A fresh paired native `authorized-small-fix` pilot was attempted on source
+`a3ba4fba8df3ba6ce25c14413a1a346f76399214`. Both subject CLI calls received proxy
+CONNECT 403 errors at the ChatGPT model endpoint and timed out after 45 seconds
+without answers. Both verdicts are indeterminate; no stakeholder/assessor ran and
+no scores were assigned. Isolation succeeded and identical fixture inputs were
+verified. The treatment contained all 48 topic entries, which does not prove
+model discovery/application. Further live cases were not launched after denial.
+
+Five independent checker/control pairs discriminate the buggy fixtures from
+known reference controls; harness tests (28) and Python example tests (6) pass.
+These are checker/code results, not evidence of skill effectiveness. Exact command,
+raw pilot evidence, checker results, limitations and the model-access prerequisite
+are in [the attempt report](results/live-evals-2026-11-02/REPORT.md).

@@ -1,0 +1,16 @@
+{
+  "status": "succeeded",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_effective_interval_and_unaffected_section (__main__.CommissionContract.test_effective_interval_and_unaffected_section) ... ok\ntest_invalid_rate_and_dates_do_not_mutate_history (__main__.CommissionContract.test_invalid_rate_and_dates_do_not_mutate_history) ... ok\ntest_pending_change_never_publishes (__main__.CommissionContract.test_pending_change_never_publishes) ... ok\ntest_retry_is_idempotent_but_id_reuse_cannot_rewrite (__main__.CommissionContract.test_retry_is_idempotent_but_id_reuse_cannot_rewrite) ... ok\ntest_roles_and_tenants_are_business_boundaries (__main__.CommissionContract.test_roles_and_tenants_are_business_boundaries) ... ok\ntest_signed_conflict_requires_reason_and_keeps_alternatives (__main__.CommissionContract.test_signed_conflict_requires_reason_and_keeps_alternatives) ... ok\ntest_source_reference_and_quote_are_verified (__main__.CommissionContract.test_source_reference_and_quote_are_verified) ... ok\ntest_unsigned_later_upload_cannot_publish (__main__.CommissionContract.test_unsigned_later_upload_cannot_publish) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.008s\n\nOK\n",
+  "seconds": 0.09,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-c",
+    "import sys, unittest, runpy; sys.path.insert(0, '/workspace'); runpy.run_path('/runtime/heldout.py', run_name='__main__')"
+  ],
+  "checker_sha256": "c35d4c0a51918a454765cb7bd889e35ce978d1a2aa2d2e54971534be015381d0",
+  "tests_run": 8,
+  "verdict": "pass"
+}

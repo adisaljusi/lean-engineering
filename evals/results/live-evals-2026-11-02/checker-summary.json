@@ -1,0 +1,82 @@
+[
+  {
+    "case": "webhook",
+    "variant": "buggy-fixture",
+    "verdict": "fail",
+    "tests_run": 8,
+    "expected_control_verdict": "fail",
+    "control_behaved_as_expected": true
+  },
+  {
+    "case": "webhook",
+    "variant": "reference-control",
+    "verdict": "pass",
+    "tests_run": 8,
+    "expected_control_verdict": "pass",
+    "control_behaved_as_expected": true
+  },
+  {
+    "case": "commission",
+    "variant": "buggy-fixture",
+    "verdict": "fail",
+    "tests_run": 8,
+    "expected_control_verdict": "fail",
+    "control_behaved_as_expected": true
+  },
+  {
+    "case": "commission",
+    "variant": "reference-control",
+    "verdict": "pass",
+    "tests_run": 8,
+    "expected_control_verdict": "pass",
+    "control_behaved_as_expected": true
+  },
+  {
+    "case": "message",
+    "variant": "buggy-fixture",
+    "verdict": "fail",
+    "tests_run": 2,
+    "expected_control_verdict": "fail",
+    "control_behaved_as_expected": true
+  },
+  {
+    "case": "message",
+    "variant": "reference-control",
+    "verdict": "pass",
+    "tests_run": 2,
+    "expected_control_verdict": "pass",
+    "control_behaved_as_expected": true
+  },
+  {
+    "case": "refund",
+    "variant": "buggy-fixture",
+    "verdict": "fail",
+    "tests_run": 3,
+    "expected_control_verdict": "fail",
+    "control_behaved_as_expected": true
+  },
+  {
+    "case": "refund",
+    "variant": "reference-control",
+    "verdict": "pass",
+    "tests_run": 3,
+    "expected_control_verdict": "pass",
+    "control_behaved_as_expected": true
+  },
+  {
+    "case": "resumed-refund",
+    "variant": "buggy-fixture",
+    "verdict": "fail",
+    "tests_run": 3,
+    "expected_control_verdict": "fail",
+    "control_behaved_as_expected": true
+  },
+  {
+    "case": "resumed-refund",
+    "variant": "reference-control",
+    "verdict": "pass",
+    "tests_run": 3,
+    "expected_control_verdict": "pass",
+    "control_behaved_as_expected": true
+  }
+]

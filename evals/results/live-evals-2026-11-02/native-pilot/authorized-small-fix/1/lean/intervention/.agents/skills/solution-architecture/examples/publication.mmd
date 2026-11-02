@@ -1,0 +1,19 @@
+sequenceDiagram
+  actor Human as Authorized reviewer
+  participant API as Review API
+  participant DB as PostgreSQL owner
+  Human->>API: Read candidates and decision revision 2
+  API->>DB: Tenant-scoped read
+  DB-->>API: Alternatives and immutable evidence references
+  API-->>Human: Candidates, evidence links and revision 2
+  Note over Human,DB: Another accepted adjudication advances revision to 3
+  Human->>API: Publish chosen candidate, expected revision 2
+  API->>DB: Transaction: authorize and compare revision
+  alt Revision differs
+    DB-->>API: Rollback - stale review
+    API-->>Human: Conflict - reload alternatives and decide
+  else Revision matches
+    DB->>DB: Append decision and update publication atomically
+    DB-->>API: Commit
+    API-->>Human: Published decision identity
+  end
